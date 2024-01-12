@@ -25,7 +25,7 @@ header {
 
 .header-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     width: 100%;
     height: 130px;
@@ -35,9 +35,80 @@ header {
 
 .main-logo {
     display: flex;
-    justify-content: center;
-    margin-right: auto;
-    margin-left: auto;
+}
+
+/**** Menu icon ****/
+
+.menu-icon {
+    display: flex;
+    position: absolute;
+    width: 40px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 3;
+    right: 5%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.menu-icon div {
+    width: 40px;
+    height: 30px;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+}
+
+.menu-icon:hover {
+    transform: translateY(-2px);
+}
+
+.menu-icon span {
+    background: #e1e1e1;
+    width: 100%;
+    height: 1.5px;
+    border-radius: 6px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.5s, width 0.5s;
+}
+
+.menu-icon .line-1 {
+    transform: translate(-50%, -8px);
+}
+
+.menu-icon .line-3 {
+    transform: translate(-50%, 7px);
+}
+
+.openmenu .line-1 {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.openmenu .line-3 {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.openmenu .line-2 {
+    width: 0;
+}
+
+/**** Overlay for menu list ****/
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 1;
+}
+
+.overlay.active {
+    display: block;
 }
 
 /**** Menu list ****/
@@ -129,79 +200,6 @@ nav li::before {
 
 nav li:hover::before {
     transform: scaleX(1);
-}
-
-/**** Menu icon ****/
-
-.menu-icon {
-    display: flex;
-    width: 40px;
-    height: 30px;
-    cursor: pointer;
-    z-index: 3;
-    margin: 0 40px 0 0;
-    transition: transform 0.3s ease-in-out;
-}
-
-.menu-icon div {
-    width: 40px;
-    height: 30px;
-    position: relative;
-    transition: transform 0.3s ease-in-out;
-}
-
-.menu-icon:hover {
-    transform: translateY(-2px);
-}
-
-.menu-icon span {
-    background: #e1e1e1;
-    width: 100%;
-    height: 1.5px;
-    border-radius: 6px;
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transition: transform 0.5s, width 0.5s;
-}
-
-.menu-icon .line-1 {
-    transform: translate(-50%, -8px);
-}
-
-.menu-icon .line-3 {
-    transform: translate(-50%, 7px);
-}
-
-.openmenu .line-1 {
-    transform: translate(-50%, -50%) rotate(-45deg);
-}
-
-.openmenu .line-3 {
-    transform: translate(-50%, -50%) rotate(45deg);
-}
-
-.openmenu .line-2 {
-    width: 0;
-}
-
-/**** Overlay for menu list ****/
-
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: none;
-    z-index: 1;
-}
-
-.overlay.active {
-    display: block;
 }
 
 /**** Smaller screens ****/
