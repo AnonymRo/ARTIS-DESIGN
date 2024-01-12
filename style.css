@@ -4,6 +4,30 @@ body {
     font-family: 'Arial', sans-serif;
 }
 
+/* Animations */
+
+@keyframes logoReveal {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes menuIconReveal {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
 /**** Agency FB font ****/
 
 @font-face {
@@ -35,6 +59,7 @@ header {
 
 .main-logo {
     display: flex;
+    animation: logoReveal 1.1s ease-in-out;
 }
 
 /**** Menu icon ****/
@@ -48,6 +73,7 @@ header {
     z-index: 3;
     right: 5%;
     transition: transform 0.3s ease-in-out;
+    animation: menuIconReveal 1.1s ease-in-out;
 }
 
 .menu-icon div {
