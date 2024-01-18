@@ -286,12 +286,17 @@ nav li:hover::before {
     left: 8%;
 }
 
+.word-container {
+    display: flex;
+    flex-direction: column;
+}
+
 .word {
     display: inline-block;
     overflow: hidden;
     color: #333;
     font-family: 'Agency FB', sans-serif;
-    font-size: 4.5em;
+    font-size: 4em;
     font-weight: 100;
     margin-bottom: 5px;
     letter-spacing: 1px;
@@ -317,6 +322,9 @@ nav li:hover::before {
     text-align: center;
     opacity: 0;
     animation: slideInFromLeft 1.7s ease-out forwards;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .custom-button {
