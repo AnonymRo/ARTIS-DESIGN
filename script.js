@@ -84,4 +84,5 @@ document.addEventListener("DOMContentLoaded", function () {
       toTop.style.bottom = "24px";
     }
   });
+
 });

@@ -606,6 +606,10 @@ nav li:hover::before {
     color: #9f4b2c;
 }
 
+/**** Cookies ****/
+
+
+
 /**** Smaller screens ****/
 
 @media (max-width: 900px) {
