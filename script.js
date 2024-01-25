@@ -4,12 +4,20 @@ document.addEventListener("DOMContentLoaded", function () {
   var nav = document.querySelector("nav");
   var separator = document.querySelector(".separator");
   var philosophyContainer = document.querySelector(".philosophy-container");
+  var toTop = document.querySelector(".to-top");
+  var footer = document.querySelector("footer");
 
   if (menuIcon) {
     menuIcon.onclick = function () {
       menuIcon.classList.toggle("openmenu");
       overlay.classList.toggle("active");
       nav.classList.toggle("open");
+
+      document.body.classList.toggle("menu-open");
+
+      if (nav.classList.contains("open")) {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
     };
   }
 
@@ -26,10 +34,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // Initial call to set separator width on page load
   updateSeparator();
 
-  // Show separator and mirrored image when scrolling past body-container
   window.addEventListener("scroll", updateSeparator);
 
   const words = document.querySelectorAll('.word');
@@ -43,7 +49,6 @@ document.addEventListener("DOMContentLoaded", function () {
       span.textContent = letter;
       word.appendChild(span);
 
-      // Adjust the delay based on your preference
       const delay = wordIndex * 300 + index * 100;
 
       setTimeout(() => {
@@ -52,15 +57,31 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  /* Back to the top button */
+  toTop.addEventListener("click", function (e) {
+    e.preventDefault();
 
-  const toTop = document.querySelector(".to-top");
+    setTimeout(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }, 100);
+  });
 
   window.addEventListener("scroll", () => {
-    if (window.scrollY > 100) {
+    const scrollPosition = window.scrollY;
+    const footerPosition = footer.getBoundingClientRect().top;
+
+    if (scrollPosition > 100) {
       toTop.classList.add("active");
     } else {
       toTop.classList.remove("active");
     }
-  })
+
+    if (footerPosition < window.innerHeight && footerPosition > 0) {
+      toTop.style.bottom = "90px";
+    } else {
+      toTop.style.bottom = "24px";
+    }
+  });
 });

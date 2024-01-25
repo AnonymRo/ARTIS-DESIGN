@@ -4,6 +4,25 @@ body {
     font-family: 'Arial', sans-serif;
 }
 
+body.menu-open {
+    overflow: hidden;
+}
+
+/**** Scrollbar ****/
+
+body::-webkit-scrollbar {
+    width: 2.5px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #e1e1e1;
+    border-radius: 5px;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: #333;
+}
+
 /* Animations */
 
 @keyframes menuIconReveal {
@@ -62,10 +81,25 @@ body {
 @keyframes slideInFromRight {
     from {
         transform: translateX(100%);
+        opacity: 0;
     }
 
     to {
         transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes exploreButtonAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
         opacity: 1;
     }
 }
@@ -336,7 +370,7 @@ nav li:hover::before {
     overflow: hidden;
     color: #333;
     font-family: 'Agency FB', sans-serif;
-    font-size: 4em;
+    font-size: 4.8em;
     font-weight: 100;
     margin-bottom: 5px;
     letter-spacing: 1px;
@@ -370,14 +404,14 @@ nav li:hover::before {
     width: 100%;
     height: 99.5%;
     background-color: rgba(0, 0, 0, 0.5);
-    animation: fadeInUp 1.8s ease-in-out forwards;
     z-index: 1;
+    animation: slideInFromRight 1.8s ease-in-out;
 }
 
 .interiors-image-container img {
     width: 100%;
     height: 100%;
-    animation: fadeInUp 1.8s ease-in-out forwards;
+    animation: slideInFromRight 1.8s ease-in-out;
 }
 
 .explore-button {
@@ -396,12 +430,16 @@ nav li:hover::before {
     font-family: 'Agency FB', sans-serif;
     font-weight: 500;
     z-index: 2;
+    animation: exploreButtonAnimation 2.2s ease-in-out;
 }
+
 
 .explore-button:hover {
     background-color: #333;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    transform: translate(-50%, -50%) scale(1.03);
 }
+
 
 /**** Phylosophy container ****/
 
@@ -477,6 +515,7 @@ nav li:hover::before {
     font-family: 'Agency FB', sans-serif;
     font-weight: 500;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    display: none;
 }
 
 .custom-button:hover {
@@ -506,7 +545,7 @@ nav li:hover::before {
 
 .social-icon {
     margin-right: 25px;
-    color: #999;
+    color: #e1e1e1;
     font-size: 24px;
     transition: color 0.3s ease-in-out;
     cursor: pointer;
@@ -518,7 +557,7 @@ nav li:hover::before {
 
 .privacy-policy {
     margin: 0;
-    color: #999;
+    color: #e1e1e1;
     font-size: 24px;
     font-family: 'Agency FB', sans-serif;
     transition: color 0.3s ease-in-out;
@@ -546,18 +585,25 @@ nav li:hover::before {
     color: #9f4b2c;
     text-decoration: none;
     opacity: 0;
-    pointer-events: none;
     transition: all .4s;
-    z-index: 1;
     border: 1px solid #333;
-  }
-  
-  .to-top.active {
+    z-index: 2;
+}
+
+.to-top.stop {
+    position: absolute;
+    bottom: auto;
+    top: calc(100% - 50px);
+    /* Adjust this value as needed */
+    transition: top .4s;
+}
+
+.to-top.active {
     bottom: 32px;
     pointer-events: auto;
     opacity: 1;
     color: #9f4b2c;
-  }
+}
 
 /**** Smaller screens ****/
 
@@ -648,6 +694,15 @@ nav li:hover::before {
         padding: 15px 20px;
         font-size: 20px;
     }
+
+    .to-top {
+        width: 40px;
+        height: 40px;
+        font-size: 24px;
+        bottom: 24px;
+        right: 24px;
+    }
+
 }
 
 /**** Even smaller screens ****/
@@ -663,5 +718,11 @@ nav li:hover::before {
 @media (min-width: 900px) {
     .word span:hover {
         transform: scale(1.10);
+    }
+}
+
+@media (min-width: 1500px) {
+    .word {
+        font-size: 6em;
     }
 }
