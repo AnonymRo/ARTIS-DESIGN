@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARTIS DESIGN | Creative Living</title>
+    <meta name="title" content="ARTIS DESIGN">
+    <meta name="description" content="This is a dummy text">
+    <meta name="keywords" content="keyword1, keyword2, keyword3">
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        crossorigin="anonymous">
+
+
+
+
+    <!-- CSS style -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Favicon for general browsers -->
+    <link rel="icon" href="./Photos/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="icon" href="./Photos/favicon-32x32.png" sizes="32x32" type="image/png">
+
+    <!-- Favicon for Apple devices -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./Photos/apple-touch-icon.png">
+
+    <!-- Favicon for Android Chrome -->
+    <link rel="icon" type="image/png" sizes="192x192" href="./Photos/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="./Photos/android-chrome-512x512.png">
+
+</head>
+
+<body>
+
+    <header>
+
+        <div class="header-container">
+            <div class="main-logo">
+                <a href="index.html">
+                    <img src="./Photos/LOGO ARTIS DESIGN V5.png" width="180" height="120">
+                </a>
+            </div>
+            <nav>
+                <ul class="menu-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Interiors</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="menu-icon" id="menu">
+                <div>
+                    <span class="line-1"></span>
+                    <span class="line-2"></span>
+                    <span class="line-3"></span>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <main class="contact-container">
+        <div class="contact-info-container">
+            <h2>Informatii de contact</h2>
+            <ul>
+                <li><i class="fas fa-phone"></i><a href="tel:+40755349805">+40 (755) 349 805</a></li>
+                <li><i class="fas fa-envelope"></i><a href="mailto:artis.dsgnstudio@gmail.com">artis.dsgnstudio@gmail.com</a></li>
+                <li><i class="fab fa-facebook"></i> <a href="https://www.facebook.com/artis.dsgnstudio">Facebook</a></li>
+                <li><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/artisdesign_studio/">Instagram</a></li>
+            </ul>
+        </div>
+
+        <div class="contact-form-container">
+            <h2>Contacteaza-ne pentru o oferta</h2>
+            <form action="https://formsubmit.co/artis.dsgnstudio@gmail.com" method="POST">
+                
+                <label for="name">Nume complet:</label>
+                <input type="text" id="name" name="Nume&nbsp;complet" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="Email" required>
+
+                <label for="phone">Telefon:</label>
+                <input type="tel" id="phone" name="Număr&nbsp;de&nbsp;telefon" required>
+
+                <label for="city">Oras:</label>
+                <input type="text" id="city" name="Oraș" required>
+
+                <label for="message">Mesajul tau:</label>
+                <textarea id="message" name="Mesajul&nbsp;clientului" required></textarea>
+
+                <button type="submit">Trimite</button>
+            </form>
+        </div>
+    </main>
+
+    <!-- Transparent overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- To top button -->
+    <a href="#" class="to-top">
+        <i class="fa-solid fa-chevron-up"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+
+<footer class="footer-container">
+    <div class="social-icons">
+        <a href="https://www.facebook.com/artis.dsgnstudio" target="_blank" class="social-icon">
+            <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a href="https://www.instagram.com/artisdesign_studio/" target="_blank" class="social-icon">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+    </div>
+
+    <!-- Privacy Policy -->
+    <div class="privacy-policy">
+        <a>Privacy Policy</a>
+    </div>
+</footer>
+
+</html>

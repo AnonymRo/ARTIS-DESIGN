@@ -23,14 +23,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function updateSeparator() {
     var bodyContainer = document.querySelector(".body-container");
-    var bodyContainerBottom = bodyContainer.getBoundingClientRect().bottom;
-
-    if (bodyContainerBottom <= window.innerHeight) {
-      separator.style.width = "100%";
-      philosophyContainer.classList.add("visible");
-    } else {
-      separator.style.width = "0";
-      philosophyContainer.classList.remove("visible");
+  
+    // Check if bodyContainer is not null before proceeding
+    if (bodyContainer) {
+      var bodyContainerBottom = bodyContainer.getBoundingClientRect().bottom;
+  
+      if (bodyContainerBottom <= window.innerHeight) {
+        separator.style.width = "100%";
+        philosophyContainer.classList.add("visible");
+      } else {
+        separator.style.width = "0";
+        philosophyContainer.classList.remove("visible");
+      }
     }
   }
 
@@ -86,3 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 });
+
+function redirectToContact() {
+    window.location.href = 'contact.html';
+}

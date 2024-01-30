@@ -606,9 +606,122 @@ nav li:hover::before {
     color: #9f4b2c;
 }
 
-/**** Cookies ****/
+/**** Contact page ****/
 
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 100px;
+}
 
+.contact-info-container {
+    flex: 1;
+    padding: 20px;
+    background-color: #e1e1e1;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form-container {
+    flex: 1;
+    padding: 20px;
+    background-color: #e1e1e1;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info-container h2,
+.contact-form-container h2 {
+    font-size: 35px;
+    margin-bottom: 20px;
+    font-family: 'Agency FB', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-info-container ul {
+    list-style: none;
+    padding: 30px;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-info-container li {
+    margin-bottom: 70px;
+    font-size: 24px;
+}
+
+.contact-info-container li a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.2s ease-in-out;
+}
+
+.contact-info-container li a:hover {
+    color: #9f4b2c;
+}
+
+.fas.fa-phone,
+.fas.fa-envelope,
+.fab.fa-facebook,
+.fab.fa-instagram {
+    font-size: 40px;
+    margin-right: 20px;
+    vertical-align: middle;
+    line-height: 30px;
+    transition: color 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.contact-form-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form-container label {
+    font-size: 22px;
+    margin-bottom: 8px;
+    font-family: 'Agency FB', sans-serif;
+}
+
+.contact-form-container input {
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    font-family: 'Agency FB', sans-serif;
+}
+
+.contact-form-container textarea {
+    padding: 12px; /* Adjust padding as needed */
+    margin-bottom: 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    border: none;
+    height: 100px; /* Set the desired height */
+    font-family: 'Agency FB', sans-serif;
+}
+
+.contact-form-container button {
+    background-color: #9f4b2c;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.4s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.contact-form-container button:hover {
+    background-color: #333;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+}
 
 /**** Smaller screens ****/
 
@@ -715,6 +828,40 @@ nav li:hover::before {
         right: 24px;
     }
 
+    .contact-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .contact-info-container {
+        margin-top: 30px;
+    }
+
+    .contact-form-container {
+        margin-bottom: 60px;
+    }
+
+    .fas.fa-phone,
+    .fas.fa-envelope,
+    .fab.fa-facebook,
+    .fab.fa-instagram {
+        font-size: 30px;
+    }
+
+    .contact-info-container li {
+        font-size: 18px;
+        margin-bottom: 50px;
+    }
+
+    .contact-info-container ul {
+        padding: 15px;
+    }
+
+    .contact-info-container h2,
+    .contact-form-container h2 {
+        font-size: 30px;
+    }
+
 }
 
 /**** Even smaller screens ****/
@@ -722,6 +869,11 @@ nav li:hover::before {
 @media (max-width: 415px) {
     .word {
         font-size: .9em;
+    }
+
+    .contact-info-container li {
+        font-size: 16px;
+        margin-bottom: 50px;
     }
 }
 
