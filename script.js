@@ -89,6 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+  // Button for index page
   const indexButton = document.getElementById('indexButton');
   if (indexButton) {
     indexButton.addEventListener('click', function () {
@@ -96,8 +97,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-});
+  //Button for contact page
+  const contactButton = document.getElementById('contactButton');
+  if (contactButton) {
+    contactButton.addEventListener('click', function () {
+      window.location.href = 'contact.html';
+    });
+  }
 
-function redirectToContact() {
-    window.location.href = 'contact.html';
-}
+});

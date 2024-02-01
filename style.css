@@ -731,8 +731,7 @@ nav li:hover::before {
 
 .Section-success {
     position: relative;
-    min-height: 80vh;
-    padding: 100px 0;
+    height: calc(100vh - 130px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -746,6 +745,28 @@ nav li:hover::before {
 .Succes-text {
     text-align: center;
     font-family: 'Agency FB', sans-serif;
+    font-size: 35px;
+}
+
+.backHome-button {
+    padding: 20px 28px;
+    font-size: 22px;
+    background-color: #9f4b2c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.4s ease-in-out, transform 0.4s ease-in-out, box-shadow 0.3s ease-in-out;
+    font-family: 'Agency FB', sans-serif;
+    font-weight: 500;
+    z-index: 2;
+    animation: exploreButtonAnimation 2.2s ease-in-out;
+}
+
+.explore-button:hover {
+    background-color: #333;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    transform: scale(1.03);
 }
 
 /**** Smaller screens ****/
