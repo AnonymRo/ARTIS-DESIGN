@@ -732,6 +732,7 @@ nav li:hover::before {
 .Section-success {
     position: relative;
     height: calc(100vh - 130px);
+    padding: 10px 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -745,7 +746,7 @@ nav li:hover::before {
 .Succes-text {
     text-align: center;
     font-family: 'Agency FB', sans-serif;
-    font-size: 35px;
+    font-size: 32px;
 }
 
 .backHome-button {
@@ -763,7 +764,7 @@ nav li:hover::before {
     animation: exploreButtonAnimation 2.2s ease-in-out;
 }
 
-.explore-button:hover {
+.backHome-button:hover {
     background-color: #333;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
     transform: scale(1.03);
