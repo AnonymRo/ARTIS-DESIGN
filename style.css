@@ -747,10 +747,11 @@ nav li:hover::before {
     text-align: center;
     font-family: 'Agency FB', sans-serif;
     font-size: 32px;
+    animation: exploreButtonAnimation 1s ease-in-out;
 }
 
 .backHome-button {
-    padding: 22px 28px;
+    padding: 20px 32px;
     font-size: 24px;
     background-color: #9f4b2c;
     color: white;
@@ -761,7 +762,7 @@ nav li:hover::before {
     font-family: 'Agency FB', sans-serif;
     font-weight: 500;
     z-index: 2;
-    animation: exploreButtonAnimation 2.2s ease-in-out;
+    animation: exploreButtonAnimation 1.3s ease-in-out;
 }
 
 .backHome-button:hover {
