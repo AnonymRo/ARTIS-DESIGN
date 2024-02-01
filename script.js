@@ -89,6 +89,13 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+  const indexButton = document.getElementById('indexButton');
+  if (indexButton) {
+    indexButton.addEventListener('click', function () {
+      window.location.href = 'index.html';
+    });
+  }
+
 });
 
 function redirectToContact() {

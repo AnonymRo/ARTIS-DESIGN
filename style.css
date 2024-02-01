@@ -659,6 +659,7 @@ nav li:hover::before {
     text-decoration: none;
     color: inherit;
     transition: color 0.2s ease-in-out;
+    cursor: pointer;
 }
 
 .contact-info-container li a:hover {
@@ -668,7 +669,8 @@ nav li:hover::before {
 .fas.fa-phone,
 .fas.fa-envelope,
 .fab.fa-facebook,
-.fab.fa-instagram {
+.fab.fa-instagram,
+.fa-solid.fa-user {
     font-size: 40px;
     margin-right: 20px;
     vertical-align: middle;
@@ -698,12 +700,14 @@ nav li:hover::before {
 }
 
 .contact-form-container textarea {
-    padding: 12px; /* Adjust padding as needed */
+    padding: 12px;
+    /* Adjust padding as needed */
     margin-bottom: 15px;
     border-radius: 5px;
     font-size: 16px;
     border: none;
-    height: 100px; /* Set the desired height */
+    height: 100px;
+    /* Set the desired height */
     font-family: 'Agency FB', sans-serif;
 }
 
@@ -721,6 +725,27 @@ nav li:hover::before {
 .contact-form-container button:hover {
     background-color: #333;
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+/**** Email sent page ****/
+
+.Section-success {
+    position: relative;
+    min-height: 80vh;
+    padding: 100px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Honey {
+    display: none;
+}
+
+.Succes-text {
+    text-align: center;
+    font-family: 'Agency FB', sans-serif;
 }
 
 /**** Smaller screens ****/
