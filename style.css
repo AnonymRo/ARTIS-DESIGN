@@ -732,7 +732,7 @@ nav li:hover::before {
 .Section-success {
     position: relative;
     height: calc(100vh - 130px);
-    padding: 10px 0;
+    padding: 0 16px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -751,7 +751,7 @@ nav li:hover::before {
 }
 
 .backHome-button {
-    padding: 20px 32px;
+    padding: 20px 40px;
     font-size: 24px;
     background-color: #9f4b2c;
     color: white;
