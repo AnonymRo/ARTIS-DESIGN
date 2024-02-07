@@ -23,11 +23,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function updateSeparator() {
     var bodyContainer = document.querySelector(".body-container");
-  
+
     // Check if bodyContainer is not null before proceeding
     if (bodyContainer) {
       var bodyContainerBottom = bodyContainer.getBoundingClientRect().bottom;
-  
+
       if (bodyContainerBottom <= window.innerHeight) {
         separator.style.width = "100%";
         philosophyContainer.classList.add("visible");
@@ -97,12 +97,26 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  //Button for contact page
+  // Button for contact page
   const contactButton = document.getElementById('contactButton');
   if (contactButton) {
     contactButton.addEventListener('click', function () {
       window.location.href = 'contact.html';
     });
   }
+
+  // Toggle photos on mobile
+  const cards = document.querySelectorAll('.card');
+
+  cards.forEach(card => {
+    card.addEventListener('click', function () {
+      cards.forEach(otherCard => {
+        if (otherCard !== this) {
+          otherCard.classList.remove('hover-effect');
+        }
+      });
+      this.classList.toggle('hover-effect');
+    });
+  });
 
 });
