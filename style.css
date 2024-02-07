@@ -934,7 +934,7 @@ nav li:hover::before {
 .MainContainer .card.hover-effect .contentBox .content {
     transform: translateX(0);
     opacity: 1;
-    transition-delay: 0.5s;
+    transition-delay: 0.45s;
 }
 
 .MainContainer .card:hover .contentBox .content h3 {
@@ -979,6 +979,26 @@ nav li:hover::before {
     justify-content: center;
     margin: 30px 0 0 0;
     margin-bottom: 40px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.interior-button {
+    padding: 12px 20px;
+    font-size: 25px;
+    background-color: #9f4b2c;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.4s ease-in-out, box-shadow 0.3s ease-in-out;
+    font-family: 'Agency FB', sans-serif;
+    font-weight: 500;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.interior-button:hover {
+    background-color: #9f4b2c;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 @media (max-width: 768px) {
@@ -1178,6 +1198,12 @@ nav li:hover::before {
 
     .MainContainer .card:hover .contentBox .content p {
         font-size: 1.3em;
+    }
+
+    .interior-button {
+        display: block;
+        padding: 10px 30px;
+        font-size: 24px;
     }
 
 }

@@ -61,17 +61,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  toTop.addEventListener("click", function (e) {
-    e.preventDefault();
-
-    setTimeout(() => {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    }, 100);
-  });
-
   window.addEventListener("scroll", () => {
     const scrollPosition = window.scrollY;
     const footerPosition = footer.getBoundingClientRect().top;
@@ -97,6 +86,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+ 
+
   // Button for contact page
   const contactButton = document.getElementById('contactButton');
   if (contactButton) {
@@ -105,9 +96,17 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Toggle photos on mobile
+  // Get all card elements
   const cards = document.querySelectorAll('.card');
 
+  // Function to remove hover-effect class from all cards
+  function removeHoverEffect() {
+    cards.forEach(card => {
+      card.classList.remove('hover-effect');
+    });
+  }
+
+  // Add click event listener to each card
   cards.forEach(card => {
     card.addEventListener('click', function () {
       cards.forEach(otherCard => {
@@ -118,5 +117,22 @@ document.addEventListener("DOMContentLoaded", function () {
       this.classList.toggle('hover-effect');
     });
   });
+
+  // Add click event listener to the to-top button
+  toTop.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    // Remove hover-effect class from all cards
+    removeHoverEffect();
+
+    // Scroll to top
+    setTimeout(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }, 100);
+  });
+
 
 });
