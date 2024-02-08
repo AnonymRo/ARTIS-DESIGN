@@ -86,7 +86,13 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
- 
+ // Button for interior page
+ const interiorButton = document.getElementById('interiorButton');
+  if (interiorButton) {
+    interiorButton.addEventListener('click', function () {
+      window.location.href = 'interiors.html';
+    });
+  }
 
   // Button for contact page
   const contactButton = document.getElementById('contactButton');
@@ -96,43 +102,45 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Get all card elements
-  const cards = document.querySelectorAll('.card');
+  // Select all card elements
+const cards = document.querySelectorAll('.card');
 
-  // Function to remove hover-effect class from all cards
-  function removeHoverEffect() {
-    cards.forEach(card => {
-      card.classList.remove('hover-effect');
-    });
-  }
-
-  // Add click event listener to each card
+// Function to remove hover-effect class from all cards
+function removeHoverEffect() {
   cards.forEach(card => {
-    card.addEventListener('click', function () {
-      cards.forEach(otherCard => {
-        if (otherCard !== this) {
-          otherCard.classList.remove('hover-effect');
-        }
-      });
-      this.classList.toggle('hover-effect');
+    card.classList.remove('hover-effect');
+  });
+}
+
+// Add click event listener to each card
+cards.forEach(card => {
+  card.addEventListener('click', function () {
+    removeHoverEffect(); // Remove hover effect from all cards
+    this.classList.toggle('hover-effect'); // Toggle hover effect for the clicked card
+  });
+
+  // Add mouseleave event listener to remove hover effect when mouse leaves the card
+  card.addEventListener('mouseleave', function () {
+    removeHoverEffect(); // Remove hover effect from all cards
+  });
+});
+
+// Add click event listener to the to-top button
+toTop.addEventListener("click", function (e) {
+  e.preventDefault();
+
+  // Remove hover-effect class from all cards
+  removeHoverEffect();
+
+  // Scroll to top
+  setTimeout(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
     });
-  });
+  }, 100);
+});
 
-  // Add click event listener to the to-top button
-  toTop.addEventListener("click", function (e) {
-    e.preventDefault();
-
-    // Remove hover-effect class from all cards
-    removeHoverEffect();
-
-    // Scroll to top
-    setTimeout(() => {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    }, 100);
-  });
 
 
 });
