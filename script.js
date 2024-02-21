@@ -86,8 +86,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
- // Button for interior page
- const interiorButton = document.getElementById('interiorButton');
+  // Button for interior page
+  const interiorButton = document.getElementById('interiorButton');
   if (interiorButton) {
     interiorButton.addEventListener('click', function () {
       window.location.href = 'interiors.html';
@@ -103,44 +103,109 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Select all card elements
-const cards = document.querySelectorAll('.card');
+  const cards = document.querySelectorAll('.card');
 
-// Function to remove hover-effect class from all cards
-function removeHoverEffect() {
-  cards.forEach(card => {
-    card.classList.remove('hover-effect');
-  });
-}
-
-// Add click event listener to each card
-cards.forEach(card => {
-  card.addEventListener('click', function () {
-    removeHoverEffect(); // Remove hover effect from all cards
-    this.classList.toggle('hover-effect'); // Toggle hover effect for the clicked card
-  });
-
-  // Add mouseleave event listener to remove hover effect when mouse leaves the card
-  card.addEventListener('mouseleave', function () {
-    removeHoverEffect(); // Remove hover effect from all cards
-  });
-});
-
-// Add click event listener to the to-top button
-toTop.addEventListener("click", function (e) {
-  e.preventDefault();
-
-  // Remove hover-effect class from all cards
-  removeHoverEffect();
-
-  // Scroll to top
-  setTimeout(() => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
+  // Function to remove hover-effect class from all cards
+  function removeHoverEffect() {
+    cards.forEach(card => {
+      card.classList.remove('hover-effect');
     });
-  }, 100);
-});
+  }
 
+  // Add click event listener to each card
+  cards.forEach(card => {
+    card.addEventListener('mouseover', function () {
+      const overlay = card.querySelector('.contentBox::before');
+      const button = card.querySelector('.view-project-btn');
+      if (overlay) overlay.classList.add('visible');
+      if (button) button.classList.add('overlay-visible');
+    });
 
+    card.addEventListener('mouseleave', function () {
+      const overlay = card.querySelector('.contentBox::before');
+      const button = card.querySelector('.view-project-btn');
+      if (overlay) overlay.classList.remove('visible');
+      if (button) button.classList.remove('overlay-visible');
+    });
 
+    card.addEventListener('click', function () {
+      removeHoverEffect(); // Remove hover effect from all cards
+      this.classList.toggle('hover-effect'); // Toggle hover effect for the clicked card
+    });
+  });
+
+  // Add click event listener to the to-top button
+  toTop.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    // Remove hover-effect class from all cards
+    removeHoverEffect();
+
+    // Scroll to top
+    setTimeout(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }, 100);
+  });
+
+  const projectId = getProjectIdFromURL();
+  const project = fetchProjectDetails(projectId);
+  renderProjectDetails(project);
+
+  function renderProjectDetails(project) {
+    const projectImagesContainer = document.querySelector('.project-images');
+    const projectDescriptionContainer = document.querySelector('.project-description');
+
+    project.images.forEach(imageUrl => {
+      const imgElement = document.createElement('img');
+      imgElement.src = imageUrl;
+      projectImagesContainer.appendChild(imgElement);
+    });
+
+    projectDescriptionContainer.textContent = project.description;
+  }
+
+  function getProjectIdFromURL() {
+    // Get the current URL
+    const urlParams = new URLSearchParams(window.location.search);
+    // Extract the project ID from the URL query parameters
+    return urlParams.get('projectId');
+  }
+
+  function fetchProjectDetails(projectId) {
+    // Example project data
+    const projects = {
+      'project1': {
+        id: 'project1',
+        images: ['./Photos/IMG_0015.JPG', './Photos/IMG_0015.JPG', './Photos/IMG_0015.JPG'],
+        description: 'This is the description for project 1.'
+      },
+      'project2': {
+        id: 'project2',
+        images: ['project2-image1.jpg', 'project2-image2.jpg', 'project2-image3.jpg'],
+        description: 'This is the description for project 2.'
+      },
+      'project3': {
+        id: 'project3',
+        images: ['project2-image1.jpg', 'project2-image2.jpg', 'project2-image3.jpg'],
+        description: 'This is the description for project 3.'
+      },
+      'project4': {
+        id: 'project4',
+        images: ['project2-image1.jpg', 'project2-image2.jpg', 'project2-image3.jpg'],
+        description: 'This is the description for project 4.'
+      },
+    };
+
+    // Check if the project ID exists in the projects object
+    if (projects.hasOwnProperty(projectId)) {
+      return projects[projectId];
+    } else {
+      // Handle case where project ID is not found
+      console.error('Project not found.');
+      return null;
+    }
+  }
 });

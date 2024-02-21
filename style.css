@@ -872,25 +872,24 @@ nav li:hover::before {
     overflow: hidden;
     border-radius: 10px;
     opacity: 0; /* Initially hidden */
-    animation: slideInFromLeft 1s ease forwards; /* Animation for appearing */
+    animation: slideInFromLeft 1.2s ease forwards; /* Animation for appearing */
 }
 
 .MainContainer .card:nth-child(1) {
-    animation-delay: 0.2s; /* Delay for the first card */
+    animation-delay: 0.3s; /* Delay for the first card */
 }
 
 .MainContainer .card:nth-child(2) {
-    animation-delay: 0.4s; /* Delay for the second card */
+    animation-delay: 0.6s; /* Delay for the second card */
 }
 
 .MainContainer .card:nth-child(3) {
-    animation-delay: 0.6s; /* Delay for the third card */
+    animation-delay: 0.9s; /* Delay for the third card */
 }
 
 .MainContainer .card:nth-child(4) {
-    animation-delay: 0.8s; /* Delay for the third card */
+    animation-delay: 1.2s; /* Delay for the third card */
 }
-
 
 .MainContainer .card .imgBox,
 .MainContainer .card .contentBox {
@@ -920,13 +919,17 @@ nav li:hover::before {
     height: 100%;
     background: #333;
     transform: scaleX(0);
-    opacity: 0; /* Initial opacity set to 0 */
+    opacity: 0;
+    transform-origin: left;
+    transition: opacity 0.3s ease; /* Removed delay for the overlay */
 }
 
 .MainContainer .card:hover .contentBox::before,
 .MainContainer .card.hover-effect .contentBox::before {
     transform: scaleX(1);
-    opacity: 0.5; /* Opacity set to 0.5 when hovering */
+    opacity: 0.5;
+    transform-origin: left;
+    transition-delay: 0s; /* Added delay for the text and button */
 }
 
 .MainContainer .card .contentBox {
@@ -941,11 +944,15 @@ nav li:hover::before {
     z-index: 1;
     opacity: 0; /* Initial opacity set to 0 */
     font-family: 'Agency FB', sans-serif;
+    font-size: 1em; /* Reset font size */
+    color: initial; /* Reset font color */
 }
 
 .MainContainer .card:hover .contentBox .content,
 .MainContainer .card.hover-effect .contentBox .content {
     opacity: 1; /* Opacity set to 1 when hovering */
+    font-size: inherit; /* Inherit font size */
+    color: inherit; /* Inherit font color */
 }
 
 .MainContainer .card:hover .contentBox .content h3,
@@ -1012,6 +1019,12 @@ nav li:hover::before {
     background-color: #333;
 }
 
+.view-project-btn.disabled {
+    pointer-events: none; /* Disable pointer events */
+    opacity: 0.5; /* Optionally reduce opacity to indicate it's disabled */
+    cursor: default; /* Optionally change cursor to default */
+}
+
 @media (max-width: 768px) {
     .img-fluid {
         position: static;
@@ -1020,6 +1033,9 @@ nav li:hover::before {
         margin-bottom: 20px;
     }
 }
+
+
+
 
 
 /**** Smaller screens ****/
@@ -1218,9 +1234,13 @@ nav li:hover::before {
         font-size: 24px;
     }
 
-    .MainContainer .card{
+    .MainContainer .card {
     opacity: 0;
     animation: slideInFromLeft 1.4s ease forwards;
+    }
+
+    .MainContainer .card .contentBox::before {
+        transition: opacity 0.6s ease;
     }
 }
 
