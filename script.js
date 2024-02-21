@@ -102,6 +102,14 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  //Button for project1
+  const project1Button = document.getElementById('project1Button');
+  if (project1Button) {
+    project1Button.addEventListener('click', function () {
+      window.location.href = 'project1.html';
+    });
+  }
+
   // Select all card elements
   const cards = document.querySelectorAll('.card');
 
@@ -150,62 +158,15 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 100);
   });
 
-  const projectId = getProjectIdFromURL();
-  const project = fetchProjectDetails(projectId);
-  renderProjectDetails(project);
-
-  function renderProjectDetails(project) {
-    const projectImagesContainer = document.querySelector('.project-images');
-    const projectDescriptionContainer = document.querySelector('.project-description');
-
-    project.images.forEach(imageUrl => {
-      const imgElement = document.createElement('img');
-      imgElement.src = imageUrl;
-      projectImagesContainer.appendChild(imgElement);
-    });
-
-    projectDescriptionContainer.textContent = project.description;
-  }
-
-  function getProjectIdFromURL() {
-    // Get the current URL
-    const urlParams = new URLSearchParams(window.location.search);
-    // Extract the project ID from the URL query parameters
-    return urlParams.get('projectId');
-  }
-
-  function fetchProjectDetails(projectId) {
-    // Example project data
-    const projects = {
-      'project1': {
-        id: 'project1',
-        images: ['./Photos/IMG_0015.JPG', './Photos/IMG_0015.JPG', './Photos/IMG_0015.JPG'],
-        description: 'This is the description for project 1.'
-      },
-      'project2': {
-        id: 'project2',
-        images: ['project2-image1.jpg', 'project2-image2.jpg', 'project2-image3.jpg'],
-        description: 'This is the description for project 2.'
-      },
-      'project3': {
-        id: 'project3',
-        images: ['project2-image1.jpg', 'project2-image2.jpg', 'project2-image3.jpg'],
-        description: 'This is the description for project 3.'
-      },
-      'project4': {
-        id: 'project4',
-        images: ['project2-image1.jpg', 'project2-image2.jpg', 'project2-image3.jpg'],
-        description: 'This is the description for project 4.'
-      },
-    };
-
-    // Check if the project ID exists in the projects object
-    if (projects.hasOwnProperty(projectId)) {
-      return projects[projectId];
-    } else {
-      // Handle case where project ID is not found
-      console.error('Project not found.');
-      return null;
+  document.querySelectorAll('.interior-container img').forEach(image =>{
+    image.onclick = () =>{
+      document.querySelector('.popup-image').style.display = 'block';
+      document.querySelector('.popup-image img').src = image.getAttribute('src');
     }
+  });
+
+  document.querySelector('.popup-image span').onclick = () =>{
+    document.querySelector('.popup-image').style.display = 'none';
   }
+
 });

@@ -19,9 +19,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
         crossorigin="anonymous">
 
-
-
-
     <!-- CSS style -->
     <link rel="stylesheet" href="style.css">
 
@@ -35,6 +32,9 @@
     <!-- Favicon for Android Chrome -->
     <link rel="icon" type="image/png" sizes="192x192" href="./Photos/android-chrome-192x192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="./Photos/android-chrome-512x512.png">
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 </head>
 
@@ -66,14 +66,23 @@
         </div>
     </header>
 
-    <main class="project-details-container">
-        <div class="project-images">
-            <!-- Placeholder for project images -->
+    <div class="grid-container">
+
+        <h1>Imagine Gallery</h1>
+        <div class="interior-container">
+            <div class="image"><img src="./Photos/IMG_0015.JPG"></div>
+            <div class="image"><img src="./Photos/IMG_0015.JPG"></div>
+            <div class="image"><img src="./Photos/IMG_0015.JPG"></div>
+            <div class="image"><img src="./Photos/IMG_0015.JPG"></div>
+            <div class="image"><img src="./Photos/IMG_0015.JPG"></div>
+            <div class="image"><img src="./Photos/IMG_0015.JPG"></div>
         </div>
-        <div class="project-description">
-            <!-- Placeholder for project description -->
+
+        <div class="popup-image">
+            <span>&times;</span>
+            <img src="./Photos/IMG_0015.JPG">
         </div>
-    </main>
+    </div>
 
     <!-- Transparent overlay -->
     <div class="overlay" id="overlay"></div>

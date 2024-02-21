@@ -871,24 +871,30 @@ nav li:hover::before {
     margin-bottom: 60px;
     overflow: hidden;
     border-radius: 10px;
-    opacity: 0; /* Initially hidden */
-    animation: slideInFromLeft 1.2s ease forwards; /* Animation for appearing */
+    opacity: 0;
+    /* Initially hidden */
+    animation: slideInFromLeft 1.2s ease forwards;
+    /* Animation for appearing */
 }
 
 .MainContainer .card:nth-child(1) {
-    animation-delay: 0.3s; /* Delay for the first card */
+    animation-delay: 0.3s;
+    /* Delay for the first card */
 }
 
 .MainContainer .card:nth-child(2) {
-    animation-delay: 0.6s; /* Delay for the second card */
+    animation-delay: 0.6s;
+    /* Delay for the second card */
 }
 
 .MainContainer .card:nth-child(3) {
-    animation-delay: 0.9s; /* Delay for the third card */
+    animation-delay: 0.9s;
+    /* Delay for the third card */
 }
 
 .MainContainer .card:nth-child(4) {
-    animation-delay: 1.2s; /* Delay for the third card */
+    animation-delay: 1.2s;
+    /* Delay for the third card */
 }
 
 .MainContainer .card .imgBox,
@@ -921,7 +927,8 @@ nav li:hover::before {
     transform: scaleX(0);
     opacity: 0;
     transform-origin: left;
-    transition: opacity 0.3s ease; /* Removed delay for the overlay */
+    transition: opacity 0.3s ease;
+    /* Removed delay for the overlay */
 }
 
 .MainContainer .card:hover .contentBox::before,
@@ -929,7 +936,8 @@ nav li:hover::before {
     transform: scaleX(1);
     opacity: 0.5;
     transform-origin: left;
-    transition-delay: 0s; /* Added delay for the text and button */
+    transition-delay: 0s;
+    /* Added delay for the text and button */
 }
 
 .MainContainer .card .contentBox {
@@ -942,17 +950,23 @@ nav li:hover::before {
     position: relative;
     padding: 30px;
     z-index: 1;
-    opacity: 0; /* Initial opacity set to 0 */
+    opacity: 0;
+    /* Initial opacity set to 0 */
     font-family: 'Agency FB', sans-serif;
-    font-size: 1em; /* Reset font size */
-    color: initial; /* Reset font color */
+    font-size: 1em;
+    /* Reset font size */
+    color: initial;
+    /* Reset font color */
 }
 
 .MainContainer .card:hover .contentBox .content,
 .MainContainer .card.hover-effect .contentBox .content {
-    opacity: 1; /* Opacity set to 1 when hovering */
-    font-size: inherit; /* Inherit font size */
-    color: inherit; /* Inherit font color */
+    opacity: 1;
+    /* Opacity set to 1 when hovering */
+    font-size: inherit;
+    /* Inherit font size */
+    color: inherit;
+    /* Inherit font color */
 }
 
 .MainContainer .card:hover .contentBox .content h3,
@@ -991,38 +1005,35 @@ nav li:hover::before {
 }
 
 .Photo {
-    color: #333;
+    font-size: 40px;
     font-family: 'Agency FB', sans-serif;
-    font-size: 4em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 30px 0 0 0;
-    margin-bottom: 40px;
-    animation: fadeInUp 1s ease-in-out;
+    font-weight: normal;
+    padding: 15px;
+    color: #333;
+    text-align: center;
+    text-transform: capitalize;
 }
 
 .view-project-btn {
-    display: block;
-    margin: 0 auto;
-    width: 100px;
-    padding: 15px 25px;
+    padding: 18px 45px;
+    font-size: 27px;
     background-color: #9f4b2c;
     color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.4s ease-in-out, box-shadow 0.3s ease-in-out;
+    font-family: 'Agency FB', sans-serif;
+    font-weight: 500;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
     text-align: center;
+    display: flex;
+    margin: 0 auto;
 }
 
 .view-project-btn:hover {
     background-color: #333;
-}
-
-.view-project-btn.disabled {
-    pointer-events: none; /* Disable pointer events */
-    opacity: 0.5; /* Optionally reduce opacity to indicate it's disabled */
-    cursor: default; /* Optionally change cursor to default */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 @media (max-width: 768px) {
@@ -1034,8 +1045,80 @@ nav li:hover::before {
     }
 }
 
+/**** Interior Details page ****/
 
+.grid-container {
+    position: relative;
+    min-height: 100vh;
+}
 
+.grid-container h1 {
+    font-size: 40px;
+    font-family: 'Agency FB', sans-serif;
+    font-weight: normal;
+    padding: 15px;
+    color: #333;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.grid-container .interior-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.grid-container .interior-container .image{
+    height: 250px;
+    width: 350px;
+    border: 1px solid #333;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+.grid-container .interior-container .image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: .2s linear;
+}
+
+.grid-container .interior-container .image:hover img {
+    transform: scale(1.02);
+}
+
+.grid-container .popup-image {
+    position: fixed;
+    top: 0; left: 0;
+    background: rgba(0, 0, 0, 0.9);
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
+.grid-container .popup-image span {
+    position: absolute;
+    top: 0; right: 10px;
+    font-size: 40px;
+    font-weight: bolder;
+    color: #e1e1e1;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.grid-container .popup-image img {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    border: 4px solid #e1e1e1;
+    border-radius: 5px;
+    width: 75%;
+    object-fit: cover;
+}
 
 
 /**** Smaller screens ****/
@@ -1235,12 +1318,25 @@ nav li:hover::before {
     }
 
     .MainContainer .card {
-    opacity: 0;
-    animation: slideInFromLeft 1.4s ease forwards;
+        opacity: 0;
+        animation: slideInFromLeft 1.4s ease forwards;
     }
 
     .MainContainer .card .contentBox::before {
         transition: opacity 0.6s ease;
+    }
+
+    .grid-container .popup-image img {
+        width: 95%;
+    }
+
+    .grid-container .interior-container {
+        margin-bottom: 40px;
+    }
+
+    .view-project-btn {
+        padding: 15px 30px;
+        margin-top: 90px;
     }
 }
 
