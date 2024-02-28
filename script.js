@@ -264,11 +264,10 @@ document.querySelector('.popup-image img').addEventListener('touchend', function
     }
 });
 
-// Event listeners for navigation arrows
-document.querySelector('.popup-image .prev').addEventListener('mouseup', function (e) {
-    e.preventDefault();
-    previousImage();
-});
+// Event listener for closing the popup image with prev button
+document.querySelector('.popup-image .prev').onclick = () => {
+  previousImage();
+};
 
 document.querySelector('.popup-image .next').addEventListener('mouseup', function (e) {
     e.preventDefault();
@@ -295,6 +294,5 @@ document.querySelector('.popup-image .close').onclick = () => {
         popupImage.style.display = 'none';
     }
 };
-
 
 });
