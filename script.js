@@ -186,16 +186,24 @@ document.addEventListener("DOMContentLoaded", function () {
 let currentImageIndex = 0;
 let totalImages = 0;
 
+// Function to show popup and prevent scrolling
+function showPopup(index) {
+    const popupImage = document.querySelector('.popup-image');
+    const body = document.querySelector('body'); // Select the body element
+    if (popupImage) {
+        currentImageIndex = index; // Set current image index
+        totalImages = document.querySelectorAll('.interior-container img').length; // Get total images
+        popupImage.classList.add('active'); // Add active class to prevent scrolling
+        body.classList.add('popup-open'); // Add class to body to prevent scrolling
+        popupImage.style.display = 'block';
+        popupImage.querySelector('img').src = document.querySelectorAll('.interior-container img')[index].getAttribute('src'); // Get image source using index
+    }
+}
+
 // Event listener for images inside .interior-container
 document.querySelectorAll('.interior-container img').forEach((image, index) => {
     image.onclick = () => {
-        const popupImage = document.querySelector('.popup-image');
-        if (popupImage) {
-            currentImageIndex = index; // Set current image index
-            totalImages = document.querySelectorAll('.interior-container img').length; // Get total images
-            popupImage.style.display = 'block';
-            popupImage.querySelector('img').src = image.getAttribute('src');
-        }
+        showPopup(index); // Pass the index to the showPopup function
     }
 });
 
@@ -204,7 +212,10 @@ const popupCloseButton = document.querySelector('.popup-image span');
 if (popupCloseButton) {
     popupCloseButton.onclick = () => {
         const popupImage = document.querySelector('.popup-image');
+        const body = document.querySelector('body'); // Select the body element
         if (popupImage) {
+            popupImage.classList.remove('active'); // Remove active class to enable scrolling
+            body.classList.remove('popup-open'); // Remove class from body to enable scrolling
             popupImage.style.display = 'none';
         }
     }
@@ -255,31 +266,35 @@ document.querySelector('.popup-image img').addEventListener('touchend', function
 
 // Event listeners for navigation arrows
 document.querySelector('.popup-image .prev').addEventListener('mouseup', function (e) {
-  e.preventDefault();
-  previousImage();
+    e.preventDefault();
+    previousImage();
 });
 
 document.querySelector('.popup-image .next').addEventListener('mouseup', function (e) {
-  e.preventDefault();
-  nextImage();
+    e.preventDefault();
+    nextImage();
 });
 
 document.querySelector('.popup-image .prev').addEventListener('touchend', function (e) {
-  e.preventDefault();
-  previousImage();
+    e.preventDefault();
+    previousImage();
 });
 
 document.querySelector('.popup-image .next').addEventListener('touchend', function (e) {
-  e.preventDefault();
-  nextImage();
+    e.preventDefault();
+    nextImage();
 });
 
 // Event listener for closing the popup image with prev and next buttons
 document.querySelector('.popup-image .close').onclick = () => {
     const popupImage = document.querySelector('.popup-image');
+    const body = document.querySelector('body'); // Select the body element
     if (popupImage) {
+        popupImage.classList.remove('active'); // Remove active class to enable scrolling
+        body.classList.remove('popup-open'); // Remove class from body to enable scrolling
         popupImage.style.display = 'none';
     }
 };
+
 
 });

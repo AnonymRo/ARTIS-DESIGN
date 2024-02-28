@@ -1226,6 +1226,11 @@ nav li:hover::before {
     display: none;
 }
 
+body.popup-open {
+    overflow: hidden;
+}
+
+
 .grid-container .popup-image .prev,
 .grid-container .popup-image .next {
     position: absolute;
