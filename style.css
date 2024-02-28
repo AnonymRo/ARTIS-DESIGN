@@ -121,6 +121,22 @@ body::-webkit-scrollbar-track {
     }
 }
 
+@keyframes showingFromTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+
+    50% {
+        opacity: 0.2;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 /**** Agency FB font ****/
 
@@ -953,7 +969,7 @@ nav li:hover::before {
     opacity: 0;
     /* Initial opacity set to 0 */
     font-family: 'Agency FB', sans-serif;
-    font-size: 1em;
+    font-size: .8em;
     /* Reset font size */
     color: initial;
     /* Reset font color */
@@ -971,7 +987,7 @@ nav li:hover::before {
 
 .MainContainer .card:hover .contentBox .content h3,
 .MainContainer .card.hover-effect .contentBox .content h3 {
-    font-size: 2em;
+    font-size: 1.7em;
     text-transform: uppercase;
     letter-spacing: 1px;
     color: white;
@@ -983,7 +999,7 @@ nav li:hover::before {
 
 .MainContainer .card:hover .contentBox .content p,
 .MainContainer .card.hover-effect .contentBox .content p {
-    font-size: 1.5em;
+    font-size: 1.3em;
     line-height: 1.4em;
     font-weight: 300;
     color: white;
@@ -1005,18 +1021,19 @@ nav li:hover::before {
 }
 
 .Photo {
-    font-size: 40px;
+    font-size: 50px;
     font-family: 'Agency FB', sans-serif;
-    font-weight: normal;
+    font-weight: bold;
     padding: 15px;
     color: #333;
     text-align: center;
     text-transform: capitalize;
+    animation: showingFromTop 1.8s ease-in-out;
 }
 
 .view-project-btn {
-    padding: 18px 45px;
-    font-size: 27px;
+    padding: 15px 40px;
+    font-size: 25px;
     background-color: #9f4b2c;
     color: white;
     border: none;
@@ -1029,6 +1046,7 @@ nav li:hover::before {
     text-align: center;
     display: flex;
     margin: 0 auto;
+    margin-top: 70px;
 }
 
 .view-project-btn:hover {
@@ -1047,9 +1065,54 @@ nav li:hover::before {
 
 /**** Interior Details page ****/
 
+.description-container {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    margin-bottom: 100px;
+}
+
+.presentation-picture {
+    max-width: 50%; /* Adjust the width of the picture */
+    flex: 0 0 auto; /* Set to initial value to allow the picture to shrink if necessary */
+    margin-right: 30px; /* Adjust spacing between picture and text */
+}
+
+.presentation-picture img {
+    width: 100%;
+    height: auto;
+    max-height: calc(100vh - 100px); /* Ensure the picture does not exceed viewport height */
+    border-radius: 5px; /* Optional: add border-radius for a rounded look */
+    animation: mainPhotoReveal 1.8s forwards;
+}
+
+.interior-text {
+    max-width: 50%; /* Adjust the width of the text */
+    flex: 1 1 auto; /* Allow the text to grow if necessary */
+    text-align: center; /* Center text horizontally */
+}
+
+.interior-text h2 {
+    font-size: 50px; /* Adjust font size as needed */
+    margin-top: 0; /* Remove default margin */
+    margin-bottom: 30px; /* Add margin bottom for spacing */
+    font-family: 'Agency FB', sans-serif;
+    font-weight: bolder;
+    text-transform: capitalize;
+}
+
+.interior-text p {
+    font-size: 22px; /* Adjust font size as needed */
+    margin-top: 0; /* Remove default margin */
+    font-family: 'Agency FB', sans-serif;
+    font-weight: 100;
+    padding: 15px;
+}
+
+
 .grid-container {
     position: relative;
     min-height: 100vh;
+    margin-bottom: 50px;
 }
 
 .grid-container h1 {
@@ -1103,7 +1166,7 @@ nav li:hover::before {
 .grid-container .popup-image span {
     position: absolute;
     top: 0; right: 10px;
-    font-size: 40px;
+    font-size: 50px;
     font-weight: bolder;
     color: #e1e1e1;
     cursor: pointer;
@@ -1114,10 +1177,10 @@ nav li:hover::before {
     position: absolute;
     top: 50%; left: 50%;
     transform: translate(-50%, -50%);
-    border: 4px solid #e1e1e1;
     border-radius: 5px;
-    width: 75%;
-    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 
@@ -1337,6 +1400,32 @@ nav li:hover::before {
     .view-project-btn {
         padding: 15px 30px;
         margin-top: 90px;
+    }
+
+    .description-container {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center items horizontally */
+        margin-bottom: 70px;
+    }
+
+    .presentation-picture {
+        width: 100%; /* Picture spans full width */
+        max-width: none; /* Remove max-width */
+        margin-right: 0; /* Remove right margin */
+    }
+
+    .presentation-picture img {
+        height: auto; /* Remove max-height */
+        border-radius: 0;
+    }
+
+    .interior-text {
+        max-width: 100%; /* Text spans full width */
+        margin-top: 30px; /* Add spacing between picture and text */
+    }
+
+    .interior-text h2 {
+        font-size: 40px;
     }
 }
 

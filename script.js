@@ -110,6 +110,30 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  //Button for project2
+  const project2Button = document.getElementById('project2Button');
+  if (project2Button) {
+    project2Button.addEventListener('click', function () {
+      window.location.href = 'project2.html';
+    });
+  }
+
+  //Button for project3
+  const project3Button = document.getElementById('project3Button');
+  if (project3Button) {
+    project3Button.addEventListener('click', function () {
+      window.location.href = 'project3.html';
+    });
+  }
+
+  //Button for project4
+  const project4Button = document.getElementById('project4Button');
+  if (project4Button) {
+    project4Button.addEventListener('click', function () {
+      window.location.href = 'project4.html';
+    });
+  }
+
   // Select all card elements
   const cards = document.querySelectorAll('.card');
 
