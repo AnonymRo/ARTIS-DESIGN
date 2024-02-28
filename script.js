@@ -182,15 +182,26 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 100);
   });
 
-  document.querySelectorAll('.interior-container img').forEach(image =>{
-    image.onclick = () =>{
-      document.querySelector('.popup-image').style.display = 'block';
-      document.querySelector('.popup-image img').src = image.getAttribute('src');
+  // Event listener for images inside .interior-container
+  document.querySelectorAll('.interior-container img').forEach(image => {
+    image.onclick = () => {
+      const popupImage = document.querySelector('.popup-image');
+      if (popupImage) {
+        popupImage.style.display = 'block';
+        popupImage.querySelector('img').src = image.getAttribute('src');
+      }
     }
   });
 
-  document.querySelector('.popup-image span').onclick = () =>{
-    document.querySelector('.popup-image').style.display = 'none';
+  // Event listener for closing the popup image
+  const popupCloseButton = document.querySelector('.popup-image span');
+  if (popupCloseButton) {
+    popupCloseButton.onclick = () => {
+      const popupImage = document.querySelector('.popup-image');
+      if (popupImage) {
+        popupImage.style.display = 'none';
+      }
+    }
   }
 
 });

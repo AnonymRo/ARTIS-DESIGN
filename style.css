@@ -404,6 +404,27 @@ nav li:hover::before {
     font-weight: 600;
 }
 
+.index-line {
+    width: 100%;
+    height: 2px; /* Increase thickness for better visibility */
+    background-color: #ddd; /* Light gray background color */
+    margin: 30px 0; /* Spacing above and below the separator */
+    position: relative; /* Enable absolute positioning of the pseudo-element */
+    margin-top: 0;
+}
+
+.index-line::after {
+    content: ''; /* Create pseudo-element */
+    position: absolute; /* Position relative to the parent */
+    top: 0;
+    left: 0;
+    width: 100%; /* Take the full width of the parent */
+    height: 100%; /* Full height */
+    background-color: #fff; /* White color for the pseudo-element */
+    border-radius: 50%; /* Round the corners for a smooth transition */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+}
+
 /**** Interiors picture ****/
 
 .interiors-image-container {
@@ -646,11 +667,21 @@ nav li:hover::before {
     border-radius: 10px;
 }
 
-.contact-info-container h2,
+.contact-info-container h2 {
+    font-size: 35px;
+    margin-bottom: 0;
+    font-family: 'Agency FB', sans-serif;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .contact-form-container h2 {
     font-size: 35px;
-    margin-bottom: 20px;
+    margin-bottom: 35px;
     font-family: 'Agency FB', sans-serif;
+    font-weight: 500;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -659,7 +690,8 @@ nav li:hover::before {
 .contact-info-container ul {
     list-style: none;
     padding: 30px;
-    margin-top: 60px;
+    margin-top: 50px;
+    margin-bottom: 0;
     display: flex;
     flex-direction: column;
 }
@@ -674,6 +706,9 @@ nav li:hover::before {
     color: inherit;
     transition: color 0.2s ease-in-out;
     cursor: pointer;
+    font-family: 'Agency FB', sans-serif;
+    font-size: 25px;
+    font-weight: 100;
 }
 
 .contact-info-container li a:hover {
@@ -732,7 +767,8 @@ nav li:hover::before {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 22px;
+    font-family: 'Agency FB', sans-serif;
     transition: background-color 0.4s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
@@ -817,10 +853,12 @@ nav li:hover::before {
     font-size: 36px;
     align-items: center;
     justify-content: center;
+    text-transform: capitalize;
+    font-weight: 400;
 }
 
 .package p {
-    font-size: 19px;
+    font-size: 18px;
     margin-top: 45px;
 }
 
@@ -1023,12 +1061,14 @@ nav li:hover::before {
 .Photo {
     font-size: 50px;
     font-family: 'Agency FB', sans-serif;
-    font-weight: bold;
+    font-weight: 400;
     padding: 15px;
     color: #333;
     text-align: center;
     text-transform: capitalize;
     animation: showingFromTop 1.8s ease-in-out;
+    margin-top: 0;
+    margin-bottom: 30px;
 }
 
 .view-project-btn {
@@ -1081,7 +1121,6 @@ nav li:hover::before {
     width: 100%;
     height: auto;
     max-height: calc(100vh - 100px); /* Ensure the picture does not exceed viewport height */
-    border-radius: 5px; /* Optional: add border-radius for a rounded look */
     animation: mainPhotoReveal 1.8s forwards;
 }
 
@@ -1092,20 +1131,44 @@ nav li:hover::before {
 }
 
 .interior-text h2 {
-    font-size: 50px; /* Adjust font size as needed */
+    font-size: 40px; /* Adjust font size as needed */
+    padding: 15px;
     margin-top: 0; /* Remove default margin */
     margin-bottom: 30px; /* Add margin bottom for spacing */
     font-family: 'Agency FB', sans-serif;
     font-weight: bolder;
     text-transform: capitalize;
+    animation: exploreButtonAnimation 1.5s ease-in;
 }
 
 .interior-text p {
     font-size: 22px; /* Adjust font size as needed */
     margin-top: 0; /* Remove default margin */
+    margin-bottom: 0;
     font-family: 'Agency FB', sans-serif;
     font-weight: 100;
     padding: 15px;
+    animation: exploreButtonAnimation 1.5s ease-in;
+}
+
+.interior-line {
+    width: 100%;
+    height: 2px; /* Increase thickness for better visibility */
+    background-color: #ddd; /* Light gray background color */
+    margin: 30px 0; /* Spacing above and below the separator */
+    position: relative; /* Enable absolute positioning of the pseudo-element */
+}
+
+.interior-line::after {
+    content: ''; /* Create pseudo-element */
+    position: absolute; /* Position relative to the parent */
+    top: 0;
+    left: 0;
+    width: 100%; /* Take the full width of the parent */
+    height: 100%; /* Full height */
+    background-color: #fff; /* White color for the pseudo-element */
+    border-radius: 50%; /* Round the corners for a smooth transition */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
 }
 
 
@@ -1254,7 +1317,7 @@ nav li:hover::before {
         width: auto;
         flex-direction: column;
         text-align: center;
-        padding-bottom: 5px;
+        padding-bottom: 0;
     }
 
     .word-container {
@@ -1360,6 +1423,8 @@ nav li:hover::before {
     .Photo {
         font-size: 2.7em;
         margin-bottom: 10px;
+        margin-top: 15px;
+        margin-bottom: 10px;
     }
 
     .MainContainer .card {
@@ -1427,6 +1492,20 @@ nav li:hover::before {
     .interior-text h2 {
         font-size: 40px;
     }
+
+    .package h2 {
+        text-transform: capitalize;
+        font-weight: 400;
+        margin-top: 0;
+    }
+
+    .package p {
+        font-weight: 100;
+    }
+
+    .MainContainer {
+        margin-bottom: 40px;
+    }
 }
 
 /**** Even smaller screens ****/
@@ -1447,6 +1526,12 @@ nav li:hover::before {
 @media (min-width: 900px) {
     .word span:hover {
         transform: scale(1.10);
+    }
+}
+
+@media (min-width: 1100px) {
+    .interior-text h2 {
+        font-size: 50px;
     }
 }
 

@@ -26,15 +26,15 @@
     <link rel="stylesheet" href="style.css">
 
     <!-- Favicon for general browsers -->
-    <link rel="icon" href="./Photos/favicon-16x16.png" sizes="16x16" type="image/png">
-    <link rel="icon" href="./Photos/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="./Photos/Logo/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="icon" href="./Photos/Logo/favicon-32x32.png" sizes="32x32" type="image/png">
 
     <!-- Favicon for Apple devices -->
-    <link rel="apple-touch-icon" sizes="180x180" href="./Photos/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./Photos/Logo/apple-touch-icon.png">
 
     <!-- Favicon for Android Chrome -->
-    <link rel="icon" type="image/png" sizes="192x192" href="./Photos/android-chrome-192x192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="./Photos/android-chrome-512x512.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./Photos/Logo/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="./Photos/Logo/android-chrome-512x512.png">
 
 </head>
 
@@ -85,31 +85,29 @@
         <div class="contact-form-container">
             <h2>Contacteaza-ne pentru o oferta</h2>
             <form action="https://formsubmit.co/artis.dsgnstudio@gmail.com" method="POST">
-
                 <input class="Honey" type="text" name="_honey">
-
                 <input type="hidden" name="_captcha" value="false">
-
                 <input type="hidden" name="_next" value="https://anonymro.github.io/ARTIS-DESIGN/succes.html">
 
                 <label for="name">Nume complet:</label>
-                <input type="text" id="name" name="Nume&nbsp;complet" required>
+                <input type="text" id="name" name="Nume complet" required autocomplete="name">
 
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="Email" required>
+                <input type="email" id="email" name="Email" required autocomplete="email">
 
                 <label for="phone">Telefon:</label>
-                <input type="tel" id="phone" name="Număr&nbsp;de&nbsp;telefon" required>
+                <input type="tel" id="phone" name="Număr de telefon" required autocomplete="tel">
 
                 <label for="city">Oras:</label>
-                <input type="text" id="city" name="Oraș" required>
+                <input type="text" id="city" name="Oraș" required autocomplete="address-level2">
 
                 <label for="message">Mesajul tau:</label>
-                <textarea id="message" name="Mesajul&nbsp;clientului" required></textarea>
+                <textarea id="message" name="Mesajul clientului" required autocomplete="off"></textarea>
 
                 <button type="submit">Trimite</button>
             </form>
         </div>
+
     </main>
 
     <!-- Transparent overlay -->
