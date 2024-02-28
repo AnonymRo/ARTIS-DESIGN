@@ -1226,14 +1226,33 @@ nav li:hover::before {
     display: none;
 }
 
-.grid-container .popup-image span {
+.grid-container .popup-image .prev,
+.grid-container .popup-image .next {
     position: absolute;
-    top: 0; right: 10px;
-    font-size: 50px;
-    font-weight: bolder;
-    color: #e1e1e1;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 40px;
+    color: white;
     cursor: pointer;
-    z-index: 100;
+    z-index: 1000;
+}
+
+.grid-container .popup-image .prev {
+    left: 10px;
+}
+
+.grid-container .popup-image .next {
+    right: 10px;
+}
+
+.grid-container .popup-image .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    z-index: 1000;
 }
 
 .grid-container .popup-image img {

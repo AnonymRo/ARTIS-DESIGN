@@ -182,75 +182,104 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 100);
   });
 
-  // Variables to keep track of current image index and total images
-  let currentImageIndex = 0;
-  let totalImages = 0;
+// Variables to keep track of current image index and total images
+let currentImageIndex = 0;
+let totalImages = 0;
 
-  // Event listener for images inside .interior-container
-  document.querySelectorAll('.interior-container img').forEach((image, index) => {
+// Event listener for images inside .interior-container
+document.querySelectorAll('.interior-container img').forEach((image, index) => {
     image.onclick = () => {
-      const popupImage = document.querySelector('.popup-image');
-      if (popupImage) {
-        currentImageIndex = index; // Set current image index
-        totalImages = document.querySelectorAll('.interior-container img').length; // Get total images
-        popupImage.style.display = 'block';
-        popupImage.querySelector('img').src = image.getAttribute('src');
-      }
+        const popupImage = document.querySelector('.popup-image');
+        if (popupImage) {
+            currentImageIndex = index; // Set current image index
+            totalImages = document.querySelectorAll('.interior-container img').length; // Get total images
+            popupImage.style.display = 'block';
+            popupImage.querySelector('img').src = image.getAttribute('src');
+        }
     }
-  });
+});
 
-  // Event listener for closing the popup image
-  const popupCloseButton = document.querySelector('.popup-image span');
-  if (popupCloseButton) {
+// Event listener for closing the popup image
+const popupCloseButton = document.querySelector('.popup-image span');
+if (popupCloseButton) {
     popupCloseButton.onclick = () => {
-      const popupImage = document.querySelector('.popup-image');
-      if (popupImage) {
-        popupImage.style.display = 'none';
-      }
+        const popupImage = document.querySelector('.popup-image');
+        if (popupImage) {
+            popupImage.style.display = 'none';
+        }
     }
-  }
+}
 
-  // Function to navigate to the next image
-  function nextImage() {
+// Function to navigate to the next image
+function nextImage() {
     currentImageIndex = (currentImageIndex + 1) % totalImages;
     const nextImageSrc = document.querySelectorAll('.interior-container img')[currentImageIndex].getAttribute('src');
     document.querySelector('.popup-image img').src = nextImageSrc;
-  }
+}
 
-  // Function to navigate to the previous image
-  function previousImage() {
+// Function to navigate to the previous image
+function previousImage() {
     currentImageIndex = (currentImageIndex - 1 + totalImages) % totalImages;
     const previousImageSrc = document.querySelectorAll('.interior-container img')[currentImageIndex].getAttribute('src');
     document.querySelector('.popup-image img').src = previousImageSrc;
-  }
+}
 
-  // Event listeners for keyboard arrow keys
-  document.addEventListener('keydown', function (e) {
+// Event listeners for keyboard arrow keys
+document.addEventListener('keydown', function (e) {
     if (e.key === 'ArrowRight') {
-      nextImage();
+        nextImage();
     } else if (e.key === 'ArrowLeft') {
-      previousImage();
+        previousImage();
     }
-  });
+});
 
-  // Event listeners for swiping left and right on touch devices
-  let touchStartX = 0;
-  let touchEndX = 0;
-  const threshold = 100; // Minimum swipe distance to trigger navigation
+// Event listeners for swiping left and right on touch devices
+let touchStartX = 0;
+let touchEndX = 0;
+const threshold = 100; // Minimum swipe distance to trigger navigation
 
-  document.querySelector('.popup-image img').addEventListener('touchstart', function (e) {
+document.querySelector('.popup-image img').addEventListener('touchstart', function (e) {
     touchStartX = e.touches[0].clientX;
-  });
+});
 
-  document.querySelector('.popup-image img').addEventListener('touchend', function (e) {
+document.querySelector('.popup-image img').addEventListener('touchend', function (e) {
     touchEndX = e.changedTouches[0].clientX;
     if (touchEndX - touchStartX > threshold) {
-      // Swipe right
-      previousImage();
+        // Swipe right
+        previousImage();
     } else if (touchStartX - touchEndX > threshold) {
-      // Swipe left
-      nextImage();
+        // Swipe left
+        nextImage();
     }
-  });
+});
+
+// Event listeners for navigation arrows
+document.querySelector('.popup-image .prev').addEventListener('mouseup', function (e) {
+  e.preventDefault();
+  previousImage();
+});
+
+document.querySelector('.popup-image .next').addEventListener('mouseup', function (e) {
+  e.preventDefault();
+  nextImage();
+});
+
+document.querySelector('.popup-image .prev').addEventListener('touchend', function (e) {
+  e.preventDefault();
+  previousImage();
+});
+
+document.querySelector('.popup-image .next').addEventListener('touchend', function (e) {
+  e.preventDefault();
+  nextImage();
+});
+
+// Event listener for closing the popup image with prev and next buttons
+document.querySelector('.popup-image .close').onclick = () => {
+    const popupImage = document.querySelector('.popup-image');
+    if (popupImage) {
+        popupImage.style.display = 'none';
+    }
+};
 
 });
