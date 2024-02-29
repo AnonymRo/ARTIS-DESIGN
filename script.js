@@ -190,13 +190,15 @@ let totalImages = 0;
 function showPopup(index) {
     const popupImage = document.querySelector('.popup-image');
     const body = document.querySelector('body'); // Select the body element
-    if (popupImage) {
+    const interiorImages = document.querySelectorAll('.interior-container img');
+
+    if (popupImage && body && interiorImages.length > index) {
         currentImageIndex = index; // Set current image index
-        totalImages = document.querySelectorAll('.interior-container img').length; // Get total images
+        totalImages = interiorImages.length; // Get total images
         popupImage.classList.add('active'); // Add active class to prevent scrolling
         body.classList.add('popup-open'); // Add class to body to prevent scrolling
         popupImage.style.display = 'block';
-        popupImage.querySelector('img').src = document.querySelectorAll('.interior-container img')[index].getAttribute('src'); // Get image source using index
+        popupImage.querySelector('img').src = interiorImages[index].getAttribute('src'); // Get image source using index
     }
 }
 
@@ -208,12 +210,12 @@ document.querySelectorAll('.interior-container img').forEach((image, index) => {
 });
 
 // Event listener for closing the popup image
-const popupCloseButton = document.querySelector('.popup-image span');
+const popupCloseButton = document.querySelector('.popup-image .close');
 if (popupCloseButton) {
     popupCloseButton.onclick = () => {
         const popupImage = document.querySelector('.popup-image');
         const body = document.querySelector('body'); // Select the body element
-        if (popupImage) {
+        if (popupImage && body) {
             popupImage.classList.remove('active'); // Remove active class to enable scrolling
             body.classList.remove('popup-open'); // Remove class from body to enable scrolling
             popupImage.style.display = 'none';
@@ -245,54 +247,95 @@ document.addEventListener('keydown', function (e) {
 });
 
 // Event listeners for swiping left and right on touch devices
-let touchStartX = 0;
-let touchEndX = 0;
-const threshold = 100; // Minimum swipe distance to trigger navigation
+const threshold = 50; // Minimum swipe distance to trigger navigation
 
-document.querySelector('.popup-image img').addEventListener('touchstart', function (e) {
-    touchStartX = e.touches[0].clientX;
-});
+document.querySelectorAll('.popup-image img').forEach(function(element) {
+    let touchStartX = 0;
+    let touchEndX = 0;
 
-document.querySelector('.popup-image img').addEventListener('touchend', function (e) {
-    touchEndX = e.changedTouches[0].clientX;
-    if (touchEndX - touchStartX > threshold) {
-        // Swipe right
-        previousImage();
-    } else if (touchStartX - touchEndX > threshold) {
-        // Swipe left
-        nextImage();
-    }
+    element.addEventListener('touchstart', function (e) {
+        touchStartX = e.touches[0].clientX;
+    });
+
+    element.addEventListener('touchend', function (e) {
+        touchEndX = e.changedTouches[0].clientX;
+        if (touchEndX - touchStartX > threshold) {
+            // Swipe right
+            previousImage();
+        } else if (touchStartX - touchEndX > threshold) {
+            // Swipe left
+            nextImage();
+        }
+    });
 });
 
 // Event listener for closing the popup image with prev button
-document.querySelector('.popup-image .prev').onclick = () => {
-  previousImage();
-};
-
-document.querySelector('.popup-image .next').addEventListener('mouseup', function (e) {
-    e.preventDefault();
-    nextImage();
-});
-
-document.querySelector('.popup-image .prev').addEventListener('touchend', function (e) {
-    e.preventDefault();
-    previousImage();
-});
-
-document.querySelector('.popup-image .next').addEventListener('touchend', function (e) {
-    e.preventDefault();
-    nextImage();
-});
-
-// Event listener for closing the popup image with prev and next buttons
-document.querySelector('.popup-image .close').onclick = () => {
-    const popupImage = document.querySelector('.popup-image');
-    const body = document.querySelector('body'); // Select the body element
-    if (popupImage) {
-        popupImage.classList.remove('active'); // Remove active class to enable scrolling
-        body.classList.remove('popup-open'); // Remove class from body to enable scrolling
-        popupImage.style.display = 'none';
+const prevButton = document.querySelector('.popup-image .prev');
+if (prevButton) {
+    prevButton.onclick = () => {
+        previousImage();
     }
-};
+}
 
+// Event listener for closing the popup image with next button
+const nextButton = document.querySelector('.popup-image .next');
+if (nextButton) {
+    nextButton.addEventListener('mouseup', function (e) {
+        e.preventDefault();
+        nextImage();
+    });
+
+    nextButton.addEventListener('touchend', function (e) {
+        e.preventDefault();
+        nextImage();
+    });
+}
+
+// Event listener for closing the popup image with prev button on touch devices
+const prevButtonTouch = document.querySelector('.popup-image .prev');
+if (prevButtonTouch) {
+    prevButtonTouch.addEventListener('touchend', function (e) {
+        e.preventDefault();
+        previousImage();
+    });
+}
+
+// Event listener for closing the popup image with close button
+const closeButton = document.querySelector('.popup-image .close');
+if (closeButton) {
+    closeButton.addEventListener('click', function () {
+        const popupImage = closeButton.closest('.popup-image');
+        const body = document.querySelector('body'); // Select the body element
+        if (popupImage && body) {
+            popupImage.classList.remove('active'); // Remove active class to enable scrolling
+            body.classList.remove('popup-open'); // Remove class from body to enable scrolling
+            popupImage.style.display = 'none';
+        }
+    });
+}
+
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+  const cookieBox = document.querySelector('.wrapper');
+  const buttons = document.querySelectorAll('.button');
+
+  const executeCodes = () => {
+      if(document.cookie.includes("artisdesign")) return;
+      cookieBox.classList.add("show");
+
+      buttons.forEach((button) => {
+        button.addEventListener("click", () => {
+            console.log("Button clicked:", button.id); // Log button click
+            cookieBox.classList.remove("show");
+    
+            if (button.id == "acceptBtn") {
+                console.log("Accept button clicked."); // Log accept button click
+                document.cookie = "cookie= artisdesign; max-age=" + 60 * 60 * 24 * 30;
+            }
+        });
+    });
+  };
+
+  window.addEventListener("load", executeCodes);
 });

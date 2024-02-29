@@ -410,7 +410,7 @@ nav li:hover::before {
     background-color: #ddd; /* Light gray background color */
     margin: 30px 0; /* Spacing above and below the separator */
     position: relative; /* Enable absolute positioning of the pseudo-element */
-    margin-top: 0;
+    margin-top: 60px;
 }
 
 .index-line::after {
@@ -641,6 +641,69 @@ nav li:hover::before {
     pointer-events: auto;
     opacity: 1;
     color: #9f4b2c;
+}
+
+/**** Cookies ****/
+
+.wrapper {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    max-width: 345px;
+    width: 100%;
+    background: #e1e1e1;
+    border-radius: 8px;
+    padding: 15px 25px 22px;
+    z-index: 500;
+}
+
+.wrapper .cookie-header {
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+}
+
+.cookie-header i {
+    color: #333;
+    font-size: 32px;
+}
+
+.cookie-header h2 {
+    color: #9f4b2c;
+    font-weight: 500;
+}
+
+.wrapper .data {
+    margin-top: 16px;
+}
+
+.wrapper .data p{
+    color: #333;
+    font-size: 16px;
+    margin-top: 0;
+}
+
+.wrapper .buttons {
+    margin-top: 16px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.buttons .button {
+    width: calc(100% / 2 - 10px);
+    padding: 8px 0;
+    border-radius: 4px;
+    background: #9f4b2c;
+    border: none;
+    color: #e1e1e1;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.buttons .button:hover {
+    background-color: #333;
 }
 
 /**** Contact page ****/
@@ -1219,7 +1282,7 @@ nav li:hover::before {
 .grid-container .popup-image {
     position: fixed;
     top: 0; left: 0;
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 0.98);
     height: 100%;
     width: 100%;
     z-index: 100;
@@ -1230,34 +1293,56 @@ body.popup-open {
     overflow: hidden;
 }
 
-
 .grid-container .popup-image .prev,
 .grid-container .popup-image .next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 40px;
+    font-size: 50px;
     color: white;
     cursor: pointer;
     z-index: 1000;
+    opacity: 0.5;
 }
 
 .grid-container .popup-image .prev {
-    left: 10px;
+    left: 15px;
 }
 
 .grid-container .popup-image .next {
-    right: 10px;
+    right: 15px;
 }
 
 .grid-container .popup-image .close {
     position: absolute;
     top: 10px;
-    right: 10px;
-    font-size: 40px;
+    right: 15px;
+    font-size: 60px;
     color: white;
     cursor: pointer;
     z-index: 1000;
+}
+
+/* Add hover effect for prev and next buttons */
+.grid-container .popup-image .prev:hover,
+.grid-container .popup-image .next:hover {
+    opacity: 0.7; /* Adjust the opacity to your preference */
+}
+
+/* Add tap effect for prev and next buttons on touch devices */
+.grid-container .popup-image .prev:active,
+.grid-container .popup-image .next:active {
+    opacity: 0.7; /* Adjust the opacity to your preference */
+}
+
+/* Add hover effect for close button */
+.grid-container .popup-image .close:hover {
+    color: #e1e1e1; /* Adjust the color to your preference */
+}
+
+/* Add tap effect for close button on touch devices */
+.grid-container .popup-image .close:active {
+    color: #e1e1e1; /* Adjust the color to your preference */
 }
 
 .grid-container .popup-image img {
@@ -1268,6 +1353,7 @@ body.popup-open {
     width: 100%;
     height: 100%;
     object-fit: contain;
+    transition: transform 0.8s ease; /* Add transition effect */
 }
 
 
@@ -1529,6 +1615,27 @@ body.popup-open {
 
     .MainContainer {
         margin-bottom: 40px;
+    }
+
+    .index-line {
+        width: 100%;
+        height: 2px; /* Increase thickness for better visibility */
+        background-color: #ddd; /* Light gray background color */
+        margin: 30px 0; /* Spacing above and below the separator */
+        position: relative; /* Enable absolute positioning of the pseudo-element */
+        margin-top: 0;
+    }
+    
+    .index-line::after {
+        content: ''; /* Create pseudo-element */
+        position: absolute; /* Position relative to the parent */
+        top: 0;
+        left: 0;
+        width: 100%; /* Take the full width of the parent */
+        height: 100%; /* Full height */
+        background-color: #fff; /* White color for the pseudo-element */
+        border-radius: 50%; /* Round the corners for a smooth transition */
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
     }
 }
 
