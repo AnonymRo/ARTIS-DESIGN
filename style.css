@@ -689,6 +689,11 @@ nav li:hover::before {
     border: none;
     background-color: #9f4b2c;
     color: white;
+    animation: transform 1.5s ease-in-out;
+}
+
+#cookies-btn:hover {
+    transform: scale(1.03);
 }
 
 @media (max-width: 1600px) {
