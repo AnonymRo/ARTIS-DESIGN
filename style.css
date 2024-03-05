@@ -856,13 +856,14 @@ nav li:hover::before {
 .Succes-text {
     text-align: center;
     font-family: 'Agency FB', sans-serif;
+    font-weight: 400;
     font-size: 32px;
     animation: exploreButtonAnimation 1s ease-in-out;
 }
 
 .backHome-button {
-    padding: 20px 40px;
-    font-size: 24px;
+    padding: 15px 40px;
+    font-size: 26px;
     background-color: #9f4b2c;
     color: white;
     border: none;
@@ -870,7 +871,7 @@ nav li:hover::before {
     cursor: pointer;
     transition: background-color 0.4s ease-in-out, transform 0.4s ease-in-out, box-shadow 0.3s ease-in-out;
     font-family: 'Agency FB', sans-serif;
-    font-weight: 500;
+    font-weight: 400;
     z-index: 2;
     animation: exploreButtonAnimation 1.3s ease-in-out;
 }
