@@ -660,13 +660,13 @@ nav li:hover::before {
     position: fixed;
     bottom: 0;
     color: white;
-    background-color: rgba(0, 0, 0, 0.7);
-    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 100;
     display: none;
 }
 
 .cookies {
-    min-height: 70px;
+    min-height: 135px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -674,13 +674,19 @@ nav li:hover::before {
     gap: 10px;
 }
 
+.cookies p {
+    font-family: 'Agency FB', sans-serif;
+    font-size: 22px;
+}
+
 #cookies-btn {
     border-radius: 5px;
-    padding: 8px 12px 8px 12px;
+    padding: 12px 35px;
     font-size: 1.3rem;
     font-family: 'Agency FB', sans-serif;
+    font-weight: bold;
     cursor: pointer;
-    border: 3px solid white;
+    border: none;
     background-color: #9f4b2c;
     color: white;
 }
@@ -1347,7 +1353,6 @@ body.popup-open {
     transition: transform 0.8s ease; /* Add transition effect */
 }
 
-
 /**** Smaller screens ****/
 
 @media (max-width: 1180px) {
@@ -1627,6 +1632,18 @@ body.popup-open {
         background-color: #fff; /* White color for the pseudo-element */
         border-radius: 50%; /* Round the corners for a smooth transition */
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    }
+
+    .cookies p {
+        font-size: 19px;
+    }
+
+    #cookies {
+        background-color: black;
+    }
+
+    #cookies-btn {
+        margin: 0 auto;
     }
 }
 
