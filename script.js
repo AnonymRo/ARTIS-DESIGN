@@ -314,6 +314,8 @@ if (closeButton) {
     });
 }
 
+});
+
 //Cookies
 
 setCookie = (cName, cValue, expDays) => {
@@ -335,16 +337,23 @@ getCookie = (cName) => {
   return value;
 }
 
-document.querySelector("#cookies-btn").addEventListener("click", () => {
-document.querySelector("#cookies").style.display = "none";
-setCookie("cookie", true, 30);
-})
+document.addEventListener("DOMContentLoaded", function() {
+    const cookiesBtn = document.querySelector("#cookies-btn");
+    if (cookiesBtn) {
+        cookiesBtn.addEventListener("click", () => {
+            document.querySelector("#cookies").style.display = "none";
+            setCookie("cookie", true, 30);
+        });
+    }
+
+    cookieMessage();
+});
 
 cookieMessage = () => {
-  if(!getCookie("cookie"))
-   document.querySelector("#cookies").style.display = "block";
+  const cookiesContainer = document.querySelector("#cookies");
+  if (cookiesContainer && !getCookie("cookie")) {
+      cookiesContainer.style.display = "block";
+  }
 }
 
 window.addEventListener("load", cookieMessage);
-
-});
