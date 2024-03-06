@@ -406,23 +406,23 @@ nav li:hover::before {
 
 .index-line {
     width: 100%;
-    height: 2px; /* Increase thickness for better visibility */
-    background-color: #ddd; /* Light gray background color */
-    margin: 30px 0; /* Spacing above and below the separator */
-    position: relative; /* Enable absolute positioning of the pseudo-element */
+    height: 2px;
+    background-color: #ddd;
+    margin: 30px 0;
+    position: relative;
     margin-top: 60px;
 }
 
 .index-line::after {
-    content: ''; /* Create pseudo-element */
-    position: absolute; /* Position relative to the parent */
+    content: '';
+    position: absolute;
     top: 0;
     left: 0;
-    width: 100%; /* Take the full width of the parent */
-    height: 100%; /* Full height */
-    background-color: #fff; /* White color for the pseudo-element */
-    border-radius: 50%; /* Round the corners for a smooth transition */
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
 /**** Interiors picture ****/
@@ -632,7 +632,6 @@ nav li:hover::before {
     position: absolute;
     bottom: auto;
     top: calc(100% - 50px);
-    /* Adjust this value as needed */
     transition: top .4s;
 }
 
@@ -679,6 +678,13 @@ nav li:hover::before {
     font-size: 22px;
 }
 
+.cookies a {
+    color: #9f4b2c;
+    text-decoration: none;
+    font-size: 22px;
+    font-family: 'Agency FB', sans-serif;
+}
+
 #cookies-btn {
     border-radius: 5px;
     padding: 12px 35px;
@@ -706,6 +712,18 @@ nav li:hover::before {
     .cookies {
         padding: 10px 0;
     }
+}
+
+.privacy-policy a {
+    color: #e1e1e1;
+    text-decoration: none;
+    font-family: 'Agency FB', sans-serif;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+}
+
+.privacy-policy a:hover {
+    color: #9f4b2c;
 }
 
 /**** Contact page ****/
@@ -815,13 +833,11 @@ nav li:hover::before {
 
 .contact-form-container textarea {
     padding: 12px;
-    /* Adjust padding as needed */
     margin-bottom: 15px;
     border-radius: 5px;
     font-size: 16px;
     border: none;
     height: 100px;
-    /* Set the desired height */
     font-family: 'Agency FB', sans-serif;
 }
 
@@ -992,29 +1008,23 @@ nav li:hover::before {
     overflow: hidden;
     border-radius: 10px;
     opacity: 0;
-    /* Initially hidden */
     animation: slideInFromLeft 1.2s ease forwards;
-    /* Animation for appearing */
 }
 
 .MainContainer .card:nth-child(1) {
     animation-delay: 0.3s;
-    /* Delay for the first card */
 }
 
 .MainContainer .card:nth-child(2) {
     animation-delay: 0.6s;
-    /* Delay for the second card */
 }
 
 .MainContainer .card:nth-child(3) {
     animation-delay: 0.9s;
-    /* Delay for the third card */
 }
 
 .MainContainer .card:nth-child(4) {
     animation-delay: 1.2s;
-    /* Delay for the third card */
 }
 
 .MainContainer .card .imgBox,
@@ -1048,7 +1058,6 @@ nav li:hover::before {
     opacity: 0;
     transform-origin: left;
     transition: opacity 0.3s ease;
-    /* Removed delay for the overlay */
 }
 
 .MainContainer .card:hover .contentBox::before,
@@ -1057,7 +1066,6 @@ nav li:hover::before {
     opacity: 0.5;
     transform-origin: left;
     transition-delay: 0s;
-    /* Added delay for the text and button */
 }
 
 .MainContainer .card .contentBox {
@@ -1071,22 +1079,16 @@ nav li:hover::before {
     padding: 30px;
     z-index: 1;
     opacity: 0;
-    /* Initial opacity set to 0 */
     font-family: 'Agency FB', sans-serif;
     font-size: .8em;
-    /* Reset font size */
     color: initial;
-    /* Reset font color */
 }
 
 .MainContainer .card:hover .contentBox .content,
 .MainContainer .card.hover-effect .contentBox .content {
     opacity: 1;
-    /* Opacity set to 1 when hovering */
     font-size: inherit;
-    /* Inherit font size */
     color: inherit;
-    /* Inherit font color */
 }
 
 .MainContainer .card:hover .contentBox .content h3,
@@ -1173,34 +1175,34 @@ nav li:hover::before {
 
 .description-container {
     display: flex;
-    align-items: center; /* Center items vertically */
+    align-items: center;
     margin-bottom: 100px;
 }
 
 .presentation-picture {
-    max-width: 50%; /* Adjust the width of the picture */
-    flex: 0 0 auto; /* Set to initial value to allow the picture to shrink if necessary */
-    margin-right: 30px; /* Adjust spacing between picture and text */
+    max-width: 50%;
+    flex: 0 0 auto;
+    margin-right: 30px;
 }
 
 .presentation-picture img {
     width: 100%;
     height: auto;
-    max-height: calc(100vh - 100px); /* Ensure the picture does not exceed viewport height */
+    max-height: calc(100vh - 100px);
     animation: mainPhotoReveal 1.8s forwards;
 }
 
 .interior-text {
-    max-width: 50%; /* Adjust the width of the text */
-    flex: 1 1 auto; /* Allow the text to grow if necessary */
-    text-align: center; /* Center text horizontally */
+    max-width: 50%;
+    flex: 1 1 auto;
+    text-align: center;
 }
 
 .interior-text h2 {
-    font-size: 40px; /* Adjust font size as needed */
+    font-size: 40px;
     padding: 15px;
-    margin-top: 0; /* Remove default margin */
-    margin-bottom: 30px; /* Add margin bottom for spacing */
+    margin-top: 0;
+    margin-bottom: 30px;
     font-family: 'Agency FB', sans-serif;
     font-weight: bolder;
     text-transform: capitalize;
@@ -1208,8 +1210,8 @@ nav li:hover::before {
 }
 
 .interior-text p {
-    font-size: 22px; /* Adjust font size as needed */
-    margin-top: 0; /* Remove default margin */
+    font-size: 22px;
+    margin-top: 0;
     margin-bottom: 0;
     font-family: 'Agency FB', sans-serif;
     font-weight: 100;
@@ -1219,22 +1221,22 @@ nav li:hover::before {
 
 .interior-line {
     width: 100%;
-    height: 2px; /* Increase thickness for better visibility */
-    background-color: #ddd; /* Light gray background color */
-    margin: 30px 0; /* Spacing above and below the separator */
-    position: relative; /* Enable absolute positioning of the pseudo-element */
+    height: 2px;
+    background-color: #ddd;
+    margin: 30px 0;
+    position: relative;
 }
 
 .interior-line::after {
-    content: ''; /* Create pseudo-element */
-    position: absolute; /* Position relative to the parent */
+    content: '';
+    position: absolute;
     top: 0;
     left: 0;
-    width: 100%; /* Take the full width of the parent */
-    height: 100%; /* Full height */
-    background-color: #fff; /* White color for the pseudo-element */
-    border-radius: 50%; /* Round the corners for a smooth transition */
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -1326,26 +1328,22 @@ body.popup-open {
     z-index: 1000;
 }
 
-/* Add hover effect for prev and next buttons */
 .grid-container .popup-image .prev:hover,
 .grid-container .popup-image .next:hover {
-    opacity: 0.7; /* Adjust the opacity to your preference */
+    opacity: 0.7;
 }
 
-/* Add tap effect for prev and next buttons on touch devices */
 .grid-container .popup-image .prev:active,
 .grid-container .popup-image .next:active {
-    opacity: 0.7; /* Adjust the opacity to your preference */
+    opacity: 0.7;
 }
 
-/* Add hover effect for close button */
 .grid-container .popup-image .close:hover {
-    color: #e1e1e1; /* Adjust the color to your preference */
+    color: #e1e1e1;
 }
 
-/* Add tap effect for close button on touch devices */
 .grid-container .popup-image .close:active {
-    color: #e1e1e1; /* Adjust the color to your preference */
+    color: #e1e1e1;
 }
 
 .grid-container .popup-image img {
@@ -1356,7 +1354,7 @@ body.popup-open {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    transition: transform 0.8s ease; /* Add transition effect */
+    transition: transform 0.8s ease;
 }
 
 /**** Smaller screens ****/
@@ -1580,25 +1578,25 @@ body.popup-open {
     }
 
     .description-container {
-        flex-direction: column; /* Stack elements vertically */
-        align-items: center; /* Center items horizontally */
+        flex-direction: column;
+        align-items: center;
         margin-bottom: 70px;
     }
 
     .presentation-picture {
-        width: 100%; /* Picture spans full width */
-        max-width: none; /* Remove max-width */
-        margin-right: 0; /* Remove right margin */
+        width: 100%;
+        max-width: none;
+        margin-right: 0;
     }
 
     .presentation-picture img {
-        height: auto; /* Remove max-height */
+        height: auto;
         border-radius: 0;
     }
 
     .interior-text {
-        max-width: 100%; /* Text spans full width */
-        margin-top: 30px; /* Add spacing between picture and text */
+        max-width: 100%;
+        margin-top: 30px;
     }
 
     .interior-text h2 {
@@ -1621,23 +1619,23 @@ body.popup-open {
 
     .index-line {
         width: 100%;
-        height: 2px; /* Increase thickness for better visibility */
-        background-color: #ddd; /* Light gray background color */
-        margin: 30px 0; /* Spacing above and below the separator */
-        position: relative; /* Enable absolute positioning of the pseudo-element */
+        height: 2px;
+        background-color: #ddd;
+        margin: 30px 0;
+        position: relative;
         margin-top: 0;
     }
     
     .index-line::after {
-        content: ''; /* Create pseudo-element */
-        position: absolute; /* Position relative to the parent */
+        content: '';
+        position: absolute;
         top: 0;
         left: 0;
-        width: 100%; /* Take the full width of the parent */
-        height: 100%; /* Full height */
-        background-color: #fff; /* White color for the pseudo-element */
-        border-radius: 50%; /* Round the corners for a smooth transition */
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        border-radius: 50%;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     }
 
     .cookies p {
@@ -1650,6 +1648,10 @@ body.popup-open {
 
     #cookies-btn {
         margin: 0 auto;
+        font-size: 20px;
+        font-weight: 300;
+        border-radius: 8px;
+        margin-bottom: 15px;
     }
 }
 
