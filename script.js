@@ -247,7 +247,7 @@ document.addEventListener('keydown', function (e) {
 });
 
 // Event listeners for swiping left and right on touch devices
-const threshold = 50; // Minimum swipe distance to trigger navigation
+const threshold = 100; // Minimum swipe distance to trigger navigation
 
 document.querySelectorAll('.popup-image img').forEach(function(element) {
     let touchStartX = 0;
