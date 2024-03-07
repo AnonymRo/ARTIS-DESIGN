@@ -106,7 +106,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const project1Button = document.getElementById('project1Button');
   if (project1Button) {
     project1Button.addEventListener('click', function () {
-      window.location.href = 'project1.html';
+      window.location.href = 'project1.php';
     });
   }
 

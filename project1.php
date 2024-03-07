@@ -98,51 +98,30 @@
     <div class="grid-container">
         <h1>Imagine Gallery</h1>
         <div class="interior-container">
-            <div class="image"><img src="./Photos/Project1/Renders/01.jpg"></div>
-            <div class="image"><img src="./Photos/Project1/Renders/02.jpg"></div>
-            <div class="image"><img src="./Photos/Project1/Renders/03.jpg"></div>
-            <div class="image"><img src="./Photos/Project1/Renders/04.jpg"></div>
-            <div class="image"><img src="./Photos/Project1/Renders/05.jpg"></div>
-            <div class="image"><img src="./Photos/Project1/Renders/06.jpg"></div>
-            <div class="image"><img src="./Photos/Project1/Renders/07.jpg"></div>
-            <div class="image"><img src="./Photos/Project1/Renders/08.jpg"></div>
-            <div class="image"><img src="./Photos/Project1/Renders/09.jpg"></div>
-            <div class="image"><img src="./Photos/Project1/Renders/10.jpg"></div>
-            <div class="image"><img src="./Photos/Project1/Renders/11.jpg"></div>
-            <div class="image"><img src="./Photos/Project1/Renders/12.jpg"></div>
-            <div class="image"><img src="./Photos/Project1/Renders/13.jpg"></div>
-            <div class="image"><img src="./Photos/Project1/Renders/14.jpg"></div>
-            <div class="image"><img src="./Photos/Project1/Renders/15.jpg"></div>
-            <div class="image"><img src="./Photos/Project1/Renders/16.jpg"></div>
-            <div class="image"><img src="./Photos/Project1/Renders/17.jpg"></div>
-            <div class="image"><img src="./Photos/Project1/Renders/18.jpg"></div>
-            <div class="image"><img src="./Photos/Project1/Renders/19.jpg"></div>
-            <div class="image"><img src="./Photos/Project1/Renders/20.jpg"></div>
-            <div class="image"><img src="./Photos/Project1/Renders/21.jpg"></div>
-            <div class="image"><img src="./Photos/Project1/Renders/22.jpg"></div>
-            <div class="image"><img src="./Photos/Project1/Renders/23.jpg"></div>
-            <div class="image"><img src="./Photos/Project1/Renders/24.jpg"></div>
-            <div class="image"><img src="./Photos/Project1/Renders/25.jpg"></div>
-            <div class="image"><img src="./Photos/Project1/Renders/26.jpg"></div>
-            <div class="image"><img src="./Photos/Project1/Renders/27.jpg"></div>
-            <div class="image"><img src="./Photos/Project1/Renders/28.jpg"></div>
-            <div class="image"><img src="./Photos/Project1/Renders/29.jpg"></div>
-            <div class="image"><img src="./Photos/Project1/Renders/30.jpg"></div>
-            <div class="image"><img src="./Photos/Project1/Renders/31.jpg"></div>
-            <div class="image"><img src="./Photos/Project1/Renders/32.jpg"></div>
-            <div class="image"><img src="./Photos/Project1/Renders/33.jpg"></div>
-            <div class="image"><img src="./Photos/Project1/Renders/34.jpg"></div>
-            <div class="image"><img src="./Photos/Project1/Renders/35.jpg"></div>
-            <div class="image"><img src="./Photos/Project1/COVER.jpg"></div>
-            <div class="image"><img src="./Photos/Project1/Renders/36.jpg"></div>
-            <div class="image"><img src="./Photos/Project1/Renders/37.jpg"></div>
-            <div class="image"><img src="./Photos/Project1/Renders/38.jpg"></div>
-            <div class="image"><img src="./Photos/Project1/Renders/39.jpg"></div>
-            <div class="image"><img src="./Photos/Project1/Renders/40.jpg"></div>
-            <div class="image"><img src="./Photos/Project1/Renders/42.jpg"></div>
-            <div class="image"><img src="./Photos/Project1/Renders/43.jpg"></div>
-            <div class="image"><img src="./Photos/Project1/Renders/44.jpg"></div>
-            <div class="image"><img src="./Photos/Project1/Renders/45.jpg"></div>
+        <?php
+            $servername = "localhost";
+            $username = "artisdes";
+            $password = "hAj6u6Bl10";
+            $dbname = "artisdes_Photos";
+
+            $conn = new mysqli($servername, $username, $password, $dbname);
+
+            if ($conn->connect_error) {
+                die("Connection failed: " . $conn->connect_error);
+            }
+
+            $sql = "SELECT Img_Dir FROM Project1";
+            $result = $conn->query($sql);
+
+            if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+                    echo '<div class="image"><img src="' . $row["Img_Dir"] . '"></div>';
+                }
+            } else {
+                echo "0 results";
+            }
+            $conn->close();
+            ?>
         </div>
 
         <div class="popup-image">
