@@ -1099,8 +1099,6 @@ nav li:hover::before {
     color: white;
     font-family: 'Agency FB', sans-serif;
     display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .MainContainer .card:hover .contentBox .content p,
@@ -1216,6 +1214,7 @@ nav li:hover::before {
     font-family: 'Agency FB', sans-serif;
     font-weight: 100;
     padding: 15px;
+    text-align: start;
     animation: exploreButtonAnimation 1.5s ease-in;
 }
 
@@ -1574,7 +1573,7 @@ body.popup-open {
 
     .view-project-btn {
         padding: 15px 30px;
-        margin-top: 90px;
+        margin-top: 70px;
     }
 
     .description-container {
