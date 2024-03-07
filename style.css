@@ -1675,6 +1675,18 @@ body.popup-open {
     }
 }
 
+@media (min-width: 901px) {
+    .word {
+        font-size: 3.8em;
+    }
+}
+
+@media (min-width: 1080px) {
+    .word {
+        font-size: 4.5em;
+    }
+}
+
 @media (min-width: 1100px) {
     .interior-text h2 {
         font-size: 50px;
@@ -1684,5 +1696,11 @@ body.popup-open {
 @media (min-width: 1500px) {
     .word {
         font-size: 6em;
+    }
+}
+
+@media (min-width: 1700px) {
+    .Photo {
+        margin-top: 50px;
     }
 }
