@@ -360,3 +360,42 @@ expandableSections.forEach(function (section) {
   title.addEventListener('click', toggleExpanded);
   title.addEventListener('touchstart', toggleExpanded);
 });
+
+function showContent(targetId) {
+  const contents = document.querySelectorAll('.package-content');
+  const targetContent = document.getElementById(`content-${targetId}`);
+
+  // Hide all contents with animation
+  contents.forEach(content => {
+      if (content.classList.contains('active')) {
+          content.classList.remove('active');
+          content.classList.add('fading');
+      }
+  });
+
+  // Show the target content
+  targetContent.classList.remove('fading'); // Ensure it doesn’t have the fading class
+  targetContent.classList.add('active');
+  
+  // Remove 'active' class from all packages
+  const packages = document.querySelectorAll('.package');
+  packages.forEach(pkg => pkg.classList.remove('active'));
+  
+  // Add 'active' class to the clicked package
+  const targetPackage = document.getElementById(targetId);
+  targetPackage.classList.add('active');
+}
+
+// Add event listeners to package titles
+const packages = document.querySelectorAll('.package h2');
+packages.forEach(header => {
+  header.addEventListener('click', () => {
+      const targetId = header.parentElement.id;
+      showContent(targetId);
+  });
+});
+
+// Display the default content (e.g., 'standard') on page load
+document.addEventListener('DOMContentLoaded', () => {
+  showContent('standard'); // Default content to display
+});

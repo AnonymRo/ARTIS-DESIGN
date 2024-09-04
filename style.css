@@ -902,57 +902,67 @@ nav li:hover::before {
     transform: scale(1.03);
 }
 
-/**** Services page ****/
+/* Services page */
+.package-content {
+    display: none;
+    padding: 25px;
+    background-color: #e1e1e1;
+    border-radius: 20px;
+    margin: 25px;
+}
+
+.package-content.active {
+    display: block;
+}
 
 .packages-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    margin-top: 30px;
-    margin-left: 15px;
-    margin-right: 15px;
-    margin-bottom: 30px;
-    border-radius: 10px;
-    height: calc(115vh - 130px);
-    overflow: hidden;
+    align-items: center;
+    margin: 30px auto;
+    padding: 0 15px;
+    font-family: 'Agency FB', sans-serif;
+}
+
+.package-content p {
+    font-family: 'Agency FB', sans-serif;
+    font-size: 21px;
 }
 
 .package {
-    padding: 20px;
-    border-radius: 10px;
-    transition: transform 0.6s ease, box-shadow 0.3s ease;
-    font-family: 'Agency FB', sans-serif;
-    font-size: 16px;
-    font-weight: 500;
-    width: 30%;
-    background-color: #e1e1e1;
-    margin-left: 20px;
-    margin-right: 20px;
+    flex: 1;
+    text-align: center;
+    cursor: pointer;
+    font-size: 25px;
+    color: #333;
+    font-weight: 300;
+    position: relative;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
-.package h2 {
-    display: flex;
+.package.active {
+    color: #9f4b2c;
+    text-decoration: underline;
+}
+
+.package:not(:last-child)::after {
+    content: '|';
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #333;
     font-size: 36px;
-    align-items: center;
-    justify-content: center;
-    text-transform: capitalize;
-    font-weight: 400;
-}
-
-.package p {
-    font-size: 18px;
-    margin-top: 45px;
-}
-
-.package:hover {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    line-height: 1;
 }
 
 .Disclaimer {
     font-family: 'Agency FB', sans-serif;
-    display: flex;
-    font-size: 22px;
+    font-size: 21px;
     padding: 25px;
     color: #9f4b2c;
+    text-align: center;
 }
 
 .serviceButton-container {
@@ -966,8 +976,8 @@ nav li:hover::before {
 }
 
 .services-button {
-    padding: 18px 30px;
-    font-size: 34px;
+    padding: 13px 22px;
+    font-size: 30px;
     background-color: #333;
     color: white;
     border: none;
@@ -1426,11 +1436,10 @@ body.popup-open {
 @media (max-width: 1180px) {
 
     .packages-container {
-        flex-direction: column;
         height: auto;
         padding: 15px;
         align-items: center;
-        margin-top: 15px;
+        margin-top: 0;
         padding-bottom: 0;
         margin-bottom: 0;
     }
@@ -1438,12 +1447,12 @@ body.popup-open {
     .package {
         width: calc(100% - 30px);
         margin: 10px 0;
-        padding: 20px;
-        margin-bottom: 40px;
+        padding: 0px;
+        margin-bottom: 15px;
     }
 
     .Disclaimer {
-        font-size: 19px;
+        font-size: 11px;
         margin: 0;
     }
 
@@ -1452,8 +1461,8 @@ body.popup-open {
     }
 
     .services-button {
-        padding: 12px 24px;
-        font-size: 25px;
+        padding: 10px 20px;
+        font-size: 22px;
     }
 }
 
@@ -1465,8 +1474,8 @@ body.popup-open {
     }
 
     .menu-icon div {
-        width: 40px;
-        height: 20px;
+        width: 32px;
+        height: 16px;
     }
 
     .body-image {
@@ -1669,12 +1678,22 @@ body.popup-open {
 
     .package h2 {
         text-transform: capitalize;
-        font-weight: 400;
+        font-weight: 500;
         margin-top: 0;
+        font-size: 22px;
     }
 
-    .package p {
+    .package:not(:last-child)::after {
+        display: none;
+    }
+
+    .package-content {
+        margin: 0 20px;
+    }
+
+    .package-content p {
         font-weight: 100;
+        font-size: 14px;
     }
 
     .MainContainer {
