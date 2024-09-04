@@ -1,1 +1,0 @@
-# ARTIS-DESIGN

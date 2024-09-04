@@ -186,27 +186,27 @@ document.addEventListener("DOMContentLoaded", function () {
 let currentImageIndex = 0;
 let totalImages = 0;
 
-// Function to show popup and prevent scrolling
+// Function to show popup
 function showPopup(index) {
     const popupImage = document.querySelector('.popup-image');
-    const body = document.querySelector('body'); // Select the body element
+    const body = document.querySelector('body');
     const interiorImages = document.querySelectorAll('.interior-container img');
 
     if (popupImage && body && interiorImages.length > index) {
-        currentImageIndex = index; // Set current image index
-        totalImages = interiorImages.length; // Get total images
-        popupImage.classList.add('active'); // Add active class to prevent scrolling
-        body.classList.add('popup-open'); // Add class to body to prevent scrolling
+        currentImageIndex = index;
+        totalImages = interiorImages.length;
+        popupImage.classList.add('active');
+        body.classList.add('popup-open');
         popupImage.style.display = 'block';
-        popupImage.querySelector('img').src = interiorImages[index].getAttribute('src'); // Get image source using index
+        popupImage.querySelector('img').src = interiorImages[index].getAttribute('src');
     }
 }
 
 // Event listener for images inside .interior-container
 document.querySelectorAll('.interior-container img').forEach((image, index) => {
     image.onclick = () => {
-        showPopup(index); // Pass the index to the showPopup function
-    }
+        showPopup(index);
+    };
 });
 
 // Event listener for closing the popup image
@@ -214,13 +214,13 @@ const popupCloseButton = document.querySelector('.popup-image .close');
 if (popupCloseButton) {
     popupCloseButton.onclick = () => {
         const popupImage = document.querySelector('.popup-image');
-        const body = document.querySelector('body'); // Select the body element
+        const body = document.querySelector('body');
         if (popupImage && body) {
-            popupImage.classList.remove('active'); // Remove active class to enable scrolling
-            body.classList.remove('popup-open'); // Remove class from body to enable scrolling
+            popupImage.classList.remove('active');
+            body.classList.remove('popup-open');
             popupImage.style.display = 'none';
         }
-    }
+    };
 }
 
 // Function to navigate to the next image
@@ -246,35 +246,12 @@ document.addEventListener('keydown', function (e) {
     }
 });
 
-// Event listeners for swiping left and right on touch devices
-const threshold = 100; // Minimum swipe distance to trigger navigation
-
-document.querySelectorAll('.popup-image img').forEach(function(element) {
-    let touchStartX = 0;
-    let touchEndX = 0;
-
-    element.addEventListener('touchstart', function (e) {
-        touchStartX = e.touches[0].clientX;
-    });
-
-    element.addEventListener('touchend', function (e) {
-        touchEndX = e.changedTouches[0].clientX;
-        if (touchEndX - touchStartX > threshold) {
-            // Swipe right
-            previousImage();
-        } else if (touchStartX - touchEndX > threshold) {
-            // Swipe left
-            nextImage();
-        }
-    });
-});
-
 // Event listener for closing the popup image with prev button
 const prevButton = document.querySelector('.popup-image .prev');
 if (prevButton) {
     prevButton.onclick = () => {
         previousImage();
-    }
+    };
 }
 
 // Event listener for closing the popup image with next button
@@ -305,10 +282,10 @@ const closeButton = document.querySelector('.popup-image .close');
 if (closeButton) {
     closeButton.addEventListener('click', function () {
         const popupImage = closeButton.closest('.popup-image');
-        const body = document.querySelector('body'); // Select the body element
+        const body = document.querySelector('body');
         if (popupImage && body) {
-            popupImage.classList.remove('active'); // Remove active class to enable scrolling
-            body.classList.remove('popup-open'); // Remove class from body to enable scrolling
+            popupImage.classList.remove('active');
+            body.classList.remove('popup-open');
             popupImage.style.display = 'none';
         }
     });
@@ -331,29 +308,55 @@ getCookie = (cName) => {
   const cArr = cDecoded.split("; ");
   let value;
   cArr.forEach(val => {
-    if(val.indexOf(name) === 0) value = val.substring(name.length);
+    if (val.indexOf(name) === 0) value = val.substring(name.length);
   })
 
   return value;
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-    const cookiesBtn = document.querySelector("#cookies-btn");
-    if (cookiesBtn) {
-        cookiesBtn.addEventListener("click", () => {
-            document.querySelector("#cookies").style.display = "none";
-            setCookie("cookie", true, 30);
-        });
-    }
+document.addEventListener("DOMContentLoaded", function () {
+  const cookiesBtn = document.querySelector("#cookies-btn");
+  if (cookiesBtn) {
+    cookiesBtn.addEventListener("click", () => {
+      document.querySelector("#cookies").style.display = "none";
+      setCookie("cookie", true, 30);
+    });
+  }
 
-    cookieMessage();
+  cookieMessage();
 });
 
 cookieMessage = () => {
   const cookiesContainer = document.querySelector("#cookies");
   if (cookiesContainer && !getCookie("cookie")) {
-      cookiesContainer.style.display = "block";
+    cookiesContainer.style.display = "block";
   }
 }
 
 window.addEventListener("load", cookieMessage);
+
+var expandableSections = document.querySelectorAll('.expandable-section');
+
+expandableSections.forEach(function (section) {
+  var title = section.querySelector('h1');
+
+  // Function to toggle the 'expanded' class for the section
+  function toggleExpanded(event) {
+    event.preventDefault(); // Prevent default touch event behavior
+    section.classList.toggle('expanded');
+
+    // If the clicked section is expanded, close all other sections
+    if (section.classList.contains('expanded')) {
+      expandableSections.forEach(function (s) {
+        // Skip the clicked section
+        if (s !== section) {
+          s.classList.remove('expanded');
+        }
+      });
+    }
+  }
+
+  // Add event listeners for both 'click' and 'touchstart' events
+  title.addEventListener('click', toggleExpanded);
+  title.addEventListener('touchstart', toggleExpanded);
+});

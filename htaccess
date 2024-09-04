@@ -1,0 +1,113 @@
+FileETag MTime Size
+
+# Redirect requests for index.html to /Home
+RewriteCond %{REQUEST_URI} ^/index\.html$
+RewriteRule ^index\.html$ /Home [R=301,L]
+
+# Redirect requests for interiors.html to /Interiors
+RewriteCond %{REQUEST_URI} ^/interiors\.html$
+RewriteRule ^interiors\.html$ /Interiors [R=301,L]
+
+# Redirect requests for services.html to /Services
+RewriteCond %{REQUEST_URI} ^/services\.html$
+RewriteRule ^services\.html$ /Services [R=301,L]
+
+# Redirect requests for contact.html to /Contact
+RewriteCond %{REQUEST_URI} ^/contact\.html$
+RewriteRule ^contact\.html$ /Contact [R=301,L]
+
+# Redirect requests for privacy.html to /Privacy
+RewriteCond %{REQUEST_URI} ^/privacy\.html$
+RewriteRule ^privacy\.html$ /Privacy [R=301,L]
+
+# Redirect requests for succes.html to /Success
+RewriteCond %{REQUEST_URI} ^/succes\.html$
+RewriteRule ^succes\.html$ /Success [R=301,L]
+
+# Redirect requests for project1.php to /ApartamentAB
+RewriteCond %{REQUEST_URI} ^/project1\.php$
+RewriteRule ^project1\.php$ /ApartamentAB [R=301,L]
+
+# Redirect requests for project2.php to /ApartamentSB
+RewriteCond %{REQUEST_URI} ^/project2\.php$
+RewriteRule ^project2\.php$ /ApartamentSB [R=301,L]
+
+# Redirect requests for project3.php to /CasaGP
+RewriteCond %{REQUEST_URI} ^/project3\.php$
+RewriteRule ^project3\.php$ /CasaGP [R=301,L]
+
+# Redirect requests for project4.php to /CasaDD
+RewriteCond %{REQUEST_URI} ^/project4\.php$
+RewriteRule ^project4\.php$ /CasaDD [R=301,L]
+
+# Redirect requests for project5.php to /ApartamentRL
+RewriteCond %{REQUEST_URI} ^/project5\.php$
+RewriteRule ^project5\.php$ /ApartamentRL [R=301,L]
+
+# Redirect requests for project6.php to /ApartamentMD
+RewriteCond %{REQUEST_URI} ^/project6\.php$
+RewriteRule ^project6\.php$ /ApartamentMD [R=301,L]
+
+# Redirect requests for project7.php to /ApartamentVA
+RewriteCond %{REQUEST_URI} ^/project7\.php$
+RewriteRule ^project7\.php$ /ApartamentVA [R=301,L]
+
+# Redirect requests for project8.php to /BucatarieNP
+RewriteCond %{REQUEST_URI} ^/project8\.php$
+RewriteRule ^project8\.php$ /BucatarieNP [R=301,L]
+
+# Redirect requests for project9.php to /ApartamentEB
+RewriteCond %{REQUEST_URI} ^/project9\.php$
+RewriteRule ^project9\.php$ /ApartamentEB [R=301,L]
+
+# Redirect requests for project10.php to /NUCET
+RewriteCond %{REQUEST_URI} ^/project10\.php$
+RewriteRule ^project10\.php$ /NUCET [R=301,L]
+
+# Rewrite requests for /Home to /index.html internally
+RewriteRule ^Home$ /index.html [L]
+
+# Rewrite requests for /Interiors to /interiors.html internally
+RewriteRule ^Interiors$ /interiors.html [L]
+
+# Rewrite requests for /Services to /services.html internally
+RewriteRule ^Services$ /services.html [L]
+
+# Rewrite requests for /Contact to /contact.html internally
+RewriteRule ^Contact$ /contact.html [L]
+
+# Rewrite requests for /Contact to /contact.html internally
+RewriteRule ^Privacy$ /privacy.html [L]
+
+# Rewrite requests for /Contact to /contact.html internally
+RewriteRule ^Success$ /succes.html [L]
+
+# Rewrite requests for /ApartamentAB to /project1.php internally
+RewriteRule ^ApartamentAB$ /project1.php [L]
+
+# Rewrite requests for /ApartamentSB to /project2.php internally
+RewriteRule ^ApartamentSB$ /project2.php [L]
+
+# Rewrite requests for /CasaGP to /project3.php internally
+RewriteRule ^CasaGP$ /project3.php [L]
+
+# Rewrite requests for /CasaDD to /project4.php internally
+RewriteRule ^CasaDD$ /project4.php [L]
+
+# Rewrite requests for /ApartamentRL to /project5.php internally
+RewriteRule ^ApartamentRL$ /project5.php [L]
+
+# Rewrite requests for /ApartamentMD to /project6.php internally
+RewriteRule ^ApartamentMD$ /project6.php [L]
+
+# Rewrite requests for /ApartamentVA to /project7.php internally
+RewriteRule ^ApartamentVA$ /project7.php [L]
+
+# Rewrite requests for /BucatarieNP to /project8.php internally
+RewriteRule ^BucatarieNP$ /project8.php [L]
+
+# Rewrite requests for /ApartamentEB to /project9.php internally
+RewriteRule ^ApartamentEB$ /project9.php [L]
+
+# Rewrite requests for /NUCET to /project10.php internally
+RewriteRule ^NUCET$ /project10.php [L]

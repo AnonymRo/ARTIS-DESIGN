@@ -9,33 +9,59 @@
   <title>ARTIS DESIGN | Creative Living</title>
   <meta name="title" content="ARTIS DESIGN">
   <meta name="description" content="Locul unde creativitatea si profesionalismul se intalnesc">
-  <meta name="keywords" content="design, interior, arad, artis, artist, studio">
+  <meta name="keywords" content="design, interior, arad">
   <meta http-equiv="Permissions-Policy" content="interest-cohort=()" />
 
-  <!-- Google fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
-  <!-- Font Awesome CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     crossorigin="anonymous">
 
-  <!-- CSS style -->
   <link rel="stylesheet" href="style.css">
 
-  <!-- Favicon for general browsers -->
   <link rel="icon" href="./Photos/Logo/favicon-16x16.png" sizes="16x16" type="image/png">
   <link rel="icon" href="./Photos/Logo/favicon-32x32.png" sizes="32x32" type="image/png">
-
-  <!-- Favicon for Apple devices -->
-  <link rel="apple-touch-icon" sizes="180x180" href="./Photos/Logo/apple-touch-icon.png">
-
-  <!-- Favicon for Android Chrome -->
   <link rel="icon" type="image/png" sizes="192x192" href="./Photos/Logo/android-chrome-192x192.png">
   <link rel="icon" type="image/png" sizes="512x512" href="./Photos/Logo/android-chrome-512x512.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./Photos/Logo/apple-touch-icon.png">
+  <link rel="shortcut icon" href="./Photos/Logo/LOGO ARTIS DESIGN V5 fundal negru.jpg" sizes="180x180" type="image/jpeg">
 
 </head>
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied'
+  });
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BPLV20QGGT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-BPLV20QGGT');
+</script>
+
+<script>
+
+  function allConsentGranted() {
+    gtag('consent', 'update', {
+      'ad_storage': 'granted',
+      'ad_user_data': 'granted',
+      'ad_personalization': 'granted',
+      'analytics_storage': 'granted'
+    });
+  }
+</script>
 
 <body>
 
@@ -96,21 +122,18 @@
   <div class="philosophy-container">
     <h2 class="philosophy-title">Our Philosophy</h2>
     <p class="philosophy-text">
-      La <span class="brand-name">ARTIS DESIGN</span> , fiecare proiect este abordat cu atentie la detalii si o pasiune
-      pentru estetica. Suntem aici
-      pentru a va ajuta sa va transformati visele in realitate si sa va oferim un spatiu in care sa va simtiti cu
-      adevarat acasa. <br><br>
-      Filozofia noastra se invarte in jurul conceptului de simplitate rafinata. Ne straduim sa evidentiem esenta
-      fiecarui spatiu prin designul nostru curat si minimalist. Intelegem ca frumusetea nu consta doar in detaliile
-      vizibile, ci si in abilitatea de a crea armonie si echilibru in fiecare colt al unei incaperi.
-      <br><br>
-      Cu o viziune axata pe ‘timelessness’, proiectele noastre sunt concepute pentru a rezista trecerii anilor si a
-      schimbarilor modei. Fiecare element este ales cu grija, astfel incat sa ofere nu doar o functionalitate practica,
-      ci si o estetica care sa ramana mereu proaspata si actuala.
-      <br><br>
-      Simplu nu înseamna lipsa de lux. In universul nostru, simplitatea devine sinonima cu eleganta si rafinamentul.
-      Cream spatii care emana o atmosfera de lux discret, unde fiecare detaliu contribuie la povestea de eleganta si
-      confort.
+      La <span class="brand-name">ARTIS DESIGN</span>, fiecare proiect este abordat cu atentie la detalii si o pasiune
+      pentru estetica. Suntem aici pentru a va ajuta sa va transformati visele in realitate si sa va oferim un spatiu in
+      care sa va simtiti cu adevarat acasa, in Arad sau oriunde altundeva. <br><br> Filozofia noastra se invarte in
+      jurul conceptului de
+      simplitate rafinata. Ne straduim sa evidentiem esenta fiecarui spatiu printr-un design curat si minimalist,
+      potrivit pentru interior. Intelegem ca frumusetea nu consta doar in detaliile vizibile, ci si in abilitatea de a
+      crea armonie si echilibru in fiecare colt al unei incaperi. <br><br> Cu o viziune axata pe 'timelessness',
+      proiectele noastre sunt concepute pentru a rezista trecerii anilor si a schimbarilor modei. Fiecare
+      element este ales cu grija, astfel incat sa ofere nu doar o functionalitate practica, ci si o estetica care sa
+      ramana mereu proaspata si actuala. <br><br> Simplu nu inseamna lipsa de lux. In universul nostru, simplitatea
+      devine sinonima cu eleganta si rafinamentul. Cream spatii care emana o atmosfera de lux discret, unde fiecare
+      detaliu contribuie la povestea de eleganta si confort.
     </p>
 
     <div class="button-container">
@@ -131,8 +154,8 @@
       <div class="subcontainer">
         <div class="cookies">
           <p>Acest site web foloseste cookies pentru a imbunatati experienta ta de navigare. Pentru mai multe
-            informatii, <a href="#">apasati aici</a>.</p>
-          <button id="cookies-btn">De acord</button>
+            informatii, <a href="privacy.html">apasati aici</a>.</p>
+          <button id="cookies-btn" onclick="allConsentGranted()">De acord</button>
         </div>
       </div>
     </div>
@@ -153,7 +176,7 @@
 
   <!-- Privacy Policy -->
   <div class="privacy-policy">
-    <a href="#">Privacy Policy</a>
+    <a href="privacy.html">Privacy Policy</a>
   </div>
 </footer>
 

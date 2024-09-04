@@ -1007,23 +1007,47 @@ nav li:hover::before {
     overflow: hidden;
     border-radius: 10px;
     opacity: 0;
-    animation: slideInFromLeft 1.2s ease forwards;
+    animation: slideInFromLeft 1.8s ease forwards;
 }
 
 .MainContainer .card:nth-child(1) {
-    animation-delay: 0.3s;
+    animation-delay: 0.2s;
 }
 
 .MainContainer .card:nth-child(2) {
-    animation-delay: 0.6s;
+    animation-delay: 0.4s;
 }
 
 .MainContainer .card:nth-child(3) {
-    animation-delay: 0.9s;
+    animation-delay: 0.6s;
 }
 
 .MainContainer .card:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+.MainContainer .card:nth-child(5) {
+    animation-delay: 1s;
+}
+
+.MainContainer .card:nth-child(6) {
     animation-delay: 1.2s;
+}
+
+.MainContainer .card:nth-child(7) {
+    animation-delay: 1.4s;
+}
+
+.MainContainer .card:nth-child(8) {
+    animation-delay: 1.6s;
+}
+
+.MainContainer .card:nth-child(9) {
+    animation-delay: 1.8s;
+}
+
+.MainContainer .card:nth-child(10) {
+    animation-delay: 2s;
 }
 
 .MainContainer .card .imgBox,
@@ -1354,6 +1378,48 @@ body.popup-open {
     object-fit: contain;
     transition: transform 0.8s ease;
 }
+
+.expandable-section {
+    background-color: #f1f1f1;
+    color: #333;
+    cursor: pointer;
+    font-family: 'Agency FB', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    height: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+    overflow: hidden; /* Hide overflowing content */
+  }
+
+  .expandable-section .content {
+    max-height: 0;
+    overflow: hidden; /* Hide overflowing content */
+    opacity: 0;
+    transition: max-height 1s ease, opacity 1s ease; /* Add transition for max-height and opacity */
+  }
+
+  .expandable-section.expanded .content {
+    max-height: 1000px; /* Set max-height to a large value */
+    opacity: 1; /* Set opacity to 1 when expanded */
+  }
+
+  /* Faster transition for retraction */
+  .expandable-section.expanded.retracting .content {
+    transition: max-height 0.7s ease, opacity 0.7s ease; /* Faster transition duration for retraction */
+  }
+
+  @media (max-width: 900px)
+  {
+    .expandable-section {
+      font-size: 14px;
+    }
+  }
 
 /**** Smaller screens ****/
 
