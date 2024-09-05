@@ -731,7 +731,7 @@ nav li:hover::before {
 .contact-container {
     display: flex;
     justify-content: space-between;
-    padding: 100px;
+    padding: 50px;
 }
 
 .contact-info-container {
@@ -934,16 +934,18 @@ nav li:hover::before {
     flex: 1;
     text-align: center;
     cursor: pointer;
-    font-size: 25px;
     color: #333;
-    font-weight: 300;
     position: relative;
     transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
+.package h2 {
+    font-size: 32px;
+    font-weight: 400;
+}
+
 .package.active {
     color: #9f4b2c;
-    text-decoration: underline;
 }
 
 .package:not(:last-child)::after {
@@ -953,7 +955,7 @@ nav li:hover::before {
     top: 50%;
     transform: translateY(-50%);
     color: #333;
-    font-size: 36px;
+    font-size: 30px;
     line-height: 1;
 }
 
@@ -1157,17 +1159,57 @@ nav li:hover::before {
     height: auto;
 }
 
+.Portofolio {
+    display: flex;
+    justify-content: center;
+    gap: 110px;
+}
+
 .Photo {
-    font-size: 50px;
+    font-size: 40px;
     font-family: 'Agency FB', sans-serif;
-    font-weight: 400;
+    font-weight: 500;
     padding: 15px;
     color: #333;
     text-align: center;
     text-transform: capitalize;
+    text-decoration: none;
     animation: showingFromTop 1.8s ease-in-out;
+    transition: color 0.1s ease, border-bottom 0.1s ease;
+}
+
+.Photo:hover,
+.Photo.active {
+    color: #9f4b2c;
+}
+
+.portofolio-line {
+    width: 100%;
+    height: 2px;
+    background-color: #ddd;
+    margin: 60px 0;
+    position: relative;
     margin-top: 0;
-    margin-bottom: 30px;
+}
+
+.portofolio-line::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.view {
+    display: none;
+}
+
+.view.active {
+    display: block;
 }
 
 .view-project-btn {
@@ -1590,24 +1632,50 @@ body.popup-open {
     }
 
     .contact-info-container li {
-        font-size: 18px;
+        font-size: 15px;
         margin-bottom: 50px;
+    }
+
+    .contact-info-container li a {
+        font-size: 20px;
     }
 
     .contact-info-container ul {
         padding: 10px;
+        margin-top: 40px;
+    }
+
+    .fas.fa-phone, .fas.fa-envelope, .fab.fa-facebook, .fab.fa-instagram, .fa-solid.fa-user {
+        font-size: 25px;
+    }
+
+    .contact-form-container label {
+        font-size: 18px;
+    }
+
+    .contact-form-container button {
+        font-size: 20px;
     }
 
     .contact-info-container h2,
     .contact-form-container h2 {
-        font-size: 30px;
+        font-size: 25px;
+    }
+
+    .Portofolio {
+        gap: 50px;
     }
 
     .Photo {
-        font-size: 2.7em;
+        font-size: 2.1em;
         margin-bottom: 10px;
-        margin-top: 15px;
+        margin-top: 10px;
         margin-bottom: 10px;
+    }
+
+    .portofolio-line {
+        margin: 25px 0;
+        margin-top: 0;
     }
 
     .MainContainer .card {

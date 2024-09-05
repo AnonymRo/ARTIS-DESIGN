@@ -64,6 +64,10 @@ RewriteRule ^project9\.php$ /ApartamentEB [R=301,L]
 RewriteCond %{REQUEST_URI} ^/project10\.php$
 RewriteRule ^project10\.php$ /NUCET [R=301,L]
 
+# Redirect requests for project11.php to /OutdoorProject
+RewriteCond %{REQUEST_URI} ^/project11\.php$
+RewriteRule ^project11\.php$ /OutdoorProject [R=301,L]
+
 # Rewrite requests for /Home to /index.html internally
 RewriteRule ^Home$ /index.html [L]
 
@@ -111,3 +115,6 @@ RewriteRule ^ApartamentEB$ /project9.php [L]
 
 # Rewrite requests for /NUCET to /project10.php internally
 RewriteRule ^NUCET$ /project10.php [L]
+
+# Rewrite requests for /OutdoorProject to /project11.php internally
+RewriteRule ^OutdoorProject$ /project11.php [L]

@@ -11,57 +11,57 @@
     <meta name="description" content="Locul unde creativitatea si profesionalismul se intalnesc">
     <meta name="keywords" content="design, interior, arad">
     <meta http-equiv="Permissions-Policy" content="interest-cohort=()" />
-  
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-      crossorigin="anonymous">
-  
+        crossorigin="anonymous">
+
     <link rel="stylesheet" href="style.css">
-  
+
     <link rel="icon" href="./Photos/Logo/favicon-16x16.png" sizes="16x16" type="image/png">
     <link rel="icon" href="./Photos/Logo/favicon-32x32.png" sizes="32x32" type="image/png">
     <link rel="icon" type="image/png" sizes="192x192" href="./Photos/Logo/android-chrome-192x192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="./Photos/Logo/android-chrome-512x512.png">
     <link rel="apple-touch-icon" sizes="180x180" href="./Photos/Logo/apple-touch-icon.png">
     <link rel="shortcut icon" href="./Photos/Logo/LOGO ARTIS DESIGN V5 fundal negru.jpg" sizes="180x180" type="image/jpeg">
-  
-  </head>
+
+</head>
 
 <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
-  
+
     gtag('consent', 'default', {
-      'ad_storage': 'denied',
-      'ad_user_data': 'denied',
-      'ad_personalization': 'denied',
-      'analytics_storage': 'denied'
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'analytics_storage': 'denied'
     });
-  </script>
-  
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BPLV20QGGT"></script>
-  <script>
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BPLV20QGGT"></script>
+<script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-  
+
     gtag('config', 'G-BPLV20QGGT');
-  </script>
-  
-  <script>
-  
+</script>
+
+<script>
+
     function allConsentGranted() {
-      gtag('consent', 'update', {
-        'ad_storage': 'granted',
-        'ad_user_data': 'granted',
-        'ad_personalization': 'granted',
-        'analytics_storage': 'granted'
-      });
+        gtag('consent', 'update', {
+            'ad_storage': 'granted',
+            'ad_user_data': 'granted',
+            'ad_personalization': 'granted',
+            'analytics_storage': 'granted'
+        });
     }
-  </script>
+</script>
 
 <body>
 
@@ -89,51 +89,36 @@
                 </div>
             </div>
         </div>
-
     </header>
 
-    <main class="contact-container">
-        <div class="contact-info-container">
-            <h2>Informatii de contact</h2>
-            <ul>
-                <li><i class="fa-solid fa-user"></i><a>Paula Busa</a></li>
-                <li><i class="fas fa-phone"></i><a href="tel:+40755349805">+40 (755) 349 805</a></li>
-                <li><i class="fas fa-envelope"></i><a
-                        href="mailto:artis.dsgnstudio@gmail.com">artis.dsgnstudio@gmail.com</a></li>
-                <li><i class="fab fa-facebook"></i> <a href="https://www.facebook.com/artis.dsgnstudio">Facebook</a>
-                </li>
-                <li><i class="fab fa-instagram"></i> <a
-                        href="https://www.instagram.com/artisdesign_studio/">Instagram</a></li>
-            </ul>
+    <div class="description-container">
+        <div class="presentation-picture">
+            <img src="./Photos/Project11/OUTDOOR.jpg">
+        </div>
+        <div class="interior-text">
+            <h2>Exterior project - Coming soon..</h2>
+            <p>
+            </p>
+        </div>
+    </div>
+
+   <!-- <div class="interior-line"></div>
+
+    
+    <div class="grid-container">
+        <h1>Imagine Gallery</h1>
+        <div class="interior-container">
+            
         </div>
 
-        <div class="contact-form-container">
-            <h2>Contacteaza-ne pentru o oferta</h2>
-            <form action="https://formsubmit.co/artis.dsgnstudio@gmail.com" method="POST">
-                <input class="Honey" type="text" name="_honey">
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_next" value="https://artis-design.ro/succes.html">
-
-                <label for="name">Nume complet:</label>
-                <input type="text" id="name" name="Nume complet" required autocomplete="name">
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="Email" required autocomplete="email">
-
-                <label for="phone">Telefon:</label>
-                <input type="tel" id="phone" name="Număr de telefon" required autocomplete="tel">
-
-                <label for="city">Oras:</label>
-                <input type="text" id="city" name="Oraș" required autocomplete="address-level2">
-
-                <label for="message">Mesajul tau (suprafata in mp², pachetul dorit) :</label>
-                <textarea id="message" name="Mesajul clientului" required autocomplete="off"></textarea>
-
-                <button type="submit">Trimite</button>
-            </form>
+        <div class="popup-image">
+            <span class="prev">&lt;</span>
+            <span class="next">&gt;</span>
+            <span class="close">&times;</span>
+            <img src="./Photos/Project1/COVER.jpg">
         </div>
-
-    </main>
+    </div> 
+    -->
 
     <!-- Transparent overlay -->
     <div class="overlay" id="overlay"></div>

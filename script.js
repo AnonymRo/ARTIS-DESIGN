@@ -182,114 +182,114 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 100);
   });
 
-// Variables to keep track of current image index and total images
-let currentImageIndex = 0;
-let totalImages = 0;
+  // Variables to keep track of current image index and total images
+  let currentImageIndex = 0;
+  let totalImages = 0;
 
-// Function to show popup
-function showPopup(index) {
+  // Function to show popup
+  function showPopup(index) {
     const popupImage = document.querySelector('.popup-image');
     const body = document.querySelector('body');
     const interiorImages = document.querySelectorAll('.interior-container img');
 
     if (popupImage && body && interiorImages.length > index) {
-        currentImageIndex = index;
-        totalImages = interiorImages.length;
-        popupImage.classList.add('active');
-        body.classList.add('popup-open');
-        popupImage.style.display = 'block';
-        popupImage.querySelector('img').src = interiorImages[index].getAttribute('src');
+      currentImageIndex = index;
+      totalImages = interiorImages.length;
+      popupImage.classList.add('active');
+      body.classList.add('popup-open');
+      popupImage.style.display = 'block';
+      popupImage.querySelector('img').src = interiorImages[index].getAttribute('src');
     }
-}
+  }
 
-// Event listener for images inside .interior-container
-document.querySelectorAll('.interior-container img').forEach((image, index) => {
+  // Event listener for images inside .interior-container
+  document.querySelectorAll('.interior-container img').forEach((image, index) => {
     image.onclick = () => {
-        showPopup(index);
+      showPopup(index);
     };
-});
+  });
 
-// Event listener for closing the popup image
-const popupCloseButton = document.querySelector('.popup-image .close');
-if (popupCloseButton) {
+  // Event listener for closing the popup image
+  const popupCloseButton = document.querySelector('.popup-image .close');
+  if (popupCloseButton) {
     popupCloseButton.onclick = () => {
-        const popupImage = document.querySelector('.popup-image');
-        const body = document.querySelector('body');
-        if (popupImage && body) {
-            popupImage.classList.remove('active');
-            body.classList.remove('popup-open');
-            popupImage.style.display = 'none';
-        }
+      const popupImage = document.querySelector('.popup-image');
+      const body = document.querySelector('body');
+      if (popupImage && body) {
+        popupImage.classList.remove('active');
+        body.classList.remove('popup-open');
+        popupImage.style.display = 'none';
+      }
     };
-}
+  }
 
-// Function to navigate to the next image
-function nextImage() {
+  // Function to navigate to the next image
+  function nextImage() {
     currentImageIndex = (currentImageIndex + 1) % totalImages;
     const nextImageSrc = document.querySelectorAll('.interior-container img')[currentImageIndex].getAttribute('src');
     document.querySelector('.popup-image img').src = nextImageSrc;
-}
+  }
 
-// Function to navigate to the previous image
-function previousImage() {
+  // Function to navigate to the previous image
+  function previousImage() {
     currentImageIndex = (currentImageIndex - 1 + totalImages) % totalImages;
     const previousImageSrc = document.querySelectorAll('.interior-container img')[currentImageIndex].getAttribute('src');
     document.querySelector('.popup-image img').src = previousImageSrc;
-}
+  }
 
-// Event listeners for keyboard arrow keys
-document.addEventListener('keydown', function (e) {
+  // Event listeners for keyboard arrow keys
+  document.addEventListener('keydown', function (e) {
     if (e.key === 'ArrowRight') {
-        nextImage();
+      nextImage();
     } else if (e.key === 'ArrowLeft') {
-        previousImage();
+      previousImage();
     }
-});
+  });
 
-// Event listener for closing the popup image with prev button
-const prevButton = document.querySelector('.popup-image .prev');
-if (prevButton) {
+  // Event listener for closing the popup image with prev button
+  const prevButton = document.querySelector('.popup-image .prev');
+  if (prevButton) {
     prevButton.onclick = () => {
-        previousImage();
+      previousImage();
     };
-}
+  }
 
-// Event listener for closing the popup image with next button
-const nextButton = document.querySelector('.popup-image .next');
-if (nextButton) {
+  // Event listener for closing the popup image with next button
+  const nextButton = document.querySelector('.popup-image .next');
+  if (nextButton) {
     nextButton.addEventListener('mouseup', function (e) {
-        e.preventDefault();
-        nextImage();
+      e.preventDefault();
+      nextImage();
     });
 
     nextButton.addEventListener('touchend', function (e) {
-        e.preventDefault();
-        nextImage();
+      e.preventDefault();
+      nextImage();
     });
-}
+  }
 
-// Event listener for closing the popup image with prev button on touch devices
-const prevButtonTouch = document.querySelector('.popup-image .prev');
-if (prevButtonTouch) {
+  // Event listener for closing the popup image with prev button on touch devices
+  const prevButtonTouch = document.querySelector('.popup-image .prev');
+  if (prevButtonTouch) {
     prevButtonTouch.addEventListener('touchend', function (e) {
-        e.preventDefault();
-        previousImage();
+      e.preventDefault();
+      previousImage();
     });
-}
+  }
 
-// Event listener for closing the popup image with close button
-const closeButton = document.querySelector('.popup-image .close');
-if (closeButton) {
+  // Event listener for closing the popup image with close button
+  const closeButton = document.querySelector('.popup-image .close');
+  if (closeButton) {
     closeButton.addEventListener('click', function () {
-        const popupImage = closeButton.closest('.popup-image');
-        const body = document.querySelector('body');
-        if (popupImage && body) {
-            popupImage.classList.remove('active');
-            body.classList.remove('popup-open');
-            popupImage.style.display = 'none';
-        }
+      const popupImage = closeButton.closest('.popup-image');
+      const body = document.querySelector('body');
+      if (popupImage && body) {
+        popupImage.classList.remove('active');
+        body.classList.remove('popup-open');
+        popupImage.style.display = 'none';
+      }
     });
-}
+  }
 
 });
 
@@ -367,20 +367,20 @@ function showContent(targetId) {
 
   // Hide all contents with animation
   contents.forEach(content => {
-      if (content.classList.contains('active')) {
-          content.classList.remove('active');
-          content.classList.add('fading');
-      }
+    if (content.classList.contains('active')) {
+      content.classList.remove('active');
+      content.classList.add('fading');
+    }
   });
 
   // Show the target content
   targetContent.classList.remove('fading'); // Ensure it doesn’t have the fading class
   targetContent.classList.add('active');
-  
+
   // Remove 'active' class from all packages
   const packages = document.querySelectorAll('.package');
   packages.forEach(pkg => pkg.classList.remove('active'));
-  
+
   // Add 'active' class to the clicked package
   const targetPackage = document.getElementById(targetId);
   targetPackage.classList.add('active');
@@ -390,12 +390,35 @@ function showContent(targetId) {
 const packages = document.querySelectorAll('.package h2');
 packages.forEach(header => {
   header.addEventListener('click', () => {
-      const targetId = header.parentElement.id;
-      showContent(targetId);
+    const targetId = header.parentElement.id;
+    showContent(targetId);
   });
 });
 
 // Display the default content (e.g., 'standard') on page load
 document.addEventListener('DOMContentLoaded', () => {
   showContent('standard'); // Default content to display
+});
+
+const links = document.querySelectorAll('.Photo');
+const views = document.querySelectorAll('.view');
+
+// Show the 'interiors' view by default and set the corresponding link as active
+const defaultView = 'interiors';
+document.getElementById(defaultView).style.display = 'block';
+document.querySelector(`[data-view="${defaultView}"]`).classList.add('active');
+
+links.forEach(link => {
+  link.addEventListener('click', function (event) {
+    event.preventDefault(); // Prevent default link behavior
+    const viewToShow = this.getAttribute('data-view');
+
+    // Hide all views and remove active class from all links
+    views.forEach(view => view.style.display = 'none');
+    links.forEach(link => link.classList.remove('active'));
+
+    // Show the selected view and set the clicked link as active
+    document.getElementById(viewToShow).style.display = 'block';
+    this.classList.add('active');
+  });
 });
