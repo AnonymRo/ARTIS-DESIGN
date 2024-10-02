@@ -1062,6 +1062,10 @@ nav li:hover::before {
     animation-delay: 2s;
 }
 
+.MainContainer .card:nth-child(11) {
+    animation-delay: 2.2s;
+}
+
 .MainContainer .card .imgBox,
 .MainContainer .card .contentBox {
     position: absolute;
