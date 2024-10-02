@@ -93,7 +93,7 @@
 
     <div class="description-container">
         <div class="presentation-picture">
-            <img src="./Photos/Project11/COVER.jpg">
+            <img src="./Photos/Project11/OUTDOOR.jpg">
         </div>
         <div class="interior-text">
             <h2>Exterior project - Coming soon..</h2>
