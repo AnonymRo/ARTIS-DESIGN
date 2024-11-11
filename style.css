@@ -1118,7 +1118,7 @@ nav li:hover::before {
 .MainContainer .card:hover .contentBox::before,
 .MainContainer .card.hover-effect .contentBox::before {
     transform: scaleX(1);
-    opacity: 0.5;
+    opacity: 0.7;
     transform-origin: left;
     transition-delay: 0s;
 }
@@ -1735,7 +1735,7 @@ body.popup-open {
     }
 
     .MainContainer .card .contentBox::before {
-        transition: opacity 0.6s ease;
+        transition: opacity 0.3s ease;
     }
 
     .grid-container .popup-image img {
