@@ -300,15 +300,16 @@ nav.open li:nth-child(4) {
 }
 
 nav ul {
-    padding: 100px;
+    padding: 80px;
     list-style: none;
 }
 
 nav a {
     text-decoration: none;
     color: #e1e1e1;
-    font-size: 70px;
-    font-family: 'Agency FB', sans-serif;
+    font-size: 55px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-weight: 400;
     position: relative;
 }
 
@@ -385,8 +386,8 @@ nav li:hover::before {
     display: inline-block;
     overflow: hidden;
     color: #333;
-    font-family: 'Agency FB', sans-serif;
-    font-size: 4.8em;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-size: 3em;
     font-weight: 100;
     margin-bottom: 5px;
     letter-spacing: 1px;
@@ -401,7 +402,7 @@ nav li:hover::before {
 
 .word span:first-child {
     color: #9f4b2c;
-    font-weight: 600;
+    font-weight: 300;
 }
 
 .index-line {
@@ -427,10 +428,18 @@ nav li:hover::before {
 
 /**** Interiors picture ****/
 
+.interiors-section {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    background-color: #333; /* Dark background */
+    padding: 100px 0;
+}
+
 .interiors-image-container {
     position: relative;
-    width: 90%;
-    margin: 60px auto 0 auto;
+    width: 50%;
+    margin-left: 20px;
     border-radius: 15px;
     overflow: hidden;
 }
@@ -459,16 +468,16 @@ nav li:hover::before {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 25px 32px;
-    font-size: 25px;
+    padding: 16px 24px;
+    font-size: 15px;
     background-color: #9f4b2c;
     color: white;
     border: none;
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.4s ease-in-out, transform 0.4s ease-in-out, box-shadow 0.3s ease-in-out;
-    font-family: 'Agency FB', sans-serif;
-    font-weight: 500;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-weight: 300;
     z-index: 2;
     animation: exploreButtonAnimation 2.2s ease-in-out;
 }
@@ -480,54 +489,86 @@ nav li:hover::before {
     transform: translate(-50%, -50%) scale(1.03);
 }
 
-
-/**** Phylosophy container ****/
-
-.philosophy-container {
-    text-align: left;
-    background-color: #333;
-    color: white;
-    padding: 50px 20px;
-    margin-top: 100px;
-    padding-inline: 66px;
-}
-
-.philosophy-title,
-.philosophy-text {
-    opacity: 0;
-    transform: translateY(-60px);
-    transition: opacity 1.8s ease, transform 1.8s ease;
-}
-
-.philosophy-container.visible .philosophy-title,
-.philosophy-container.visible .philosophy-text {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.philosophy-title {
+.interiors-text-container {
+    width: 50%;
     text-align: center;
-    font-size: 3em;
-    font-weight: 600;
-    font-family: 'Agency FB', sans-serif;
+    padding: 30px;
+    overflow: hidden;
+    animation: slideInFromRight 1.8s ease-in-out;
+}
+
+.interiors-text-container h2 {
     margin: 0;
-    color: #e1e1e1;
+    font-size: 2.3em;
+    font-weight: 600;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    color: #9f4b2c
 }
 
-.philosophy-text {
-    font-size: 1.4em;
-    font-weight: 400;
-    line-height: 1.6;
-    font-family: 'Agency FB', sans-serif;
-    display: inline-block;
-    color: #e1e1e1;
-    background-color: #333;
+.interiors-text-container p {
+    margin-top: 30px;
+    font-size: 1.2em;
+    line-height: 1.5;
+    color: #fff;
+    font-weight: 300;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    text-align: center;
     padding: 20px;
-    margin-top: 20px;
 }
 
-.brand-name {
+
+/**** Design container ****/
+
+.designer-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 80px;
+    color: #f0f0f0; /* Light color for general text */
+}
+
+.designer-picture {
+    width: 50%; /* Adjust as needed */
+    display: flex;
+    align-items: right;
+    justify-content: right;
+    padding: 40px;
+    overflow: hidden; /* Ensure anything that overflows is hidden */
+}
+
+.designer-picture img {
+    width: 100%; /* Take the full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Cover the entire area */
+    animation: mainPhotoReveal 1.8s ease-in-out; /* Keep your animation */
+    border-radius: 15px;
+}
+
+.designer-content {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 10px;
+    color: #333;
+    text-align: center;
+}
+
+.designer-content h2 {
+    justify-content: flex-start;
+    font-size: 2.3em;
     color: #9f4b2c;
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.designer-content p {
+    color: #333;
+    font-weight: 300;
+    font-size: 1.2em;
+    line-height: 1.5;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 /**** Contact button ****/
@@ -590,19 +631,6 @@ nav li:hover::before {
 }
 
 .social-icon:hover {
-    color: #9f4b2c;
-}
-
-.privacy-policy {
-    margin: 0;
-    color: #e1e1e1;
-    font-size: 24px;
-    font-family: 'Agency FB', sans-serif;
-    transition: color 0.3s ease-in-out;
-    cursor: pointer;
-}
-
-.privacy-policy:hover {
     color: #9f4b2c;
 }
 
@@ -674,7 +702,7 @@ nav li:hover::before {
 }
 
 .cookies p {
-    font-family: 'Agency FB', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     font-size: 22px;
 }
 
@@ -682,14 +710,14 @@ nav li:hover::before {
     color: #9f4b2c;
     text-decoration: none;
     font-size: 22px;
-    font-family: 'Agency FB', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 #cookies-btn {
     border-radius: 5px;
     padding: 12px 35px;
     font-size: 1.3rem;
-    font-family: 'Agency FB', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     font-weight: bold;
     cursor: pointer;
     border: none;
@@ -717,9 +745,10 @@ nav li:hover::before {
 .privacy-policy a {
     color: #e1e1e1;
     text-decoration: none;
-    font-family: 'Agency FB', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     cursor: pointer;
     transition: color 0.2s ease-in-out;
+    font-size: 0.8em;
 }
 
 .privacy-policy a:hover {
@@ -1118,7 +1147,7 @@ nav li:hover::before {
     padding: 30px;
     z-index: 1;
     opacity: 0;
-    font-family: 'Agency FB', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     font-size: .8em;
     color: initial;
 }
@@ -1136,7 +1165,7 @@ nav li:hover::before {
     text-transform: uppercase;
     letter-spacing: 1px;
     color: white;
-    font-family: 'Agency FB', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     display: flex;
 }
 
@@ -1146,7 +1175,7 @@ nav li:hover::before {
     line-height: 1.4em;
     font-weight: 300;
     color: white;
-    font-family: 'Agency FB', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 .image-wrapper {
@@ -1171,8 +1200,8 @@ nav li:hover::before {
 
 .Photo {
     font-size: 40px;
-    font-family: 'Agency FB', sans-serif;
-    font-weight: 500;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-weight: 300;
     padding: 15px;
     color: #333;
     text-align: center;
@@ -1225,7 +1254,7 @@ nav li:hover::before {
     border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.4s ease-in-out, box-shadow 0.3s ease-in-out;
-    font-family: 'Agency FB', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     font-weight: 500;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
     text-align: center;
@@ -1439,8 +1468,7 @@ body.popup-open {
     background-color: #f1f1f1;
     color: #333;
     cursor: pointer;
-    font-family: 'Agency FB', sans-serif;
-    font-weight: 300;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     font-size: 18px;
     padding: 18px;
     width: 100%;
@@ -1453,7 +1481,13 @@ body.popup-open {
     overflow: hidden; /* Hide overflowing content */
   }
 
+  .expandable-section h1 {
+    font-weight: 300;
+    font-size: 1.2em;
+  }
+
   .expandable-section .content {
+    font-weight: 100;
     max-height: 0;
     overflow: hidden; /* Hide overflowing content */
     opacity: 0;
@@ -1468,13 +1502,6 @@ body.popup-open {
   /* Faster transition for retraction */
   .expandable-section.expanded.retracting .content {
     transition: max-height 0.7s ease, opacity 0.7s ease; /* Faster transition duration for retraction */
-  }
-
-  @media (max-width: 900px)
-  {
-    .expandable-section {
-      font-size: 14px;
-    }
   }
 
 /**** Smaller screens ****/
@@ -1515,7 +1542,7 @@ body.popup-open {
 @media (max-width: 900px) {
 
     .main-logo img {
-        width: 140px;
+        width: 105px;
         height: auto;
     }
 
@@ -1529,8 +1556,13 @@ body.popup-open {
     }
 
     .word {
-        font-size: 1.3em;
+        font-size: 1em;
         padding-right: 10px;
+        letter-spacing: 0;
+    }
+
+    .word span:first-child {
+        font-weight: 400;
     }
 
     .body-container {
@@ -1546,7 +1578,7 @@ body.popup-open {
         width: auto;
         flex-direction: column;
         text-align: center;
-        padding-bottom: 0;
+        padding: 10px
     }
 
     .word-container {
@@ -1566,26 +1598,39 @@ body.popup-open {
         clip-path: none;
     }
 
-    .philosophy-container {
-        padding-inline: 20px;
-        margin-top: 60px;
+    .designer-container {
+        flex-direction: column;
+        margin-top: 0;
+        padding: 50px 0;
     }
 
-    .philosophy-title {
-        font-size: 2em;
+    .designer-content {
+        width: 100%;
+        padding: 0;
     }
 
-    .philosophy-text {
-        font-size: 1.1em;
+    .designer-content h2 {
+        font-size: 1.4em;
+        margin: 0;
     }
 
-    .overlay-interiors {
-        height: 98.7%;
-        border-radius: 5px;
+    .designer-content p {
+        font-size: 0.8em;
+        padding: 30px;
+        margin: 0;
     }
 
-    .privacy-policy {
-        font-size: 16px;
+    .designer-picture {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .designer-picture img {
+        border-radius: 25px;
+        padding: 15px;
+        width: 90%;
     }
 
     .social-icon {
@@ -1593,18 +1638,18 @@ body.popup-open {
     }
 
     .interiors-image-container {
-        margin-top: 20px;
+        margin-top: 0;
         width: 90%;
         border-radius: 5px;
     }
 
     .interiors-image-container img {
-        border-radius: 5px;
+        border-radius: 15px;
     }
 
     .explore-button {
         padding: 12px 15px;
-        font-size: 20px;
+        font-size: 12px;
     }
 
     .to-top {
@@ -1671,7 +1716,7 @@ body.popup-open {
     }
 
     .Photo {
-        font-size: 2.1em;
+        font-size: 1.4em;
         margin-bottom: 10px;
         margin-top: 10px;
         margin-bottom: 10px;
@@ -1687,11 +1732,12 @@ body.popup-open {
     }
 
     .MainContainer .card:hover .contentBox .content h3 {
-        font-size: 1.7em;
+        font-size: 1.4em;
+        font-weight: 600;
     }
 
     .MainContainer .card:hover .contentBox .content p {
-        font-size: 1.3em;
+        font-size: 1em;
     }
 
     .interior-button {
@@ -1720,6 +1766,7 @@ body.popup-open {
     .view-project-btn {
         padding: 15px 30px;
         margin-top: 70px;
+        font-size: 15px;
     }
 
     .description-container {
@@ -1794,7 +1841,12 @@ body.popup-open {
     }
 
     .cookies p {
-        font-size: 19px;
+        font-size: 15px;
+    }
+
+    .cookies a {
+        font-size: 15px;
+        margin-top: 12ßpx;
     }
 
     #cookies {
@@ -1803,23 +1855,64 @@ body.popup-open {
 
     #cookies-btn {
         margin: 0 auto;
-        font-size: 20px;
+        font-size: 15px;
         font-weight: 300;
         border-radius: 8px;
         margin-bottom: 15px;
     }
+
+    .expandable-section {
+        font-size: 14px;
+      }
+  
+      .interiors-section {
+          flex-direction: column-reverse;
+          padding: 50px 0;
+      }
+  
+      .interiors-text-container {
+          width: 100%;
+          padding: 0;
+      }
+  
+      .interiors-text-container h2 {
+          font-size: 1.4em;
+      }
+  
+      .interiors-text-container p {
+          font-size: 0.8em;
+          margin-top: 0;
+          padding: 30px;
+      }
+  
+      .interiors-image-container {
+          margin-left: 0;
+      }
+
+      nav a {
+        font-size: 45px;
+      }
 }
 
 /**** Even smaller screens ****/
 
 @media (max-width: 415px) {
-    .word {
-        font-size: .9em;
-    }
 
     .contact-info-container li {
         font-size: 16px;
         margin-bottom: 50px;
+    }
+}
+
+@media (min-width: 1075px) {
+    .word {
+        font-size: 3.8em;
+    }
+}
+
+@media (min-width: 1500px) {
+    .word {
+        font-size: 4em;
     }
 }
 
@@ -1831,27 +1924,9 @@ body.popup-open {
     }
 }
 
-@media (min-width: 901px) {
-    .word {
-        font-size: 3.8em;
-    }
-}
-
-@media (min-width: 1080px) {
-    .word {
-        font-size: 4.5em;
-    }
-}
-
 @media (min-width: 1100px) {
     .interior-text h2 {
         font-size: 50px;
-    }
-}
-
-@media (min-width: 1500px) {
-    .word {
-        font-size: 6em;
     }
 }
 

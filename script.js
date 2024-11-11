@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", function () {
   var overlay = document.getElementById("overlay");
   var nav = document.querySelector("nav");
   var separator = document.querySelector(".separator");
-  var philosophyContainer = document.querySelector(".philosophy-container");
   var toTop = document.querySelector(".to-top");
   var footer = document.querySelector("footer");
 
@@ -21,45 +20,25 @@ document.addEventListener("DOMContentLoaded", function () {
     };
   }
 
-  function updateSeparator() {
-    var bodyContainer = document.querySelector(".body-container");
+// Letter animation
+const words = document.querySelectorAll('.word');
 
-    // Check if bodyContainer is not null before proceeding
-    if (bodyContainer) {
-      var bodyContainerBottom = bodyContainer.getBoundingClientRect().bottom;
-
-      if (bodyContainerBottom <= window.innerHeight) {
-        separator.style.width = "100%";
-        philosophyContainer.classList.add("visible");
-      } else {
-        separator.style.width = "0";
-        philosophyContainer.classList.remove("visible");
-      }
-    }
-  }
-
-  updateSeparator();
-
-  window.addEventListener("scroll", updateSeparator);
-
-  const words = document.querySelectorAll('.word');
-
-  words.forEach((word, wordIndex) => {
+words.forEach((word, wordIndex) => {
     const letters = word.textContent.split('');
-    word.innerHTML = '';
+    word.innerHTML = ''; // Clear the original word content
 
     letters.forEach((letter, index) => {
-      const span = document.createElement('span');
-      span.textContent = letter;
-      word.appendChild(span);
+        const span = document.createElement('span');
+        span.textContent = letter;
+        span.style.opacity = '0'; // Set initial opacity to 0
+        word.appendChild(span);
 
-      const delay = wordIndex * 300 + index * 100;
-
-      setTimeout(() => {
-        span.style.opacity = '1';
-      }, delay);
+        const delay = wordIndex * 300 + index * 100;
+        setTimeout(() => {
+            span.style.opacity = '1';
+        }, delay);
     });
-  });
+});
 
   window.addEventListener("scroll", () => {
     const scrollPosition = window.scrollY;
