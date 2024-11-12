@@ -169,8 +169,8 @@
         <div class="container">
             <div class="subcontainer">
                 <div class="cookies">
-                    <p>Acest site web foloseste cookies pentru a imbunatati experienta ta de navigare. Pentru mai multe
-                        informatii, <a href="privacy.html">apasati aici</a>.</p>
+                <p>Acest site web folosește cookies pentru a îmbunătăți experiența ta de navigare. Pentru mai multe
+                informații, <a href="privacy.html">apăsați aici</a>.</p>
                     <button id="cookies-btn" onclick="allConsentGranted()">De acord</button>
                 </div>
             </div>
