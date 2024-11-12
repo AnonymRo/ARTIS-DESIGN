@@ -820,7 +820,8 @@ nav li:hover::before {
 .fas.fa-envelope,
 .fab.fa-facebook,
 .fab.fa-instagram,
-.fa-solid.fa-user {
+.fa-solid.fa-user,
+.fas.fa-map-marker-alt {
     font-size: 30px;
     margin-right: 20px;
     vertical-align: middle;
@@ -1687,7 +1688,7 @@ body.popup-open {
         margin-top: 40px;
     }
 
-    .fas.fa-phone, .fas.fa-envelope, .fab.fa-facebook, .fab.fa-instagram, .fa-solid.fa-user {
+    .fas.fa-phone, .fas.fa-envelope, .fab.fa-facebook, .fab.fa-instagram, .fa-solid.fa-user, .fas.fa-map-marker-alt {
         font-size: 25px;
     }
 
