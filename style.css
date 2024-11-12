@@ -1523,8 +1523,8 @@ body.popup-open {
     }
 
     .services-button {
-        padding: 12px 15px;
-        font-size: 12px;
+        padding: 12px 18px;
+        font-size: 15px;
     }
 }
 
@@ -1646,7 +1646,7 @@ body.popup-open {
     }
 
     .privacy-policy a {
-        font-size: 0.7em;
+        font-weight: 250;
     }
 
     .contact-container {
@@ -1801,8 +1801,8 @@ body.popup-open {
     }
 
     .package-content p {
-        font-weight: 150;
-        font-size: 12px;
+        font-weight: 100;
+        font-size: 13px;
     }
 
     .MainContainer {
