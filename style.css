@@ -1513,7 +1513,8 @@ body.popup-open {
     }
 
     .Disclaimer {
-        font-size: 11px;
+        font-size: 10px;
+        font-weight: 250;
         margin: 0;
     }
 
@@ -1522,8 +1523,8 @@ body.popup-open {
     }
 
     .services-button {
-        padding: 10px 20px;
-        font-size: 22px;
+        padding: 12px 15px;
+        font-size: 12px;
     }
 }
 
@@ -1622,7 +1623,7 @@ body.popup-open {
     }
 
     .social-icon {
-        font-size: 22px;
+        font-size: 20px;
     }
 
     .interiors-image-container {
@@ -1639,9 +1640,13 @@ body.popup-open {
     .to-top {
         width: 40px;
         height: 40px;
-        font-size: 24px;
+        font-size: 20px;
         bottom: 24px;
         right: 24px;
+    }
+
+    .privacy-policy a {
+        font-size: 0.7em;
     }
 
     .contact-container {
@@ -1781,9 +1786,9 @@ body.popup-open {
 
     .package h2 {
         text-transform: capitalize;
-        font-weight: 500;
+        font-weight: 280;
         margin-top: 0;
-        font-size: 22px;
+        font-size: 18px;
     }
 
     .package:not(:last-child)::after {
@@ -1792,11 +1797,12 @@ body.popup-open {
 
     .package-content {
         margin: 0 20px;
+        padding: 20px;
     }
 
     .package-content p {
-        font-weight: 100;
-        font-size: 14px;
+        font-weight: 150;
+        font-size: 12px;
     }
 
     .MainContainer {
