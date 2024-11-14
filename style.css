@@ -408,8 +408,8 @@ nav li:hover::before {
 }
 
 .word:nth-child(4) span:first-child { /* Targets the "I" */
-    padding-left: 9px; /* Adjust as needed to visually align */
-    margin-right: 19px;
+    padding-left: 11.5px; /* Adjust as needed to visually align */
+    margin-right: 16px;
 }
 
 .index-line {
@@ -1584,6 +1584,12 @@ body.popup-open {
 
     .word span:first-child {
         font-weight: 400;
+        margin-right: 0;
+    }
+
+    .word:nth-child(4) span:first-child {
+        margin-right: 0;
+        padding-left: 0;
     }
 
     .body-container {
