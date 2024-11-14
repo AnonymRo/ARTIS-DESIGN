@@ -841,7 +841,7 @@ nav li:hover::before {
     background-color: #333;
     color: #e1e1e1;
     border-radius: 50%; 
-    padding: 8px;
+    padding: 7px;
     margin-right: 20px;
     vertical-align: middle;
     line-height: 30px;
@@ -1710,7 +1710,8 @@ body.popup-open {
     }
 
     .fas.fa-phone, .fas.fa-envelope, .fab.fa-facebook, .fab.fa-instagram, .fa-solid.fa-user, .fas.fa-map-marker-alt {
-        font-size: 25px;
+        font-size: 22px;
+        padding: 6px;
     }
 
     .contact-form-container label {
