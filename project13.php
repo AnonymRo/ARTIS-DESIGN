@@ -1,4 +1,4 @@
-        <!DOCTYPE html>
+<!DOCTYPE html>
                 <html lang="en">
 
                 <head>
@@ -93,18 +93,11 @@
 
                     <div class="description-container">
                         <div class="presentation-picture">
-                            <img src="./Photos/Project10/Cladire/COVER.jpg">
+                            <img src="">
                         </div>
                         <div class="interior-text">
-                            <h2>NUCET COUNTRY CLUB II</h2>
-                            <p> Sala de evenimente reprezinta o fuziune rafinata de stiluri country-modern-industrial, cu un design care pune in valoare arhitectura existenta, integrand armonios elemente naturale si contemporane. Un punct focal al spatiului este tavanul din lemn, o piesa statement care aduce o textura calda si autentica, contrastand cu liniile industriale ale structurilor metalice expuse si cu detaliile minimaliste din mobilier. <br><br>
-
-                                Baile surprind prin conceptul de „natura in interior”, folosind un tapet cu tematica de padure, ce adauga o senzatie de imersiune in peisajul natural. in acest mod, se pastreaza o continuitate intre interior si exterior, oferind un refugiu de liniste in mijlocul amenajarii. <br><br>
-
-                                La etaj, lounge-ul moody este gandit ca un spatiu intim si atmosferic, cu o cromatica in tonuri inchise, texturi de catifea si texturi calde de lemn, care creeaza o ambianta relaxanta si primitoare. Designul interior foloseste un mix de materiale tactile si finisaje brute, invitand la socializare sau la momente de contemplare intr-o atmosfera mai calma si sofisticata. <br><br>
-
-                                Intreaga amenajare reuseste sa pastreze un echilibru fin intre rusticitatea autentica si modernitatea urbana, fiind un spatiu versatil, perfect pentru evenimente cu personalitate, fie ele elegante, corporate sau casual. 
-                            </p>
+                            <h2>Project name</h2>
+                            <p> </p>
                         </div>
                     </div>
 
