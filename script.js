@@ -20,25 +20,25 @@ document.addEventListener("DOMContentLoaded", function () {
     };
   }
 
-// Letter animation
-const words = document.querySelectorAll('.word');
+  // Letter animation
+  const words = document.querySelectorAll('.word');
 
-words.forEach((word, wordIndex) => {
+  words.forEach((word, wordIndex) => {
     const letters = word.textContent.split('');
     word.innerHTML = ''; // Clear the original word content
 
     letters.forEach((letter, index) => {
-        const span = document.createElement('span');
-        span.textContent = letter;
-        span.style.opacity = '0'; // Set initial opacity to 0
-        word.appendChild(span);
+      const span = document.createElement('span');
+      span.textContent = letter;
+      span.style.opacity = '0'; // Set initial opacity to 0
+      word.appendChild(span);
 
-        const delay = wordIndex * 300 + index * 100;
-        setTimeout(() => {
-            span.style.opacity = '1';
-        }, delay);
+      const delay = wordIndex * 300 + index * 100;
+      setTimeout(() => {
+        span.style.opacity = '1';
+      }, delay);
     });
-});
+  });
 
   window.addEventListener("scroll", () => {
     const scrollPosition = window.scrollY;

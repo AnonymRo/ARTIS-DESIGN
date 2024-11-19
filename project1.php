@@ -3,64 +3,81 @@
 
 <head>
 
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ARTIS DESIGN | Creative Living</title>
-  <meta name="title" content="ARTIS DESIGN">
-  <meta name="description" content="Locul unde creativitatea si profesionalismul se intalnesc">
-  <meta name="keywords" content="design, interior, arad">
-  <meta http-equiv="Permissions-Policy" content="interest-cohort=()" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARTIS DESIGN | Creative Living</title>
+    <meta name="title" content="ARTIS DESIGN">
+    <meta name="description" content="Locul unde creativitatea si profesionalismul se intalnesc">
+    <meta name="keywords" content="design, interior, arad">
+    <meta http-equiv="Permissions-Policy" content="interest-cohort=()" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
-  <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    crossorigin="anonymous">
+    <meta property="og:image"
+        content="https://www.artis-design.ro/Photos/Logo/LOGO%20ARTIS%20DESIGN%20V5%20fundal%20negru.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
 
-  <link rel="stylesheet" href="style.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "ARTIS DESIGN | Creative Living",
+      "description": "Locul unde creativitatea si profesionalismul se intalnesc",
+      "image": "https://www.artis-design.ro/Photos/Logo/LOGO%20ARTIS%20DESIGN%20V5%20fundal%20negru.jpg"
+    }
+  </script>
 
-  <link rel="icon" href="./Photos/Logo/favicon-16x16.png" sizes="16x16" type="image/png">
-  <link rel="icon" href="./Photos/Logo/favicon-32x32.png" sizes="32x32" type="image/png">
-  <link rel="icon" type="image/png" sizes="192x192" href="./Photos/Logo/android-chrome-192x192.png">
-  <link rel="icon" type="image/png" sizes="512x512" href="./Photos/Logo/android-chrome-512x512.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="./Photos/Logo/apple-touch-icon.png">
-  <link rel="shortcut icon" href="./Photos/Logo/LOGO ARTIS DESIGN V5 fundal negru.jpg" sizes="180x180" type="image/jpeg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="icon" href="./Photos/Logo/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="icon" href="./Photos/Logo/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./Photos/Logo/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="./Photos/Logo/android-chrome-512x512.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./Photos/Logo/apple-touch-icon.png">
+    <link rel="shortcut icon" href="./Photos/Logo/LOGO ARTIS DESIGN V5 fundal negru.jpg" sizes="180x180"
+        type="image/jpeg">
 
 </head>
 
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() { dataLayer.push(arguments); }
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
 
-  gtag('consent', 'default', {
-    'ad_storage': 'denied',
-    'ad_user_data': 'denied',
-    'ad_personalization': 'denied',
-    'analytics_storage': 'denied'
-  });
+    gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'analytics_storage': 'denied'
+    });
 </script>
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-BPLV20QGGT"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() { dataLayer.push(arguments); }
-  gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-BPLV20QGGT');
+    gtag('config', 'G-BPLV20QGGT');
 </script>
 
 <script>
 
-  function allConsentGranted() {
-    gtag('consent', 'update', {
-      'ad_storage': 'granted',
-      'ad_user_data': 'granted',
-      'ad_personalization': 'granted',
-      'analytics_storage': 'granted'
-    });
-  }
+    function allConsentGranted() {
+        gtag('consent', 'update', {
+            'ad_storage': 'granted',
+            'ad_user_data': 'granted',
+            'ad_personalization': 'granted',
+            'analytics_storage': 'granted'
+        });
+    }
 </script>
 
 <body>
@@ -96,25 +113,25 @@
             <img src="./Photos/Project1/COVER.jpg">
         </div>
         <div class="interior-text">
-            <h2>APARTAMENT A.B.</h2>
-            <p>In proiectul nostru de amenajare al acestui apartament modern si minimalist, am abordat cu atentie paleta
-                de culori si am optat pentru o combinatie indrazneata de griuri, verde si negru, pentru a sublinia
-                simplitatea si eleganta designului. <br><br>
+            <h2>Apartament A.B.</h2>
+            <p>În proiectul nostru de amenajare al acestui apartament modern și minimalist, am abordat cu atenție paleta
+                de culori și am optat pentru o combinație îndrazneață de griuri, verde și negru, pentru a sublinia
+                simplitatea și eleganța designului. <br><br>
 
-                Griurile, in diferite nuante si texturi, sunt utilizate pentru a crea un cadru neutru si rafinat, care
-                sa puna in valoare elementele esentiale ale spatiului. Verdele este introdus pentru a aduce o nota de
-                prospetime si naturalete in acest context minimalist, fiind integrat subtil in accentele si detaliile
+                Griurile, în diferite nuanțe și texturi, sunt utilizate pentru a crea un cadru neutru și rafinat, care
+                să pună în valoare elementele esențiale ale spațiului. Verdele este introdus pentru a aduce o notă de
+                prospețime și naturalețe în acest context minimalist, fiind integrat subtil în accentele și detaliile
                 precum plantele sau piesele de mobilier. <br><br>
 
-                Negrul este folosit strategic pentru a accentua liniile si formele moderne ale mobilierului si
-                obiectelor, creand un contrast puternic si definind contururile spatiului. Aceasta paleta de culori
-                este completata cu materiale si finisaje de calitate superioara, care adauga o nota de lux discreta
-                si durabila in intregul design. <br><br>
+                Negrul este folosit strategic pentru a accentua liniile și formele moderne ale mobilierului și
+                obiectelor, creând un contrast puternic și definind contururile spațiului. Aceasta paletă de culori
+                este completată cu materiale și finisaje de calitate superioară, care adaugă o notă de lux discretă
+                și durabilă în întregul design. <br><br>
 
-                Prin aceasta abordare echilibrata si atenta la detalii, am reușit sa cream un interior modern si
-                minimalist, care imbina functionalitatea cu estetica într-un mod armonios si rafinat. Este un spatiu
-                care emana echilibru, liniste si simplitate, oferind un cadru perfect pentru un stil de viata
-                contemporan si confortabil.
+                Prin această abordare echilibrată și atentă la detalii, am reușit să creăm un interior modern și
+                minimalist, care îmbină funcționalitatea cu estetica într-un mod armonios și rafinat. Este un spațiu
+                care emană echilibru, liniște și simplitate, oferind un cadru perfect pentru un stil de viață
+                contemporan și confortabil.
             </p>
         </div>
     </div>
@@ -170,8 +187,8 @@
         <div class="container">
             <div class="subcontainer">
                 <div class="cookies">
-                <p>Acest site web folosește cookies pentru a îmbunătăți experiența ta de navigare. Pentru mai multe
-                informații, <a href="privacy.html">apăsați aici</a>.</p>
+                    <p>Acest site web folosește cookies pentru a îmbunătăți experiența ta de navigare. Pentru mai multe
+                        informații, <a href="privacy.html">apăsați aici</a>.</p>
                     <button id="cookies-btn" onclick="allConsentGranted()">De acord</button>
                 </div>
             </div>

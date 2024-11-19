@@ -12,6 +12,22 @@
     <meta name="keywords" content="design, interior, arad">
     <meta http-equiv="Permissions-Policy" content="interest-cohort=()" />
 
+    <meta property="og:image"
+        content="https://www.artis-design.ro/Photos/Logo/LOGO%20ARTIS%20DESIGN%20V5%20fundal%20negru.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "ARTIS DESIGN | Creative Living",
+      "description": "Locul unde creativitatea si profesionalismul se intalnesc",
+      "image": "https://www.artis-design.ro/Photos/Logo/LOGO%20ARTIS%20DESIGN%20V5%20fundal%20negru.jpg"
+    }
+  </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
@@ -26,7 +42,8 @@
     <link rel="icon" type="image/png" sizes="192x192" href="./Photos/Logo/android-chrome-192x192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="./Photos/Logo/android-chrome-512x512.png">
     <link rel="apple-touch-icon" sizes="180x180" href="./Photos/Logo/apple-touch-icon.png">
-    <link rel="shortcut icon" href="./Photos/Logo/LOGO ARTIS DESIGN V5 fundal negru.jpg" sizes="180x180" type="image/jpeg">
+    <link rel="shortcut icon" href="./Photos/Logo/LOGO ARTIS DESIGN V5 fundal negru.jpg" sizes="180x180"
+        type="image/jpeg">
 
 </head>
 
@@ -96,19 +113,24 @@
             <img src="./Photos/Project9/COVER.jpg">
         </div>
         <div class="interior-text">
-            <h2>APARTAMENT E.B.</h2>
-            <p>Atmosfera este dominata de accente intunecate si linii curate, creand un spatiu elegant si confortabil. 
-               Fiecare detaliu a fost atent ales pentru a reflecta un stil de viata rafinat si functional, combinand estetica deosebita cu confortul de zi cu zi. <br><br>
+            <h2>Apartament E.B.</h2>
+            <p>Atmosfera este dominată de accente întunecate și linii curate, creând un spațiu elegant și confortabil.
+                Fiecare detaliu a fost atent ales pentru a reflecta un stil de viață rafinat și funcțional, combinând
+                estetica deosebită cu confortul de zi cu zi. <br><br>
 
-               Livingul este cu adevarat spectaculos, avand un perete central care capteaza imediat atentia. 
-               Acest perete este decorat cu banda LED, riflaje si placare cu imitatie de marmura, oferind un efect vizual uimitor. 
-               Un semineu bioetanol adauga un plus de caldura si rafinament, transformand livingul intr-un spatiu ideal pentru relaxare si socializare. <br><br>
+                Livingul este cu adevărat spectaculos, având un perete central care captează imediat atenția.
+                Acest perete este decorat cu bandă LED, riflaje și placare cu imitație de marmură, oferind un efect
+                vizual uimitor.
+                Un șemineu pe bioetanol adaugă un plus de căldură și rafinament, transformând livingul într-un spațiu ideal
+                pentru relaxare și socializare. <br><br>
 
-               Baia este, de asemenea, deosebita, evidentiindu-se prin delimitarea zonelor. 
-               Zona de dus se distinge de restul baii printr-o utilizare a culorilor si texturilor, creand un spatiu functional si estetic placut. 
-               Materialele de calitate si finisajele impecabile contribuie la un aspect luxos si modern. <br><br>
+                Baia este, de asemenea, deosebită, evidențiindu-se prin delimitarea zonelor.
+                Zona de duș se distinge de restul băii printr-o utilizare a culorilor și texturilor, creând un spațiu
+                funcțional și estetic plăcut.
+                Materialele de calitate și finisajele impecabile contribuie la un aspect luxos și modern. <br><br>
 
-               Acest apartament ofera combinatia perfecta intre confort si stil, fiind un loc ideal pentru cei care apreciaza designul de top si atentia la detalii.
+                Acest apartament oferă combinația perfectă între confort și stil, fiind un loc ideal pentru cei care
+                apreciază designul de top și atenția la detalii.
             </p>
         </div>
     </div>
@@ -127,7 +149,7 @@
             $conn = new mysqli($servername, $username, $password, $dbname);
 
             if ($conn->connect_error) {
-                die ("Connection failed: " . $conn->connect_error);
+                die("Connection failed: " . $conn->connect_error);
             }
 
             $sql = "SELECT Img_Dir FROM Project9";
@@ -164,8 +186,8 @@
         <div class="container">
             <div class="subcontainer">
                 <div class="cookies">
-                <p>Acest site web folosește cookies pentru a îmbunătăți experiența ta de navigare. Pentru mai multe
-                informații, <a href="privacy.html">apăsați aici</a>.</p>
+                    <p>Acest site web folosește cookies pentru a îmbunătăți experiența ta de navigare. Pentru mai multe
+                        informații, <a href="privacy.html">apăsați aici</a>.</p>
                     <button id="cookies-btn" onclick="allConsentGranted()">De acord</button>
                 </div>
             </div>

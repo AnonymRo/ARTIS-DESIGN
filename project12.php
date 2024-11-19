@@ -12,6 +12,22 @@
     <meta name="keywords" content="design, interior, arad">
     <meta http-equiv="Permissions-Policy" content="interest-cohort=()" />
 
+    <meta property="og:image"
+        content="https://www.artis-design.ro/Photos/Logo/LOGO%20ARTIS%20DESIGN%20V5%20fundal%20negru.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "ARTIS DESIGN | Creative Living",
+      "description": "Locul unde creativitatea si profesionalismul se intalnesc",
+      "image": "https://www.artis-design.ro/Photos/Logo/LOGO%20ARTIS%20DESIGN%20V5%20fundal%20negru.jpg"
+    }
+  </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
@@ -26,7 +42,8 @@
     <link rel="icon" type="image/png" sizes="192x192" href="./Photos/Logo/android-chrome-192x192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="./Photos/Logo/android-chrome-512x512.png">
     <link rel="apple-touch-icon" sizes="180x180" href="./Photos/Logo/apple-touch-icon.png">
-    <link rel="shortcut icon" href="./Photos/Logo/LOGO ARTIS DESIGN V5 fundal negru.jpg" sizes="180x180" type="image/jpeg">
+    <link rel="shortcut icon" href="./Photos/Logo/LOGO ARTIS DESIGN V5 fundal negru.jpg" sizes="180x180"
+        type="image/jpeg">
 
 </head>
 
@@ -93,22 +110,60 @@
 
     <div class="description-container">
         <div class="presentation-picture">
-            <img src="./Photos/Project11/OUTDOOR.jpg">
+            <img src="./Photos/Project11/COVER.jpg">
         </div>
         <div class="interior-text">
-            <h2>Exterior project - Coming soon..</h2>
-            <p>
+            <h2>Concept Villa Day & Night</h2>
+            <p> Acest exterior conceptual pune în valoare contrastul între tonurile închise și naturale, creând un
+                spațiu sofisticat și primitor, dar și misterios. Fațada, dominată de nuanțe închise de gri și negru, se
+                combină perfect cu elemente din lemn natural, aducând o căldură aparte acestui design modern. Liniile
+                arhitecturale curate și formele geometrice precise sunt completate de textura lemnului, care adaugă o
+                notă organică și elegantă, echilibrând duritatea materialelor mate cu rafinamentul acestora.
+                <br><br>
+                Iluminatul ambiental joacă un rol esențial în acest concept, transformând exteriorul într-un spațiu
+                dinamic, care își schimbă atmosfera în funcție de momentul zilei. Spoturile subtile și benzi de LED
+                integrate în designul fațadei creează jocuri de lumină ce evidențiază detaliile arhitecturale, fără a
+                încărca vizual spațiul. Aceste surse de lumină ambientală sunt atent plasate pentru a adăuga un efect
+                dramatic pe timpul nopții, punând în valoare nu doar forma clădirii, ci și texturile și materialele
+                folosite.
+                <br><br>
+                În totalitate, acest exterior combină intimitatea și confortul unei atmosfere „dark” cu căldura și
+                naturalețea lemnului, iar iluminatul subtil adaugă un caracter unic, făcând acest spațiu să capete viață
+                în fiecare moment al zilei.
             </p>
         </div>
     </div>
 
-   <!-- <div class="interior-line"></div>
+    <div class="interior-line"></div>
 
-    
+
     <div class="grid-container">
         <h1>Imagine Gallery</h1>
         <div class="interior-container">
-            
+            <?php
+            $servername = "localhost";
+            $username = "artisdes";
+            $password = "hAj6u6Bl10";
+            $dbname = "artisdes_Photos";
+
+            $conn = new mysqli($servername, $username, $password, $dbname);
+
+            if ($conn->connect_error) {
+                die("Connection failed: " . $conn->connect_error);
+            }
+
+            $sql = "SELECT Img_Dir FROM Project12";
+            $result = $conn->query($sql);
+
+            if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+                    echo '<div class="image"><img src="' . $row["Img_Dir"] . '"></div>';
+                }
+            } else {
+                echo "0 results";
+            }
+            $conn->close();
+            ?>
         </div>
 
         <div class="popup-image">
@@ -117,8 +172,7 @@
             <span class="close">&times;</span>
             <img src="./Photos/Project1/COVER.jpg">
         </div>
-    </div> 
-    -->
+    </div>
 
     <!-- Transparent overlay -->
     <div class="overlay" id="overlay"></div>
@@ -132,8 +186,8 @@
         <div class="container">
             <div class="subcontainer">
                 <div class="cookies">
-                <p>Acest site web folosește cookies pentru a îmbunătăți experiența ta de navigare. Pentru mai multe
-                informații, <a href="privacy.html">apăsați aici</a>.</p>
+                    <p>Acest site web folosește cookies pentru a îmbunătăți experiența ta de navigare. Pentru mai multe
+                        informații, <a href="privacy.html">apăsați aici</a>.</p>
                     <button id="cookies-btn" onclick="allConsentGranted()">De acord</button>
                 </div>
             </div>

@@ -12,6 +12,22 @@
     <meta name="keywords" content="design, interior, arad">
     <meta http-equiv="Permissions-Policy" content="interest-cohort=()" />
 
+    <meta property="og:image"
+        content="https://www.artis-design.ro/Photos/Logo/LOGO%20ARTIS%20DESIGN%20V5%20fundal%20negru.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "ARTIS DESIGN | Creative Living",
+      "description": "Locul unde creativitatea si profesionalismul se intalnesc",
+      "image": "https://www.artis-design.ro/Photos/Logo/LOGO%20ARTIS%20DESIGN%20V5%20fundal%20negru.jpg"
+    }
+  </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
@@ -26,7 +42,8 @@
     <link rel="icon" type="image/png" sizes="192x192" href="./Photos/Logo/android-chrome-192x192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="./Photos/Logo/android-chrome-512x512.png">
     <link rel="apple-touch-icon" sizes="180x180" href="./Photos/Logo/apple-touch-icon.png">
-    <link rel="shortcut icon" href="./Photos/Logo/LOGO ARTIS DESIGN V5 fundal negru.jpg" sizes="180x180" type="image/jpeg">
+    <link rel="shortcut icon" href="./Photos/Logo/LOGO ARTIS DESIGN V5 fundal negru.jpg" sizes="180x180"
+        type="image/jpeg">
 
 </head>
 
@@ -96,19 +113,19 @@
             <img src="./Photos/Project6/COVER.jpg">
         </div>
         <div class="interior-text">
-            <h2>APARTAMENT M.D.</h2>
-            <p>Cu un design modern si minimalist, apartamentul este o oaza de eleganta si simplitate. Culorile neutre
-                domina peisajul, cu accente subtile de lemn si negru adaugand profunzime si contrast. Lumina ambientala
-                este o caracteristica esentiala, cu banda LED integrata inteligent in tot spatiul pentru a crea
-                atmosfera perfecta. <br><br>
+            <h2>Apartament M.D.</h2>
+            <p>Cu un design modern și minimalist, apartamentul este o oază de eleganță și simplitate. Culorile neutre
+                domină peisajul, cu accente subtile de lemn și negru adăugând profunzime și contrast. Lumina ambientală
+                este o caracteristică esențială, cu banda LED integrată inteligent în tot spațiul pentru a crea
+                atmosfera perfectă. <br><br>
 
-                Peretii sunt vopsiti in culori deschise, reflectand si multiplicand lumina naturala, ceea ce face ca
-                fiecare incapere sa para spatioasa si luminoasa. Mobilierul minimalist completeaza aceasta atmosfera,
-                oferind un aspect curat si ordonat. <br><br>
+                Pereții sunt vopsiți în culori deschise, reflectând și multiplicând lumina naturală, ceea ce face ca
+                fiecare încăpere să pară spațioasă și luminoasă. Mobilierul minimalist completează această atmosferă,
+                oferind un aspect curat și ordonat. <br><br>
 
-                Acest apartament reprezinta o combinatie perfecta de stil si practicitate, unde fiecare element este
-                gandit pentru a oferi un mediu confortabil si placut. Cu o atentie deosebita acordata luminii si
-                detaliilor, acest spatiu modern si minimalist imbina functionalitatea cu estetica intr-un mod
+                Acest apartament reprezintă o combinație perfectă de stil și practicitate, unde fiecare element este
+                gândit pentru a oferi un mediu confortabil și plăcut. Cu o atenție deosebită acordată luminii și
+                detaliilor, acest spațiu modern și minimalist îmbină funcționalitatea cu estetica într-un mod
                 remarcabil.
             </p>
         </div>
@@ -128,7 +145,7 @@
             $conn = new mysqli($servername, $username, $password, $dbname);
 
             if ($conn->connect_error) {
-                die ("Connection failed: " . $conn->connect_error);
+                die("Connection failed: " . $conn->connect_error);
             }
 
             $sql = "SELECT Img_Dir FROM Project6";
@@ -165,8 +182,8 @@
         <div class="container">
             <div class="subcontainer">
                 <div class="cookies">
-                <p>Acest site web folosește cookies pentru a îmbunătăți experiența ta de navigare. Pentru mai multe
-                informații, <a href="privacy.html">apăsați aici</a>.</p>
+                    <p>Acest site web folosește cookies pentru a îmbunătăți experiența ta de navigare. Pentru mai multe
+                        informații, <a href="privacy.html">apăsați aici</a>.</p>
                     <button id="cookies-btn" onclick="allConsentGranted()">De acord</button>
                 </div>
             </div>

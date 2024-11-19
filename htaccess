@@ -60,13 +60,25 @@ RewriteRule ^project8\.php$ /BucatarieNP [R=301,L]
 RewriteCond %{REQUEST_URI} ^/project9\.php$
 RewriteRule ^project9\.php$ /ApartamentEB [R=301,L]
 
-# Redirect requests for project10.php to /NUCET
+# Redirect requests for project10.php to /NUCET-I
 RewriteCond %{REQUEST_URI} ^/project10\.php$
-RewriteRule ^project10\.php$ /NUCET [R=301,L]
+RewriteRule ^project10\.php$ /NUCET-I [R=301,L]
 
-# Redirect requests for project11.php to /OutdoorProject
+# Redirect requests for project11.php to /NUCET-II
 RewriteCond %{REQUEST_URI} ^/project11\.php$
-RewriteRule ^project11\.php$ /OutdoorProject [R=301,L]
+RewriteRule ^project11\.php$ /NUCET-II [R=301,L]
+
+# Redirect requests for project12.php to /OutdoorProject
+RewriteCond %{REQUEST_URI} ^/project12\.php$
+RewriteRule ^project12\.php$ /OutdoorProject [R=301,L]
+
+# Redirect requests for project13.php to /BaiAT
+RewriteCond %{REQUEST_URI} ^/project13\.php$
+RewriteRule ^project13\.php$ /BaiAT [R=301,L]
+
+# Redirect requests for project14.php to /ApartamentAP
+RewriteCond %{REQUEST_URI} ^/project14\.php$
+RewriteRule ^project14\.php$ /ApartamentAP [R=301,L]
 
 # Rewrite requests for /Home to /index.html internally
 RewriteRule ^Home$ /index.html [L]
@@ -113,8 +125,17 @@ RewriteRule ^BucatarieNP$ /project8.php [L]
 # Rewrite requests for /ApartamentEB to /project9.php internally
 RewriteRule ^ApartamentEB$ /project9.php [L]
 
-# Rewrite requests for /NUCET to /project10.php internally
-RewriteRule ^NUCET$ /project10.php [L]
+# Rewrite requests for /NUCET-I to /project10.php internally
+RewriteRule ^NUCET-I$ /project10.php [L]
 
-# Rewrite requests for /OutdoorProject to /project11.php internally
-RewriteRule ^OutdoorProject$ /project11.php [L]
+# Rewrite requests for /NUCET-II to /project11.php internally
+RewriteRule ^NUCET-II$ /project11.php [L]
+
+# Rewrite requests for /OutdoorProject to /project12.php internally
+RewriteRule ^OutdoorProject$ /project12.php [L]
+
+# Rewrite requests for /BaiAT to /project13.php internally
+RewriteRule ^BaiAT$ /project13.php [L]
+
+# Rewrite requests for /ApartamentAP to /project14.php internally
+RewriteRule ^ApartamentAP$ /project14.php [L]

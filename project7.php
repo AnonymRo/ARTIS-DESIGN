@@ -12,6 +12,22 @@
     <meta name="keywords" content="design, interior, arad">
     <meta http-equiv="Permissions-Policy" content="interest-cohort=()" />
 
+    <meta property="og:image"
+        content="https://www.artis-design.ro/Photos/Logo/LOGO%20ARTIS%20DESIGN%20V5%20fundal%20negru.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "ARTIS DESIGN | Creative Living",
+      "description": "Locul unde creativitatea si profesionalismul se intalnesc",
+      "image": "https://www.artis-design.ro/Photos/Logo/LOGO%20ARTIS%20DESIGN%20V5%20fundal%20negru.jpg"
+    }
+  </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
@@ -26,7 +42,8 @@
     <link rel="icon" type="image/png" sizes="192x192" href="./Photos/Logo/android-chrome-192x192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="./Photos/Logo/android-chrome-512x512.png">
     <link rel="apple-touch-icon" sizes="180x180" href="./Photos/Logo/apple-touch-icon.png">
-    <link rel="shortcut icon" href="./Photos/Logo/LOGO ARTIS DESIGN V5 fundal negru.jpg" sizes="180x180" type="image/jpeg">
+    <link rel="shortcut icon" href="./Photos/Logo/LOGO ARTIS DESIGN V5 fundal negru.jpg" sizes="180x180"
+        type="image/jpeg">
 
 </head>
 
@@ -96,18 +113,23 @@
             <img src="./Photos/Project7/COVER.png">
         </div>
         <div class="interior-text">
-            <h2>APARTAMENT V.A.</h2>
-            <p>Aceasta casa in stil minimalist imbina simplitatea si functionalitatea, oferind un spatiu elegant si modern.
-               Openspace-ul generos permite luminii naturale sa inunde interiorul, aducand un sentiment de calm si liniste. <br><br>
+            <h2>Apartament V.A.</h2>
+            <p>Aceas apartament în stil minimalist îmbină simplitatea și funcționalitatea, oferind un spațiu elegant și
+                modern.
+                Openspace-ul generos permite luminii naturale să inunde interiorul, aducând un sentiment de calm și
+                liniște. <br><br>
 
-               In living, un perete impresionant din spatele canapelei atrage imediat atentia.
-               Decorat cu elemente interesante, acest perete adauga profunzime si caracter spatiului, fiind un punct de interes vizual important. <br><br>
+                În living, un perete impresionant din spatele canapelei atrage imediat atenția.
+                Decorat cu elemente interesante, acest perete adaugă profunzime și caracter spațiului, fiind un punct de
+                interes vizual important. <br><br>
 
-               Bucataria, dominata de o insula mare si spatioasa, se deschide catre living. 
-               Insula este nu doar practica, ci si un loc central de socializare, echipata cu spatii de depozitare inteligente si un design curat, pastrand estetica minimalista. <br><br>
+                Bucătăria, dominată de o insulă mare și spațioasă, se deschide catre living.
+                Insula nu este doar practică, ci și un loc central de socializare, echipată cu spații de depozitare
+                inteligente și un design curat, păstrând estetica minimalistă. <br><br>
 
-               Materialele si finisajele reflecta eleganta stilului minimalist, cu suprafete netede, culori neutre si linii bine definite. 
-               Detaliile de design atent selectate creeaza un mediu de viata modern si sofisticat, perfect pentru un stil de viata contemporan.
+                Materialele și finisajele reflectă eleganța stilului minimalist, cu suprafețe netede, culori neutre și
+                linii bine definite.
+                Detaliile de design atent selectate creează un mediu de viață modern și sofisticat.
             </p>
         </div>
     </div>
@@ -126,7 +148,7 @@
             $conn = new mysqli($servername, $username, $password, $dbname);
 
             if ($conn->connect_error) {
-                die ("Connection failed: " . $conn->connect_error);
+                die("Connection failed: " . $conn->connect_error);
             }
 
             $sql = "SELECT Img_Dir FROM Project7";
@@ -163,8 +185,8 @@
         <div class="container">
             <div class="subcontainer">
                 <div class="cookies">
-                <p>Acest site web folosește cookies pentru a îmbunătăți experiența ta de navigare. Pentru mai multe
-                informații, <a href="privacy.html">apăsați aici</a>.</p>
+                    <p>Acest site web folosește cookies pentru a îmbunătăți experiența ta de navigare. Pentru mai multe
+                        informații, <a href="privacy.html">apăsați aici</a>.</p>
                     <button id="cookies-btn" onclick="allConsentGranted()">De acord</button>
                 </div>
             </div>

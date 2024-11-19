@@ -3,64 +3,81 @@
 
 <head>
 
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ARTIS DESIGN | Creative Living</title>
-  <meta name="title" content="ARTIS DESIGN">
-  <meta name="description" content="Locul unde creativitatea si profesionalismul se intalnesc">
-  <meta name="keywords" content="design, interior, arad">
-  <meta http-equiv="Permissions-Policy" content="interest-cohort=()" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARTIS DESIGN | Creative Living</title>
+    <meta name="title" content="ARTIS DESIGN">
+    <meta name="description" content="Locul unde creativitatea si profesionalismul se intalnesc">
+    <meta name="keywords" content="design, interior, arad">
+    <meta http-equiv="Permissions-Policy" content="interest-cohort=()" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
-  <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    crossorigin="anonymous">
+    <meta property="og:image"
+        content="https://www.artis-design.ro/Photos/Logo/LOGO%20ARTIS%20DESIGN%20V5%20fundal%20negru.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
 
-  <link rel="stylesheet" href="style.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "ARTIS DESIGN | Creative Living",
+      "description": "Locul unde creativitatea si profesionalismul se intalnesc",
+      "image": "https://www.artis-design.ro/Photos/Logo/LOGO%20ARTIS%20DESIGN%20V5%20fundal%20negru.jpg"
+    }
+  </script>
 
-  <link rel="icon" href="./Photos/Logo/favicon-16x16.png" sizes="16x16" type="image/png">
-  <link rel="icon" href="./Photos/Logo/favicon-32x32.png" sizes="32x32" type="image/png">
-  <link rel="icon" type="image/png" sizes="192x192" href="./Photos/Logo/android-chrome-192x192.png">
-  <link rel="icon" type="image/png" sizes="512x512" href="./Photos/Logo/android-chrome-512x512.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="./Photos/Logo/apple-touch-icon.png">
-  <link rel="shortcut icon" href="./Photos/Logo/LOGO ARTIS DESIGN V5 fundal negru.jpg" sizes="180x180" type="image/jpeg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="icon" href="./Photos/Logo/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="icon" href="./Photos/Logo/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./Photos/Logo/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="./Photos/Logo/android-chrome-512x512.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./Photos/Logo/apple-touch-icon.png">
+    <link rel="shortcut icon" href="./Photos/Logo/LOGO ARTIS DESIGN V5 fundal negru.jpg" sizes="180x180"
+        type="image/jpeg">
 
 </head>
 
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() { dataLayer.push(arguments); }
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
 
-  gtag('consent', 'default', {
-    'ad_storage': 'denied',
-    'ad_user_data': 'denied',
-    'ad_personalization': 'denied',
-    'analytics_storage': 'denied'
-  });
+    gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'analytics_storage': 'denied'
+    });
 </script>
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-BPLV20QGGT"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() { dataLayer.push(arguments); }
-  gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-BPLV20QGGT');
+    gtag('config', 'G-BPLV20QGGT');
 </script>
 
 <script>
 
-  function allConsentGranted() {
-    gtag('consent', 'update', {
-      'ad_storage': 'granted',
-      'ad_user_data': 'granted',
-      'ad_personalization': 'granted',
-      'analytics_storage': 'granted'
-    });
-  }
+    function allConsentGranted() {
+        gtag('consent', 'update', {
+            'ad_storage': 'granted',
+            'ad_user_data': 'granted',
+            'ad_personalization': 'granted',
+            'analytics_storage': 'granted'
+        });
+    }
 </script>
 
 <body>
@@ -96,21 +113,21 @@
             <img src="./Photos/Project2/COVER.jpg">
         </div>
         <div class="interior-text">
-            <h2>APARTAMENT S.B.</h2>
-            <p>Pentru acest proiect de amenajare, ne-am axat pe o estetica feminina si luxurianta, cu un amestec subtil
-                de culori crem, alb si maro teracota. Aceasta paleta de culori aduce un aer sofisticat si elegant,
-                transformand spatiul intr-un sanctuar de rafinament si confort. <br><br>
+            <h2>Apartament S.B.</h2>
+            <p>Pentru acest proiect de amenajare, ne-am axat pe o estetică feminină și luxuriantă, cu un amestec subtil
+                de culori crem, alb și maro teracota. Această paletă de culori aduce un aer sofisticat și elegant,
+                transformând spațiul într-un sanctuar de rafinament și confort. <br><br>
 
-                În dormitor si in cele doua bai, am optat pentru finisaje de cea mai inalta calitate, cu detalii si
-                texturi bogate. Paturile si piesele de mobilier sunt selectate cu grija, avand linii fluide si forme
-                elegante, adaugand un aer de opulenta si lux in intregul spatiu. <br><br>
+                În dormitor și în cele doua băi, am optat pentru finisaje de cea mai înaltă calitate, cu detalii și
+                texturi bogate. Paturile și piesele de mobilier sunt selectate cu grijă, având linii fluide și forme
+                elegante, adăugând un aer de opulență și lux în întregul spațiu. <br><br>
 
-                Plantele de interior si textilele moi, precum catifeaua si matasea, adauga un plus de caldura si
-                confort, completand paleta de culori si creand un ambient plin de farmec si sofisticare. <br><br>
+                Plantele de interior și textilele moi, precum catifeaua și mătasea, adaugă un plus de caldură și
+                confort, completând paleta de culori și creând un ambient plin de farmec și sofisticare. <br><br>
 
-                Prin acest design feminin si luxos, am creat un spatiu care emane eleganta si rafinament in fiecare
-                detaliu, oferind o experienta exceptionala si memorabila pentru ocupantii sai. Este un loc unde fiecare
-                element este atent ponderat si aranjat pentru a crea un mediu de traire care sa inspire si sa incante in
+                Prin acest design feminin și luxos, am creat un spațiu care emană eleganță și rafinament în fiecare
+                detaliu, oferind o experiență excepțională și memorabilă pentru ocupanții săi. Este un loc unde fiecare
+                element este atent ponderat și aranjat pentru a crea un mediu de trăire care să inspire și să încânte în
                 fiecare zi.
             </p>
         </div>
@@ -167,8 +184,8 @@
         <div class="container">
             <div class="subcontainer">
                 <div class="cookies">
-                <p>Acest site web folosește cookies pentru a îmbunătăți experiența ta de navigare. Pentru mai multe
-                informații, <a href="privacy.html">apăsați aici</a>.</p>
+                    <p>Acest site web folosește cookies pentru a îmbunătăți experiența ta de navigare. Pentru mai multe
+                        informații, <a href="privacy.html">apăsați aici</a>.</p>
                     <button id="cookies-btn" onclick="allConsentGranted()">De acord</button>
                 </div>
             </div>

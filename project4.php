@@ -3,64 +3,81 @@
 
 <head>
 
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ARTIS DESIGN | Creative Living</title>
-  <meta name="title" content="ARTIS DESIGN">
-  <meta name="description" content="Locul unde creativitatea si profesionalismul se intalnesc">
-  <meta name="keywords" content="design, interior, arad">
-  <meta http-equiv="Permissions-Policy" content="interest-cohort=()" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARTIS DESIGN | Creative Living</title>
+    <meta name="title" content="ARTIS DESIGN">
+    <meta name="description" content="Locul unde creativitatea si profesionalismul se intalnesc">
+    <meta name="keywords" content="design, interior, arad">
+    <meta http-equiv="Permissions-Policy" content="interest-cohort=()" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
-  <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    crossorigin="anonymous">
+    <meta property="og:image"
+        content="https://www.artis-design.ro/Photos/Logo/LOGO%20ARTIS%20DESIGN%20V5%20fundal%20negru.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
 
-  <link rel="stylesheet" href="style.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "ARTIS DESIGN | Creative Living",
+      "description": "Locul unde creativitatea si profesionalismul se intalnesc",
+      "image": "https://www.artis-design.ro/Photos/Logo/LOGO%20ARTIS%20DESIGN%20V5%20fundal%20negru.jpg"
+    }
+  </script>
 
-  <link rel="icon" href="./Photos/Logo/favicon-16x16.png" sizes="16x16" type="image/png">
-  <link rel="icon" href="./Photos/Logo/favicon-32x32.png" sizes="32x32" type="image/png">
-  <link rel="icon" type="image/png" sizes="192x192" href="./Photos/Logo/android-chrome-192x192.png">
-  <link rel="icon" type="image/png" sizes="512x512" href="./Photos/Logo/android-chrome-512x512.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="./Photos/Logo/apple-touch-icon.png">
-  <link rel="shortcut icon" href="./Photos/Logo/LOGO ARTIS DESIGN V5 fundal negru.jpg" sizes="180x180" type="image/jpeg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="icon" href="./Photos/Logo/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="icon" href="./Photos/Logo/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./Photos/Logo/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="./Photos/Logo/android-chrome-512x512.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./Photos/Logo/apple-touch-icon.png">
+    <link rel="shortcut icon" href="./Photos/Logo/LOGO ARTIS DESIGN V5 fundal negru.jpg" sizes="180x180"
+        type="image/jpeg">
 
 </head>
 
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() { dataLayer.push(arguments); }
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
 
-  gtag('consent', 'default', {
-    'ad_storage': 'denied',
-    'ad_user_data': 'denied',
-    'ad_personalization': 'denied',
-    'analytics_storage': 'denied'
-  });
+    gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'analytics_storage': 'denied'
+    });
 </script>
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-BPLV20QGGT"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() { dataLayer.push(arguments); }
-  gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-BPLV20QGGT');
+    gtag('config', 'G-BPLV20QGGT');
 </script>
 
 <script>
 
-  function allConsentGranted() {
-    gtag('consent', 'update', {
-      'ad_storage': 'granted',
-      'ad_user_data': 'granted',
-      'ad_personalization': 'granted',
-      'analytics_storage': 'granted'
-    });
-  }
+    function allConsentGranted() {
+        gtag('consent', 'update', {
+            'ad_storage': 'granted',
+            'ad_user_data': 'granted',
+            'ad_personalization': 'granted',
+            'analytics_storage': 'granted'
+        });
+    }
 </script>
 
 <body>
@@ -96,18 +113,18 @@
             <img src="./Photos/Project4/COVER.jpg">
         </div>
         <div class="interior-text">
-            <h2>RENOVARE CASA D.D</h2>
-            <p>Intr-o lume in continua miscare, in care spatiul de lucru si cel de relaxare se intrepatrund tot mai
-                mult, amenajarea unui open space si a bailor devine esentiala pentru a crea un mediu functional si
-                reconfortant. Inspirandu-ne din tendintele moderne si cautand sa aducem un strop de natura si
-                autenticitate in interiorul acestor spatii, am creat un design contemporan cu accente de lemn cald,
-                verde proaspat si griuri elegante. <br><br>
+            <h2>Renovare casă D.D</h2>
+            <p>Într-o lume în continuă mișcare, în care spațiul de lucru și cel de relaxare se întrepătrund tot mai
+                mult, amenajarea unui open space și a băilor devine esențială pentru a crea un mediu funcțional și
+                reconfortant. Inspirându-ne din tendințele moderne și căutând să aducem un strop de natură și
+                autenticitate în interiorul acestor spații, am creat un design contemporan cu accente de lemn cald,
+                verde proaspăt și griuri elegante. <br><br>
 
-                Open space-ul reprezinta inima activitatii, un loc unde creativitatea si colaborarea se întâlnesc
-                intr-un cadru primitor si placut. Elementele de lemn, fie ca sunt integrate in mobilier sau in detalii
-                decorative, adauga caldura si caracter spatiului, in timp ce tonurile de griuri neutre creeaza un fundal
-                elegant si versatil. Accentele de verde proaspat imprumuta spatiului o senzatie de prospetime si
-                vitalitate, aducand natura in interior si incurajand o atmosfera relaxanta si revitalizanta.
+                Open space-ul reprezintă inima activității, un loc unde creativitatea și colaborarea se întâlnesc
+                într-un cadru primitor și plăcut. Elementele de lemn, fie că sunt integrate în mobilier sau în detalii
+                decorative, adaugă caldură și caracter spațiului, în timp ce tonurile de gri neutre creează un fundal
+                elegant și versatil. Accentele de verde proaspăt împrumută spațiului o senzație de prospețime și
+                vitalitate, aducând natura în interior și încurajând o atmosferă relaxantă și revitalizantă.
             </p>
         </div>
     </div>
@@ -163,8 +180,8 @@
         <div class="container">
             <div class="subcontainer">
                 <div class="cookies">
-                <p>Acest site web folosește cookies pentru a îmbunătăți experiența ta de navigare. Pentru mai multe
-                informații, <a href="privacy.html">apăsați aici</a>.</p>
+                    <p>Acest site web folosește cookies pentru a îmbunătăți experiența ta de navigare. Pentru mai multe
+                        informații, <a href="privacy.html">apăsați aici</a>.</p>
                     <button id="cookies-btn" onclick="allConsentGranted()">De acord</button>
                 </div>
             </div>

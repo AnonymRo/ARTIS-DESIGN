@@ -3,64 +3,81 @@
 
 <head>
 
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ARTIS DESIGN | Creative Living</title>
-  <meta name="title" content="ARTIS DESIGN">
-  <meta name="description" content="Locul unde creativitatea si profesionalismul se intalnesc">
-  <meta name="keywords" content="design, interior, arad">
-  <meta http-equiv="Permissions-Policy" content="interest-cohort=()" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARTIS DESIGN | Creative Living</title>
+    <meta name="title" content="ARTIS DESIGN">
+    <meta name="description" content="Locul unde creativitatea si profesionalismul se intalnesc">
+    <meta name="keywords" content="design, interior, arad">
+    <meta http-equiv="Permissions-Policy" content="interest-cohort=()" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
-  <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    crossorigin="anonymous">
+    <meta property="og:image"
+        content="https://www.artis-design.ro/Photos/Logo/LOGO%20ARTIS%20DESIGN%20V5%20fundal%20negru.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
 
-  <link rel="stylesheet" href="style.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "ARTIS DESIGN | Creative Living",
+      "description": "Locul unde creativitatea si profesionalismul se intalnesc",
+      "image": "https://www.artis-design.ro/Photos/Logo/LOGO%20ARTIS%20DESIGN%20V5%20fundal%20negru.jpg"
+    }
+  </script>
 
-  <link rel="icon" href="./Photos/Logo/favicon-16x16.png" sizes="16x16" type="image/png">
-  <link rel="icon" href="./Photos/Logo/favicon-32x32.png" sizes="32x32" type="image/png">
-  <link rel="icon" type="image/png" sizes="192x192" href="./Photos/Logo/android-chrome-192x192.png">
-  <link rel="icon" type="image/png" sizes="512x512" href="./Photos/Logo/android-chrome-512x512.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="./Photos/Logo/apple-touch-icon.png">
-  <link rel="shortcut icon" href="./Photos/Logo/LOGO ARTIS DESIGN V5 fundal negru.jpg" sizes="180x180" type="image/jpeg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="icon" href="./Photos/Logo/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="icon" href="./Photos/Logo/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./Photos/Logo/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="./Photos/Logo/android-chrome-512x512.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./Photos/Logo/apple-touch-icon.png">
+    <link rel="shortcut icon" href="./Photos/Logo/LOGO ARTIS DESIGN V5 fundal negru.jpg" sizes="180x180"
+        type="image/jpeg">
 
 </head>
 
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() { dataLayer.push(arguments); }
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
 
-  gtag('consent', 'default', {
-    'ad_storage': 'denied',
-    'ad_user_data': 'denied',
-    'ad_personalization': 'denied',
-    'analytics_storage': 'denied'
-  });
+    gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'analytics_storage': 'denied'
+    });
 </script>
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-BPLV20QGGT"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() { dataLayer.push(arguments); }
-  gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-BPLV20QGGT');
+    gtag('config', 'G-BPLV20QGGT');
 </script>
 
 <script>
 
-  function allConsentGranted() {
-    gtag('consent', 'update', {
-      'ad_storage': 'granted',
-      'ad_user_data': 'granted',
-      'ad_personalization': 'granted',
-      'analytics_storage': 'granted'
-    });
-  }
+    function allConsentGranted() {
+        gtag('consent', 'update', {
+            'ad_storage': 'granted',
+            'ad_user_data': 'granted',
+            'ad_personalization': 'granted',
+            'analytics_storage': 'granted'
+        });
+    }
 </script>
 
 <body>
@@ -96,26 +113,26 @@
             <img src="./Photos/Project3/COVER.jpg">
         </div>
         <div class="interior-text">
-            <h2>RENOVARE CASA G.P.</h2>
-            <p>In dormitor, am ales sa folosim nuante pamantii, precum maro si bej, pentru a crea o atmosfera calda si
-                relaxanta. Paturile si mobilierul sunt concepute intr-un stil minimalist, cu linii curate si materiale
-                naturale, cum ar fi lemnul si bumbacul organic. Lumina naturala este maximizata prin folosirea
-                ferestrelor mari si a materialelor translucide pentru draperii, creand o atmosfera luminoasa si
-                aerisita. <br><br>
+            <h2>Renovare casă G.P.</h2>
+            <p>În dormitor, am ales să folosim nuanțe pământii, precum maro și bej, pentru a crea o atmosferă caldă și
+                relaxantă. Paturile și mobilierul sunt concepute într-un stil minimalist, cu linii curate și materiale
+                naturale, cum ar fi lemnul și bumbacul organic. Lumina naturală este maximizată prin folosirea
+                ferestrelor mari și a materialelor translucide pentru draperii, creând o atmosferă luminoasă și
+                aerisită. <br><br>
 
-                In ceea ce privesc baile, am continuat paleta de culori pamantii, integrand elemente de piatra naturala
-                si lemn pentru a adauga textura si caldura spatiului. Liniile simple si formele geometrice predominante
-                in designul minimalist sunt juxtapuse cu accente organice, cum ar fi plantele de interior si accesoriile
-                din fibră naturala, aducand un sentiment de echilibru si conexiune cu natura. <br><br>
+                În ceea ce privesc băile, am continuat paleta de culori pământii, integrând elemente de piatră naturală
+                și lemn pentru a adaugă textură și căldură spațiului. Liniile simple și formele geometrice predominante
+                în designul minimalist sunt juxtapuse cu accente organice, cum ar fi plantele de interior și accesoriile
+                din fibră naturală, aducând un sentiment de echilibru și conexiune cu natura. <br><br>
 
-                Accentele metalice, cum ar fi robinetele si prizele, sunt alese intr-o nuanta de bronz sau arama, pentru
-                a completa perfect paleta de culori si pentru a adauga un aspect sofisticat si rafinat spatiului.
+                Accentele metalice, cum ar fi robinetele și prizele, sunt alese într-o nuanță de bronz sau arama, pentru
+                a completa perfect paleta de culori și pentru a adăuga un aspect sofisticat și rafinat spațiului.
                 <br><br>
 
-                Prin aceasta abordare modern minimalista, dar totodata organica, care imbina perfect estetica
+                Prin aceasta abordare modern minimalistă, dar totodată organică, care îmbină perfect estetica
                 contemporana cu
-                caldura si confortul inspirat din natura, am reusit sa cream un mediu intim si reconfortant. Este un
-                spatiu care invita la relaxare si reflectie, oferind un refugiu personal in mijlocul agitatiei vietii
+                căldura și confortul inspirat din natură, am reușit să creăm un mediu intim și reconfortant. Este un
+                spațiu care invită la relaxare și reflecție, oferind un refugiu personal în mijlocul agitației vieții
                 moderne.
             </p>
         </div>
@@ -172,8 +189,8 @@
         <div class="container">
             <div class="subcontainer">
                 <div class="cookies">
-                <p>Acest site web folosește cookies pentru a îmbunătăți experiența ta de navigare. Pentru mai multe
-                informații, <a href="privacy.html">apăsați aici</a>.</p>
+                    <p>Acest site web folosește cookies pentru a îmbunătăți experiența ta de navigare. Pentru mai multe
+                        informații, <a href="privacy.html">apăsați aici</a>.</p>
                     <button id="cookies-btn" onclick="allConsentGranted()">De acord</button>
                 </div>
             </div>

@@ -372,7 +372,8 @@ nav li:hover::before {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; /* Centers ARTIS column */
+    align-items: center;
+    /* Centers ARTIS column */
     position: relative;
     left: 5%;
 }
@@ -380,11 +381,13 @@ nav li:hover::before {
 .word-container {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Aligns each word to start from the same line */
+    align-items: flex-start;
+    /* Aligns each word to start from the same line */
 }
 
 .word {
-    display: flex; /* Aligns first letter and word on a single line */
+    display: flex;
+    /* Aligns first letter and word on a single line */
     color: #333;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     font-size: 3em;
@@ -403,12 +406,15 @@ nav li:hover::before {
 .word span:first-child {
     color: #9f4b2c;
     font-weight: 350;
-    margin-right: 5px; /* Space between the first letter and the rest of the word */
+    margin-right: 5px;
+    /* Space between the first letter and the rest of the word */
     transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
-.word:nth-child(4) span:first-child { /* Targets the "I" */
-    padding-left: 11.5px; /* Adjust as needed to visually align */
+.word:nth-child(4) span:first-child {
+    /* Targets the "I" */
+    padding-left: 11.5px;
+    /* Adjust as needed to visually align */
     margin-right: 16px;
 }
 
@@ -439,7 +445,8 @@ nav li:hover::before {
     display: flex;
     gap: 20px;
     align-items: center;
-    background-color: #333; /* Dark background */
+    background-color: #333;
+    /* Dark background */
     padding: 100px 0;
 }
 
@@ -519,23 +526,30 @@ nav li:hover::before {
     justify-content: center;
     padding: 20px;
     margin-top: 80px;
-    color: #f0f0f0; /* Light color for general text */
+    color: #f0f0f0;
+    /* Light color for general text */
 }
 
 .designer-picture {
-    width: 50%; /* Adjust as needed */
+    width: 50%;
+    /* Adjust as needed */
     display: flex;
     align-items: right;
     justify-content: right;
     padding: 40px;
-    overflow: hidden; /* Ensure anything that overflows is hidden */
+    overflow: hidden;
+    /* Ensure anything that overflows is hidden */
 }
 
 .designer-picture img {
-    width: 100%; /* Take the full width of the container */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: cover; /* Cover the entire area */
-    animation: mainPhotoReveal 1.8s ease-in-out; /* Keep your animation */
+    width: 100%;
+    /* Take the full width of the container */
+    height: auto;
+    /* Maintain aspect ratio */
+    object-fit: cover;
+    /* Cover the entire area */
+    animation: mainPhotoReveal 1.8s ease-in-out;
+    /* Keep your animation */
     border-radius: 15px;
 }
 
@@ -727,7 +741,7 @@ nav li:hover::before {
 }
 
 @media (max-width: 1600px) {
-    .container{
+    .container {
         width: 100%;
     }
 }
@@ -820,10 +834,13 @@ nav li:hover::before {
 }
 
 .info-item i {
-    min-width: 30px; /* Ensures consistent icon width for alignment */
-    margin-right: 15px; /* Space between icon and text */
+    min-width: 30px;
+    /* Ensures consistent icon width for alignment */
+    margin-right: 15px;
+    /* Space between icon and text */
     line-height: 30px;
-    text-align: center; /* Centers icon within its fixed width */
+    text-align: center;
+    /* Centers icon within its fixed width */
 }
 
 .contact-info-container li a {
@@ -849,7 +866,7 @@ nav li:hover::before {
     font-size: 23px;
     background-color: #333;
     color: #e1e1e1;
-    border-radius: 50%; 
+    border-radius: 50%;
     padding: 7px;
     margin-right: 20px;
     vertical-align: middle;
@@ -1200,7 +1217,6 @@ nav li:hover::before {
 .MainContainer .card:hover .contentBox .content h3,
 .MainContainer .card.hover-effect .contentBox .content h3 {
     font-size: 1.3em;
-    text-transform: uppercase;
     letter-spacing: 1px;
     color: white;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -1343,22 +1359,22 @@ nav li:hover::before {
 }
 
 .interior-text h2 {
-    font-size: 30px;
+    font-size: 2.3em;
+    font-weight: 600;
     color: #333;
     padding: 15px;
     margin-top: 0;
     margin-bottom: 30px;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    font-weight: bold;
     animation: exploreButtonAnimation 1.5s ease-in;
 }
 
 .interior-text p {
-    font-size: 20px;
+    font-size: 1.2em;
     margin-top: 0;
     margin-bottom: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    font-weight: 100;
+    font-weight: 300;
     padding: 15px;
     text-align: start;
     animation: exploreButtonAnimation 1.5s ease-in;
@@ -1392,9 +1408,9 @@ nav li:hover::before {
 }
 
 .grid-container h1 {
-    font-size: 30px;
+    font-size: 2em;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    font-weight: normal;
+    font-weight: 300;
     padding: 15px;
     color: #333;
     text-align: center;
@@ -1408,7 +1424,7 @@ nav li:hover::before {
     justify-content: center;
 }
 
-.grid-container .interior-container .image{
+.grid-container .interior-container .image {
     height: 250px;
     width: 350px;
     border: 1px solid #333;
@@ -1431,7 +1447,8 @@ nav li:hover::before {
 
 .grid-container .popup-image {
     position: fixed;
-    top: 0; left: 0;
+    top: 0;
+    left: 0;
     background: rgba(0, 0, 0, 0.98);
     height: 100%;
     width: 100%;
@@ -1493,7 +1510,8 @@ body.popup-open {
 
 .grid-container .popup-image img {
     position: absolute;
-    top: 50%; left: 50%;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 5px;
     width: 100%;
@@ -1516,31 +1534,37 @@ body.popup-open {
     margin-top: 30px;
     margin-bottom: 30px;
     box-sizing: border-box;
-    overflow: hidden; /* Hide overflowing content */
-  }
+    overflow: hidden;
+    /* Hide overflowing content */
+}
 
-  .expandable-section h1 {
+.expandable-section h1 {
     font-weight: 300;
     font-size: 1.2em;
-  }
+}
 
-  .expandable-section .content {
+.expandable-section .content {
     font-weight: 100;
     max-height: 0;
-    overflow: hidden; /* Hide overflowing content */
+    overflow: hidden;
+    /* Hide overflowing content */
     opacity: 0;
-    transition: max-height 1s ease, opacity 1s ease; /* Add transition for max-height and opacity */
-  }
+    transition: max-height 1s ease, opacity 1s ease;
+    /* Add transition for max-height and opacity */
+}
 
-  .expandable-section.expanded .content {
-    max-height: 1000px; /* Set max-height to a large value */
-    opacity: 1; /* Set opacity to 1 when expanded */
-  }
+.expandable-section.expanded .content {
+    max-height: 1000px;
+    /* Set max-height to a large value */
+    opacity: 1;
+    /* Set opacity to 1 when expanded */
+}
 
-  /* Faster transition for retraction */
-  .expandable-section.expanded.retracting .content {
-    transition: max-height 0.7s ease, opacity 0.7s ease; /* Faster transition duration for retraction */
-  }
+/* Faster transition for retraction */
+.expandable-section.expanded.retracting .content {
+    transition: max-height 0.7s ease, opacity 0.7s ease;
+    /* Faster transition duration for retraction */
+}
 
 /**** Smaller screens ****/
 
@@ -1748,7 +1772,12 @@ body.popup-open {
         gap: 0;
     }
 
-    .fas.fa-phone, .fas.fa-envelope, .fab.fa-facebook, .fab.fa-instagram, .fa-solid.fa-user, .fas.fa-map-marker-alt {
+    .fas.fa-phone,
+    .fas.fa-envelope,
+    .fab.fa-facebook,
+    .fab.fa-instagram,
+    .fa-solid.fa-user,
+    .fas.fa-map-marker-alt {
         font-size: 22px;
         padding: 6px;
     }
@@ -1848,7 +1877,11 @@ body.popup-open {
     }
 
     .interior-text h2 {
-        font-size: 40px;
+        font-size: 1.4em;
+    }
+
+    .interior-text p {
+        font-size: 0.8em;
     }
 
     .package h2 {
@@ -1884,7 +1917,7 @@ body.popup-open {
         position: relative;
         margin-top: 0;
     }
-    
+
     .index-line::after {
         content: '';
         position: absolute;
@@ -1920,43 +1953,43 @@ body.popup-open {
 
     .expandable-section {
         font-size: 14px;
-      }
-  
-      .interiors-section {
-          flex-direction: column-reverse;
-          padding: 50px 0;
-      }
-  
-      .interiors-text-container {
-          width: 100%;
-          padding: 0;
-      }
-  
-      .interiors-text-container h2 {
-          font-size: 1.4em;
-      }
-  
-      .interiors-text-container p {
-          font-size: 0.8em;
-          margin-top: 0;
-          padding: 30px;
-      }
-  
-      .interiors-image-container {
-          margin-left: 0;
-      }
+    }
 
-      nav a {
+    .interiors-section {
+        flex-direction: column-reverse;
+        padding: 50px 0;
+    }
+
+    .interiors-text-container {
+        width: 100%;
+        padding: 0;
+    }
+
+    .interiors-text-container h2 {
+        font-size: 1.4em;
+    }
+
+    .interiors-text-container p {
+        font-size: 0.8em;
+        margin-top: 0;
+        padding: 30px;
+    }
+
+    .interiors-image-container {
+        margin-left: 0;
+    }
+
+    nav a {
         font-size: 45px;
-      }
+    }
 
-      header {
+    header {
         height: 100px;
-      }
+    }
 
-      .header-container {
+    .header-container {
         height: 100px;
-      }
+    }
 }
 
 /**** Even smaller screens ****/
@@ -1991,7 +2024,7 @@ body.popup-open {
 
 @media (min-width: 1100px) {
     .interior-text h2 {
-        font-size: 50px;
+        font-size: 2.3em;
     }
 }
 
