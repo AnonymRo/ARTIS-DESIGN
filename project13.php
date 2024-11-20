@@ -117,8 +117,8 @@
             <p> Două băi în stil French, fiecare plină de personalitate și rafinament, în care tapetul și plăcile mici
                 de faianță creează o atmosferă unică. Fiecare baie are propriul său caracter, dar ambele îmbină eleganța
                 clasică cu detalii moderne, pentru a oferi un spațiu atât funcțional, cât și plin de stil.
-                <br><br>
-                Baia cu duș <br>
+                <br><br><br>
+                Baia cu duș <br><br>
                 Această baie emană un aer proaspăt și sofisticat, inspirat de natura franceză, cu un tapet care
                 înfățișează frunze delicate într-o paletă de verde smarald și nuanțe de bej.
                 Tapetul este aplicat pe un perete central, creând un punct focal natural care adaugă un strop de
@@ -130,8 +130,8 @@
                 Elemente de mobilier din lemn și accente de metal auriu la robinete și lămpi completează perfect
                 decorul.
 
-                <br><br>
-                Baia cu cadă <br>
+                <br><br><br>
+                Baia cu cadă <br><br>
                 Această baie aduce un aer de eleganță clasică și confort, cu un tapet în tonuri de maro și bej, ce evocă
                 rafinamentul băilor tradiționale franțuzești.
                 Tapetul, cu un model continuu, poate înfățișa motive florale , creând un cadru cald și sofisticat.
@@ -173,7 +173,7 @@
 
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
-                    echo '<div class="image"><img src="' . $row["Img_Dir"] . '"></div>';
+                    echo '<div class="image"><img src="' . $row["Img_Dir"] . '" loading="lazy" alt="Interior project image"></div>';
                 }
             } else {
                 echo "0 results";

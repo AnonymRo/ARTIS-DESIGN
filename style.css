@@ -1427,11 +1427,11 @@ nav li:hover::before {
 .grid-container .interior-container .image {
     height: 250px;
     width: 350px;
-    border: 1px solid #333;
+    border: 0.1px solid #333;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     cursor: zoom-in;
-    border-radius: 2px;
+    border-radius: 3px;
 }
 
 .grid-container .interior-container .image img {
@@ -1882,6 +1882,10 @@ body.popup-open {
 
     .interior-text p {
         font-size: 0.8em;
+    }
+
+    .grid-container h1 {
+        font-size: 1.6em;
     }
 
     .package h2 {

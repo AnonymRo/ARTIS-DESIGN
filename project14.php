@@ -110,7 +110,7 @@
 
     <div class="description-container">
         <div class="presentation-picture">
-            <img src="./Photos/COVER.jpg">
+            <img src="./Photos/Project13/COVER.jpg">
         </div>
         <div class="interior-text">
             <h2>Apartament A.P.</h2>
@@ -156,7 +156,7 @@
 
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
-                    echo '<div class="image"><img src="' . $row["Img_Dir"] . '"></div>';
+                    echo '<div class="image"><img src="' . $row["Img_Dir"] . '" loading="lazy" alt="Interior project image"></div>';
                 }
             } else {
                 echo "0 results";

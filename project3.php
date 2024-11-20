@@ -160,7 +160,7 @@
 
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
-                    echo '<div class="image"><img src="' . $row["Img_Dir"] . '"></div>';
+                    echo '<div class="image"><img src="' . $row["Img_Dir"] . '" loading="lazy" alt="Interior project image"></div>';
                 }
             } else {
                 echo "0 results";
